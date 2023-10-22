@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#demo {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+	 font-size: 300%;
+    top: 50%;
+    left: 50%;
+}
+#demo2 {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+	 font-size: 300%;
+    top: 60%;
+    left: 50%;
+}
+
+</style>	
+
+<title>Page Title</title>
+</head>
+<body>
+
+<h1 id="demo">This is a Heading</h1>
+<p id="demo2">This is a Heading</p>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDkGgIKfkj4ZAUn-BJjX-4Zh1S7mgYw5a0",
+    authDomain: "warsimulator-26663651.firebaseapp.com",
+    databaseURL: "https://warsimulator-26663651.firebaseio.com",
+    projectId: "warsimulator-26663651",
+    storageBucket: "warsimulator-26663651.appspot.com",
+    messagingSenderId: "692209207081"
+  };
+  firebase.initializeApp(config);
+
+  const auth=firebase.auth();
+  auth.signInWithEmailAndPassword("dguojin@gmail.com","123456");
+  //auth.signOut();
+	var dbRef=firebase.database().ref().child('users');
+	var count=0;
+	
+	var mailMap=new Map();
+
+	dbRef.on("value", function(snapshot) {
+	count=0;
+	
+	var email;
+	
+
+  	snapshot.forEach(function(child) {
+  	count++;
+    //console.log(child.key+"");
+    child.forEach(function(c){
+    if(c.key=="email"){
+	
+	if(!mailMap.has(c.val())){
+		console.log("recentEmail: "+c.val()+new Date());
+		mailMap.set(c.val(),1);
+	}
+
+    email+=c.val()+",";
+    }
+    	
+    });
+    document.getElementById("demo").innerHTML =
+	"User count: "+count;
+
+  });
+ 	console.log(email);
+});
+
+</script>>
+
+</body>
+</html>
