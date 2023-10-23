@@ -17260,8 +17260,6 @@ GameObject:
   - component: {fileID: 60053533203844633}
   - component: {fileID: 60053533221770893}
   - component: {fileID: 60053475348143293}
-  - component: {fileID: 6293499504377343618}
-  - component: {fileID: 7916694048819465046}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -22145,18 +22143,6 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
---- !u!114 &6293499504377343618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91151400045266295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749078e372a4a4e41a11e7432d0606ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6613098009726349944
 GameObject:
   m_ObjectHideFlags: 0
@@ -22474,18 +22460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7916694048819465046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91151400045266295}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3cc1aad5daa43f4a497d5d18575ff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &8134245135363054220
 Rigidbody2D:
   serializedVersion: 4
