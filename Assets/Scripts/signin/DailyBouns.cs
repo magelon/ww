@@ -15,7 +15,8 @@ public class DailyBouns : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();PlayerPrefs is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user’s platform registry.
+        //Unity stores PlayerPrefs in a local registry, without encryption. Do not use PlayerPrefs data to store sensitive data.
         dayCount = PlayerPrefs.GetInt("dayCount", 0);
         bonus = panel.childCount;
         date = DateTime.Now.ToString().Substring(0, 9);
