@@ -286,8 +286,8 @@ public class Enime : MonoBehaviour
         }
         if (slowOn == false)
         {
-            Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
-            Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+            //Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
+            //Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
         }
 
     }
