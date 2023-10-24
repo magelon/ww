@@ -1,55 +1,40 @@
 ﻿using UnityEngine;
 
-public class WoodObjects : MonoBehaviour
+public class FloatingObject : MonoBehaviour
 {
-    // Float a rigidbody object a set distance above a surface.
+    public float floatHeight;
+    public float liftForce;
+    public float damping;
+    public LayerMask waterLayer;
 
-    public float floatHeight;     // Desired floating height.
-    public float liftForce;       // Force to apply when lifting the rigidbody.
-    public float damping;         // Force reduction proportional to speed (reduces bouncing).
-    public LayerMask waterLand;
-    Rigidbody rb;
+    private Rigidbody2D rb;
 
-
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
+
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D component not found. Make sure it's attached to the GameObject.");
+        }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // Cast a ray straight down. only with waterlayer
-        RaycastHit hit;
-            //Physics.Raycast(transform.position, -Vector2.up, waterLandLayer);
-        
+        if (rb == null)
+            return;
 
-        // If it hits something...
-        if (Physics.Raycast(transform.position, -transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity, waterLand))
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, waterLayer);
+
+        if (hit.collider != null)
         {
-            Debug.DrawRay(transform.position, -transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
-            //Debug.Log("Did Hit");
-            //Debug.Log("hit water");
-            // Calculate the distance from the surface and the "error" relative
-            // to the floating height.
+            Debug.DrawRay(transform.position, Vector2.down * hit.distance, Color.yellow);
+
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
             float heightError = floatHeight - distance;
 
-            // The force is proportional to the height error, but we remove a part of it
-            // according to the object's speed.
-
-            if (rb)
-            {
-                float force = liftForce * heightError - rb.velocity.y * damping;
-
-                // Apply the force to the rigidbody.
-                rb.AddForce(Vector3.up * force);
-            }
-            else
-            {
-                rb = GetComponent<Rigidbody>();
-            }
-
-
+            float force = liftForce * heightError - rb.velocity.y * damping;
+            rb.AddForce(Vector2.up * force);
         }
     }
 }

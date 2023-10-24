@@ -12,7 +12,7 @@ public class CallmenuButton : MonoBehaviour
     {
         Time.timeScale = 0;
         ATween.MoveTo(panel.gameObject, 
-            ATween.Hash("ignoretimescale", true, "islocal", true, "x", -296,
+            ATween.Hash("ignoretimescale", true, "islocal", true, "y", 0,
             "time", 1f, "easeType", "easeOutExpo", "oncomplete",
             "OnShowCompleted", "oncompletetarget", this.gameObject));
         CloseButton.SetActive(true);
@@ -22,7 +22,7 @@ public class CallmenuButton : MonoBehaviour
     {
         Time.timeScale = 1;
         ATween.MoveTo(panel.gameObject,
-          ATween.Hash("ignoretimescale", true, "islocal", true, "x", -702,
+          ATween.Hash("ignoretimescale", true, "islocal", true, "y", 720,
           "time", 1f, "easeType", "easeOutExpo", "oncomplete",
           "OnShowCompleted", "oncompletetarget", this.gameObject));
         CloseButton.SetActive(false);

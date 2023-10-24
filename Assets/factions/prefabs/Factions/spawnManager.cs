@@ -26,24 +26,63 @@ public class spawnManager : MonoBehaviour
                 equipList.Add(PlayerPrefs.GetString("currentEquip" + i));
                 ecount++;
             }
+            else{
+                equipList.Add("item0");
+
+            }
         }
 
 
-        for (int i = 0; i < count; i++)
-        {
-            if (i<ecount)
-            {
-                SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = 
-                Resources.Load<Sprite>("sumPrefabs/itemImgs/" + equipList[i]);
+        // for (int i = 0; i < count; i++)
+        // {
+        //     if (i<ecount)
+        //     {
+        //         SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = 
+        //         Resources.Load<Sprite>("sumPrefabs/itemImgs/" + equipList[i]);
 
-            }
-            else
+        //     }
+        //     else
+        //     {
+        //         SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = 
+        //         Resources.Load<Sprite>("sumPrefabs/itemImgs/" + equipList[0]);
+        //         //SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = false;
+        //     }
+        // }
+
+        //generated with chat gpt add items from local to the scene
+            for (int i = 0; i < count; i++)
             {
-                SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = 
-                Resources.Load<Sprite>("sumPrefabs/itemImgs/" + equipList[0]);
-                //SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>().sprite = false;
+                Image buttonImage = SpawnButtonGroup[i].transform.Find("Image").GetComponent<Image>();
+                if (i < ecount)
+                {
+                    string spritePath = "sumPrefabs/itemImgs/" + equipList[i];
+                    Sprite sprite = Resources.Load<Sprite>(spritePath);
+                    
+                    if (sprite != null)
+                    {
+                        buttonImage.sprite = sprite;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Sprite not found: " + spritePath);
+                        // Optionally, set a default sprite or handle the error in another way.
+                    }
+                }
+                else
+                {
+                    if (equipList.Count > 0)
+                    {
+                        buttonImage.sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + equipList[0]);
+                    }
+                    else
+                    {
+                        // Handle the case where equipList is empty.
+                        Debug.LogWarning("equipList is empty");
+                        // Optionally, set a default sprite or handle the error in another way.
+                    }
+                }
             }
-        }
+
 
         //check level is passed or not and given things
         if (GameData.getInstance().levelPassed < 4)
