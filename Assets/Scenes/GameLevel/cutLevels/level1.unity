@@ -8726,10 +8726,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475866834}
-  - component: {fileID: 475866830}
   - component: {fileID: 475866832}
   - component: {fileID: 475866836}
   - component: {fileID: 475866835}
+  - component: {fileID: 475866830}
   m_Layer: 2
   m_Name: boat
   m_TagString: creature
@@ -8754,7 +8754,7 @@ MonoBehaviour:
   damping: 0.5
   waterLayer:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 0
 --- !u!212 &475866832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22190,7 +22190,7 @@ MonoBehaviour:
   dieForce: 500
   slowDownFactor: 0.05
   slowDownLength: 2
-  alive: 0
+  alive: 1
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
@@ -22295,7 +22295,7 @@ MonoBehaviour:
   dieForce: 500
   slowDownFactor: 0.05
   slowDownLength: 2
-  alive: 0
+  alive: 1
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}

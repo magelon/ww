@@ -6,12 +6,15 @@ public class FloatingObject : MonoBehaviour
     public float liftForce;
     public float damping;
     public LayerMask waterLayer;
+    private bool is_Floating=false;
+    private Enime e;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        e=GetComponent<Enime>();
 
         if (rb == null)
         {
@@ -19,22 +22,41 @@ public class FloatingObject : MonoBehaviour
         }
     }
 
+    private void Update(){
+         if(is_Floating&&rb){
+                //Cast a ray straight down. only with waterlayer
+                 RaycastHit2D hit;
+                 hit=Physics2D.Raycast(transform.position, -transform.TransformDirection(Vector2.up),Mathf.Infinity, waterLayer);
+                 float distance = Mathf.Abs(hit.point.y - transform.position.y);
+                 float heightError = floatHeight - distance;
+                 //float force = liftForce * heightError - rb.velocity.y * damping;
+
+                float force = liftForce * heightError - rb.velocity.y * damping;
+
+                // Apply the force to the rigidbody.
+                rb.AddForce(Vector2.up * force);
+                //rb.AddForce(Vector2.up * 10);
+         }
+    }
+
     private void FixedUpdate()
     {
-        if (rb == null)
-            return;
+        // if (rb == null){
+        //     rb = GetComponent<Rigidbody2D>();
+        // }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, waterLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, waterLayer);
+        Debug.DrawRay(transform.position, Vector2.down, Color.yellow);
 
         if (hit.collider != null)
         {
-            Debug.DrawRay(transform.position, Vector2.down * hit.distance, Color.yellow);
-
-            float distance = Mathf.Abs(hit.point.y - transform.position.y);
-            float heightError = floatHeight - distance;
-
-            float force = liftForce * heightError - rb.velocity.y * damping;
-            rb.AddForce(Vector2.up * force);
+            Debug.Log("hit");
+            //Debug.DrawRay(transform.position, Vector2.down * hit.distance, Color.yellow);
+            is_Floating=true;
+            
+        }else{
+            Debug.Log("not hit");
+            is_Floating=false;
         }
     }
 }

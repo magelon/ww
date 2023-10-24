@@ -250,7 +250,7 @@ public class Enime : MonoBehaviour
                
 
                 //this will change by different level manuelly
-                if (f != Factions.white)
+                if (f != Factions.yellow)
                 {
                     Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
                     poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
