@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6818675}
   - component: {fileID: 6818674}
   - component: {fileID: 6818673}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6997,88 +6997,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: landscape
       objectReference: {fileID: 0}
+    - target: {fileID: 7586876389226784804, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389226784804, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389226784805, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389244452546, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389349142628, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389900138852, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876389993501661, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876390244696390, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876390618275383, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586876390803694369, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e53d77acd7d0ce94182874ad1e8507ea, type: 3}
---- !u!1 &72593889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 72593890}
-  - component: {fileID: 72593891}
-  m_Layer: 2
-  m_Name: reactWater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &72593890
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72593889}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.082, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 475866834}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &72593891
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72593889}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.21, y: 0.05}
-  m_EdgeRadius: 0
 --- !u!1 &76414428
 GameObject:
   m_ObjectHideFlags: 0
@@ -7088,7 +7051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76414429}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7324,7 +7287,7 @@ GameObject:
   - component: {fileID: 126028285}
   - component: {fileID: 126028286}
   - component: {fileID: 126028287}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8230,7 +8193,7 @@ GameObject:
   - component: {fileID: 303070524}
   - component: {fileID: 303070525}
   - component: {fileID: 303070526}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8727,34 +8690,16 @@ GameObject:
   m_Component:
   - component: {fileID: 475866834}
   - component: {fileID: 475866832}
+  - component: {fileID: 475866837}
   - component: {fileID: 475866836}
-  - component: {fileID: 475866835}
-  - component: {fileID: 475866830}
+  - component: {fileID: 475866838}
   m_Layer: 2
   m_Name: boat
   m_TagString: creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &475866830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475866829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d2a833e9f153504e9db6ccc803200ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatHeight: 1.2
-  liftForce: 15
-  damping: 0.5
-  waterLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  m_IsActive: 0
 --- !u!212 &475866832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8816,41 +8761,31 @@ Transform:
   m_GameObject: {fileID: 475866829}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.458, z: 0.05}
+  m_LocalPosition: {x: -0.005, y: -0.363, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 72593890}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &475866835
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &475866836
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475866829}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2a833e9f153504e9db6ccc803200ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatHeight: 0.1
+  liftForce: 15
+  damping: 0.5
+  waterLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &475866836
+--- !u!61 &475866837
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8882,7 +8817,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.0820339}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8893,8 +8828,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.32, y: 0.106535554}
   m_EdgeRadius: 0
+--- !u!50 &475866838
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475866829}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9397,7 +9359,7 @@ GameObject:
   - component: {fileID: 732514477}
   - component: {fileID: 732514478}
   - component: {fileID: 732514479}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9607,7 +9569,7 @@ GameObject:
   - component: {fileID: 748714303}
   - component: {fileID: 748714306}
   - component: {fileID: 748714307}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10274,7 +10236,7 @@ GameObject:
   - component: {fileID: 934140838}
   - component: {fileID: 934140841}
   - component: {fileID: 934140842}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10899,7 +10861,7 @@ GameObject:
   - component: {fileID: 1068789706}
   - component: {fileID: 1068789709}
   - component: {fileID: 1068789710}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12311,7 +12273,7 @@ GameObject:
   - component: {fileID: 1567444586}
   - component: {fileID: 1567444587}
   - component: {fileID: 1567444588}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12744,7 +12706,7 @@ GameObject:
   - component: {fileID: 1740336367}
   - component: {fileID: 1740336368}
   - component: {fileID: 1740336369}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13228,7 +13190,7 @@ GameObject:
   - component: {fileID: 1845178609}
   - component: {fileID: 1845178612}
   - component: {fileID: 1845178613}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13921,7 +13883,7 @@ GameObject:
   - component: {fileID: 2019058532}
   - component: {fileID: 2019058533}
   - component: {fileID: 2019058534}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14131,7 +14093,7 @@ GameObject:
   - component: {fileID: 2044276470}
   - component: {fileID: 2044276473}
   - component: {fileID: 2044276474}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14416,7 +14378,7 @@ GameObject:
   - component: {fileID: 2132610079}
   - component: {fileID: 2132610080}
   - component: {fileID: 2132610081}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: woodPice (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21962,7 +21924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876099, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: height
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876099, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: waveLenth
@@ -21986,7 +21948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876100, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.03
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876100, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: m_LocalPosition.z

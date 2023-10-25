@@ -334,12 +334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2a833e9f153504e9db6ccc803200ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatHeight: 1.2
+  floatHeight: 1
   liftForce: 12.8
   damping: 0.5
-  waterLand:
+  waterLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
 --- !u!61 &1936332158417894283
 BoxCollider2D:
   m_ObjectHideFlags: 0

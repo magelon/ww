@@ -14,7 +14,7 @@ public class FloatingObject : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        e=GetComponent<Enime>();
+        //waterLayer = LayerMask.NameToLayer("Default");
 
         if (rb == null)
         {
@@ -47,13 +47,15 @@ public class FloatingObject : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, waterLayer);
         Debug.DrawRay(transform.position, Vector2.down, Color.yellow);
+        //bool ali=GetComponent<Enime>().alive;
+        int currentLayer = gameObject.layer;
+        string currentLayerName = LayerMask.LayerToName(currentLayer);
 
-        if (hit.collider != null)
+        if (hit.collider != null &&(currentLayerName=="dead"))//&&!ali
         {
             Debug.Log("hit");
             //Debug.DrawRay(transform.position, Vector2.down * hit.distance, Color.yellow);
-            is_Floating=true;
-            
+            is_Floating=true; 
         }else{
             Debug.Log("not hit");
             is_Floating=false;

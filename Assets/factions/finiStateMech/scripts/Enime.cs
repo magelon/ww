@@ -40,8 +40,9 @@ public class Enime : MonoBehaviour
     private void OnEnable()
     {
         alive = true;
-        Destroy(GetComponent<Rigidbody>());
-        Destroy(GetComponent<BoxCollider>());
+        //Destroy(GetComponent<Rigidbody>());
+        //Destroy(GetComponent<BoxCollider>());
+
         GetComponent<Animator>().enabled = true;
         //health = 3;
         this.gameObject.layer = LayerMask.NameToLayer("Default");
@@ -112,6 +113,7 @@ public class Enime : MonoBehaviour
         {
             alive = false;
             //Debug.Log("died");
+            this.gameObject.layer = LayerMask.NameToLayer("dead");
             //killing quest
             //rls.loot();
             //when it died remove 2d rigdbody and 2d colidder add 3d rig and collider let is fell in to water
@@ -213,10 +215,10 @@ public class Enime : MonoBehaviour
             //here is a solution for slow down specific objects
             //speed up or slow down a gameobject with anim speed and movement speed variables
 
-            knockDie(dieForce);
+            //knockDie(dieForce);
             //GetComponent<Rigidbody2D>().AddTorque(2 * Time.fixedDeltaTime * 100f, ForceMode2D.Force);
-            Destroy(GetComponent<Rigidbody2D>());
-            Destroy(GetComponent<BoxCollider2D>());
+            //Destroy(GetComponent<Rigidbody2D>());
+            //Destroy(GetComponent<BoxCollider2D>());
 
             //this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(gameObject.name+"die");
            
@@ -274,9 +276,9 @@ public class Enime : MonoBehaviour
                 }
 
 
-                this.gameObject.AddComponent<BoxCollider>();
-                this.gameObject.AddComponent<Rigidbody>();
-                GetComponent<Rigidbody>().constraints=RigidbodyConstraints.FreezeRotation;
+                //this.gameObject.AddComponent<BoxCollider>();
+                //this.gameObject.AddComponent<Rigidbody>();
+                //GetComponent<Rigidbody>().constraints=RigidbodyConstraints.FreezeRotation;
                 Invoke("changeLayer", 2f);
             }
          
