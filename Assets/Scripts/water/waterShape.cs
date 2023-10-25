@@ -232,11 +232,10 @@ public class waterShape : MonoBehaviour
                 vertex.y += Mathf.PerlinNoise(baseHeight[i].x + noiseWalk, baseHeight[i].y + Mathf.Sin(Time.time * speed)) * scale;
                 vertices[i] = vertex;
 
-                RaycastHit hit;
+                RaycastHit2D hit =Physics2D.Raycast(new Vector2(vertices[i].x * transform.localScale.x+transform.position.x,
+                 vertices[i].y * transform.localScale.y+transform.position.y), transform.TransformDirection(Vector2.up), 0.1f, waterWaveLayer);
 
-                if(Physics.Raycast(new Vector3(vertices[i].x * transform.localScale.x+transform.position.x,
-                 vertices[i].y * transform.localScale.y+transform.position.y,
-                 0), transform.TransformDirection(Vector3.up), out hit, 0.1f, waterWaveLayer))
+                if(hit)
                 {
                     //Debug.Log("hit");
                     if (hit.collider != null)

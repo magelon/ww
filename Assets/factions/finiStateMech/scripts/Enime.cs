@@ -18,6 +18,10 @@ public class Enime : MonoBehaviour
     private bool slowOn = false;
 
     public bool alive;
+    private bool win=false;
+    private bool lose=false;
+    private bool die=false;
+
     public GameObject gost;
     public GameObject gostFlip;
     public GameObject gainText;
@@ -187,8 +191,6 @@ public class Enime : MonoBehaviour
             speed = 0;
             dazedTime -= Time.deltaTime;
         }
-        
-      
     }
 
     private void FixedUpdate()
@@ -232,13 +234,12 @@ public class Enime : MonoBehaviour
                 }
            
 
-            if (!GetComponent<Rigidbody2D>() && !GetComponent<BoxCollider2D>()&&!GetComponent<Rigidbody>()&&!GetComponent<BoxCollider>())
-            {
-                //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
+           if(!die){
+            //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
+                die=true;
                 if (tank.face)
                 {
                     //flip  x true;
-                   
                     poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
 
                 }
@@ -249,39 +250,40 @@ public class Enime : MonoBehaviour
                 }
 
                 GameManager.getInstance().playSfx("died");
+                Invoke("changeLayer", 2f);
+           }
+                
                
 
                 //this will change by different level manuelly
                 if (f != Factions.yellow)
                 {
                     Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
-
+                    
+                    Debug.Log("win");
                     if (gameObject.name.Substring(0, 4) == "base")
                     {
                         // GameData.getInstance().coin += 500;
-                        GameData.getInstance().main.gameWin();
+                        if(!win){
+                            poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
+                            win=true;
+                            GameData.getInstance().main.gameWin();
+                        }
                     }
-                    GameData.getInstance().energy += 0.05f;
+                    //GameData.getInstance().energy += 0.05f;
                     //GameData.getInstance().coin += 50;
                     //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
                     //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
                 }
                 else
                 {
-                    if (gameObject.name.Substring(0, 4) == "base") {
+                    if (gameObject.name.Substring(0, 4) == "base" && !lose) {
+                        lose=true;
                         GameData.getInstance().main.gameFailed();
                     }
                       
                 }
 
-
-                //this.gameObject.AddComponent<BoxCollider>();
-                //this.gameObject.AddComponent<Rigidbody>();
-                //GetComponent<Rigidbody>().constraints=RigidbodyConstraints.FreezeRotation;
-                Invoke("changeLayer", 2f);
-            }
-         
             //slowMotion();
 
 
