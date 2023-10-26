@@ -2029,7 +2029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728321720559, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0006797339
+      value: 7.514889
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728416639813, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3208,7 +3208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a32bfcc0b48e64c9ae25191a850673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobby: {fileID: 0}
 --- !u!1 &1207237672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4727,7 +4726,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.2
+  orthographic size: 1
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5706,7 +5705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a32bfcc0b48e64c9ae25191a850673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobby: {fileID: 0}
 --- !u!1 &1000010521372217
 GameObject:
   m_ObjectHideFlags: 0

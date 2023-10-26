@@ -114,7 +114,7 @@ public class LevelMenu : MonoBehaviour {
 
         pageDots = new List<GameObject> ();
 
-
+	//generate level pages
 				pages = Mathf.FloorToInt (GameData.totalLevel / perpage);
 				for (int i = 0; i < pages; i++) {
 						GameObject tdot = Instantiate (dot, dot.transform.parent) as GameObject;
