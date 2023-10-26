@@ -7,7 +7,7 @@ public class spawnManager : MonoBehaviour
 {
     public Button[] SpawnButtonGroup;
     private List<string> equipList;
-    public GameObject intro;
+    //public GameObject intro;
     //lv1 unlock lv2 unlock lv3 unlock 0,1,2
     //public int requimentLv;
 
@@ -97,10 +97,10 @@ public class spawnManager : MonoBehaviour
                 SpawnButtonGroup[0].transform.Find("Image").GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("sumPrefabs/itemImgs/item0");
                 PlayerPrefs.SetString("currentEquip0","item0");
-                if (intro)
-                {
-                    intro.SetActive(true);
-                }
+                // if (intro)
+                // {
+                //     intro.SetActive(true);
+                // }
 
             }
             if (GameData.getInstance().levelPassed == 2)
@@ -112,10 +112,10 @@ public class spawnManager : MonoBehaviour
                 SpawnButtonGroup[1].transform.Find("Image").GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("sumPrefabs/itemImgs/item1");
                 PlayerPrefs.SetString("currentEquip1", "item1");
-                if (intro)
-                {
-                    intro.SetActive(true);
-                }
+                // if (intro)
+                // {
+                //     intro.SetActive(true);
+                // }
 
             }
             if (GameData.getInstance().levelPassed == 3)
@@ -129,10 +129,10 @@ public class spawnManager : MonoBehaviour
                 SpawnButtonGroup[2].transform.Find("Image").GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("sumPrefabs/itemImgs/item2");
                 PlayerPrefs.SetString("currentEquip2", "item2");
-                if (intro)
-                {
-                    intro.SetActive(true);
-                }
+                // if (intro)
+                // {
+                //     intro.SetActive(true);
+                // }
             }
         }
 

@@ -112,6 +112,67 @@ public class Enime : MonoBehaviour
             canvasSp = FindObjectOfType<Canvas>();
         }
 
+        if (health <= 0)
+        {
+                try
+                {
+                    GetComponent<Animator>().SetBool("die", true);
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e);
+                }
+           
+
+           if(!die){
+            //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
+                die=true;
+                if (tank.face)
+                {
+                    //flip  x true;
+                    poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
+
+                }
+                else
+                {
+                
+                    poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
+                }
+
+                GameManager.getInstance().playSfx("died");
+                Invoke("changeLayer", 2f);
+                }
+                
+                //this will change by different level manuelly
+                if (f != Factions.yellow)
+                {
+                    Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
+                    
+                    Debug.Log("win");
+                    if (gameObject.name.Substring(0, 4) == "base")
+                    {
+                        // GameData.getInstance().coin += 500;
+                        if(!win){
+                            poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
+                            win=true;
+                            GameData.getInstance().main.gameWin();
+                        }
+                    }
+                    //GameData.getInstance().energy += 0.05f;
+                    //GameData.getInstance().coin += 50;
+                    //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
+                    //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
+                }
+                else
+                {
+                    if (gameObject.name.Substring(0, 4) == "base" && !lose) {
+                        lose=true;
+                        GameData.getInstance().main.gameFailed();
+                    }
+                      
+                }
+
+        }
 
         if (health <= 0)
         {

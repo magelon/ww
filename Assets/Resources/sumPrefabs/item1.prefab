@@ -253,9 +253,9 @@ MonoBehaviour:
   floatHeight: 1.2
   liftForce: 12.8
   damping: 0.5
-  waterLand:
+  waterLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
 --- !u!61 &1936332158417894283
 BoxCollider2D:
   m_ObjectHideFlags: 0

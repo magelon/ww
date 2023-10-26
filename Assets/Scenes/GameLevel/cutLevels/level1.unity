@@ -7982,11 +7982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477464034865762885, guid: fd5258368d6dbb046882929f32454280, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.67
+      value: -1.407
       objectReference: {fileID: 0}
     - target: {fileID: 7477464034865762885, guid: fd5258368d6dbb046882929f32454280, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33000004
+      value: -0.095
       objectReference: {fileID: 0}
     - target: {fileID: 7477464034865762885, guid: fd5258368d6dbb046882929f32454280, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10847,7 +10847,6 @@ MonoBehaviour:
   - {fileID: 827893463}
   - {fileID: 1670595268}
   - {fileID: 1238064429}
-  intro: {fileID: 91151401987391765}
 --- !u!1 &1034954886
 GameObject:
   m_ObjectHideFlags: 0
@@ -17627,7 +17626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &91151401987391766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17635,7 +17634,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91151401987391765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e420b843cd694df39d133069c4e77d0, type: 3}
   m_Name: 
@@ -22092,7 +22091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876099, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: waveLenth
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876099, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: inpactScale
@@ -22108,7 +22107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876100, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.14
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 1403776682268876100, guid: 47caf2b40e753452c96b049dee081a79, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22399,7 +22398,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!114 &6773467585756443683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22664,7 +22663,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!4 &8938421843245464539
 Transform:
   m_ObjectHideFlags: 0

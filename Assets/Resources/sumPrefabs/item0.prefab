@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2a833e9f153504e9db6ccc803200ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatHeight: 1
+  floatHeight: 1.2
   liftForce: 12.8
   damping: 0.5
   waterLayer:
@@ -401,6 +401,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945910895372570375, guid: 4b1a962a67a9340d28f25e7523936de0, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5945910895372570488, guid: 4b1a962a67a9340d28f25e7523936de0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -448,6 +452,14 @@ PrefabInstance:
     - target: {fileID: 5945910895372570489, guid: 4b1a962a67a9340d28f25e7523936de0, type: 3}
       propertyPath: m_Name
       value: slipDust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945910895372570489, guid: 4b1a962a67a9340d28f25e7523936de0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945910895372570489, guid: 4b1a962a67a9340d28f25e7523936de0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
