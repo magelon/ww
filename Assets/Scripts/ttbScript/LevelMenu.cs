@@ -13,17 +13,15 @@ public class LevelMenu : MonoBehaviour {
 		GameObject listItemg;
 		GameObject mainContainer;
 		List<GameObject> groups;
-		void Start () {
+		void Start (){
                  
 				GameManager.getInstance ().init();
 				GameData.getInstance ().resetData();
-
 				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
-
 				initView ();
 				mainContainer = GameObject.Find ("mainContainer");
 				groups = new List<GameObject>();
-				foreach (Transform group_ in mainContainer.transform) {
+				foreach (Transform group_ in mainContainer.transform){
 						groups.Add (group_.gameObject);
 				}
 		}
@@ -44,8 +42,6 @@ public class LevelMenu : MonoBehaviour {
 		/// </summary>
 		/// <param name="force">Force.</param>
 		public void swipePage(float force){
-
-
 				if (Mathf.Abs(force) < 1f) {//user not do a quick swipe
 						if (groups [page].transform.position.x < Screen.width / 4) {
 								if (page >= 0 && page < pages) {
