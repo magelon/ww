@@ -19,9 +19,7 @@ public class MainScript : MonoBehaviour {
 		public Text txtCoin;
         public Text txtLevel;
         public GameObject GachaGroup;
-
         private int clevel=0;
-
     public Text textM;
     public Slider energySlider;
     public PanelDisplayTip pdt;
