@@ -23,6 +23,7 @@ public class MainScript : MonoBehaviour {
     public Text textM;
     public Slider energySlider;
     public PanelDisplayTip pdt;
+	public StaminaSystem ss;
 
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
@@ -36,7 +37,7 @@ public class MainScript : MonoBehaviour {
         }
 
 				initData ();
-				initView ();
+				initView ();	
         //rv = GetComponent<rewardVideo>();
        // inter = GetComponent<InterstitialAdScript>();
         StartCoroutine("waitAsecond");
@@ -374,13 +375,24 @@ public class MainScript : MonoBehaviour {
 				case "btnRewind":
 
 				case "btnRestart":
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                        //Application.LoadLevel(Application.loadedLevelName);
+						Debug.Log("retry");
+                        if(ss.UseStamina(20)){
+						
+					 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+						}else{
+							Debug.Log("not enough staminas");
+						}
 						GameManager.getInstance ().playSfx ("click");
 						break;
 				case "btnRetry":
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                GameManager.getInstance ().playSfx ("click");
+					Debug.Log("retry");
+					if(ss.UseStamina(20)){
+						
+					 	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+					}else{
+						Debug.Log("not enough staminas");
+					}
+                	GameManager.getInstance ().playSfx ("click");
 						break;
 				case "btnContinue":
 						if(GameData.getInstance().cLevel < GameData.totalLevel-1){
@@ -514,7 +526,12 @@ public class MainScript : MonoBehaviour {
 						fadeIn ("MainMenu");
 						break;
 				case "btnRetry":
-						fadeIn (SceneManager.GetActiveScene ().name);
+						Debug.Log("retry");
+                        if(ss.UseStamina(20)){
+					 		fadeIn (SceneManager.GetActiveScene ().name);
+						}else{
+							Debug.Log("not enough staminas");
+						}
 						break;
 				case "btnNext":
                         nextLevel();

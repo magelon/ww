@@ -6,15 +6,18 @@ using UnityEngine.UI;
 ////using DG.Tweening;
 using UnityEngine.SceneManagement;
 
+//generate levels button use stamina when click level
+
 public class LevelMenu : MonoBehaviour {
 
     // Use this for initialization
         public levelSystem ls;
+		//stamina system
+		public StaminaSystem ss;
 		GameObject listItemg;
 		GameObject mainContainer;
 		List<GameObject> groups;
 		void Start (){
-                 
 				GameManager.getInstance ().init();
 				GameData.getInstance ().resetData();
 				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
@@ -142,7 +145,6 @@ public class LevelMenu : MonoBehaviour {
             //tgroup.transform.parent = levelButton.transform.parent.gameObject.transform.parent;
         }
 
-
         for (int i = 0; i < GameData.totalLevel; i++) {
 						GameObject tbtn = Instantiate (levelButton, Vector3.zero, Quaternion.identity) as GameObject;
 
@@ -153,7 +155,6 @@ public class LevelMenu : MonoBehaviour {
 						tbtn.SetActive (true);
 
             tbtn.transform.localScale = new Vector3(1, 1, 1);
-
 
             //level name
             //need find way to set int in playerPrefs
@@ -175,13 +176,11 @@ public class LevelMenu : MonoBehaviour {
 								}
 						}
 
-
                         //check item is locked or not
 
 						if (i >= GameData.getInstance ().levelPassed && i > 0) {
 
 								ttext.enabled = false;
-
 
 						} else {
 
@@ -193,10 +192,8 @@ public class LevelMenu : MonoBehaviour {
 
 				}
 
-
 				GameObject.Find ("txtScores").GetComponent<Text>().text = Localization.Instance.GetString("levelScore") + PlayerPrefs.GetInt("totalXp");
-                GameObject.Find ("confirm").GetComponentInChildren<Text> ().text = Localization.Instance.GetString ("btnContinue");
-
+                //GameObject.Find ("confirm").GetComponentInChildren<Text> ().text = Localization.Instance.GetString ("btnContinue");
 
 		}
 
@@ -213,9 +210,7 @@ public class LevelMenu : MonoBehaviour {
 				page = tdotIndex;
 				canmove = false;
 
-
 				ATween.MoveTo(gContainer[0].transform.parent.gameObject, ATween.Hash("ignoretimescale",true,"islocal", true,"x", -gContainer[page].transform.localPosition.x, "time",.3f,"easeType", "easeOutExpo", "oncomplete", "dotclicked","oncompletetarget",this.gameObject));
-
 
 		}	
 
@@ -228,19 +223,18 @@ public class LevelMenu : MonoBehaviour {
 
 		}
 
-
 		public static bool islock = false;
 		/// <summary>
 		/// Clicks the level button.
 		/// </summary>
 		/// <param name="tbtn">Tbtn.</param>
 		void clickLevel(GameObject tbtn){
-				if (!isMoving) {
+
+				if (!isMoving && ss.UseStamina(20)) {
 						GameData.getInstance ().cLevel = int.Parse (tbtn.GetComponentInChildren<Text> ().text) - 1;
 						fadeIn (tbtn.name);
             GameManager.getInstance().playSfx("click");
         }
-
 
 		}
 
@@ -269,13 +263,15 @@ public class LevelMenu : MonoBehaviour {
 						GameData.getInstance().cLevel = GameData.totalLevel;
 				}
 		        if(GameData.getInstance().cLevel == 0)
-        {
-            GameData.getInstance().cLevel = 1;
-        }
+        		{
+            		GameData.getInstance().cLevel = 1;
+        		}
 				string tstr = "level" + GameData.getInstance ().cLevel;
-				fadeIn (tstr);
 
-        GameManager.getInstance().playSfx("click");
+				if(ss.UseStamina(20)){
+					fadeIn (tstr);
+				}
+        		GameManager.getInstance().playSfx("click");
     }
 
 		/// <summary>

@@ -712,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &109598797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11160,6 +11160,7 @@ MonoBehaviour:
   textM: {fileID: 0}
   energySlider: {fileID: 0}
   pdt: {fileID: 0}
+  ss: {fileID: 0}
   panelDisplayTip: {fileID: 0}
   panelAskTip: {fileID: 1000011321318197}
   panelAskSkip: {fileID: 1000010832825357}
