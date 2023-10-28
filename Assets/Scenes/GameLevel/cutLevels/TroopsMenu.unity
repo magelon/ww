@@ -353,6 +353,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27970011}
   m_CullTransparentMesh: 0
+--- !u!1 &28569543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6446907550879427073, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+  m_PrefabInstance: {fileID: 1946835813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &62240562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1264,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306947952}
   m_CullTransparentMesh: 0
+--- !u!1 &308055478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6446907550862814222, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+  m_PrefabInstance: {fileID: 1946835813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &347645359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +2814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 0}
+  m_AnchoredPosition: {x: -130, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &990915236
@@ -4631,6 +4641,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680512213}
   m_CullTransparentMesh: 0
+--- !u!1 &1690560839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6446907550370809498, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+  m_PrefabInstance: {fileID: 1946835813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1694889649 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2931708456900110009, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
@@ -5544,6 +5559,18 @@ PrefabInstance:
       propertyPath: t
       value: 
       objectReference: {fileID: 515008072}
+    - target: {fileID: 6446907551819808276, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: foes.Array.data[6]
+      value: 
+      objectReference: {fileID: 308055478}
+    - target: {fileID: 6446907551819808276, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: foes.Array.data[7]
+      value: 
+      objectReference: {fileID: 28569543}
+    - target: {fileID: 6446907551819808276, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: foes.Array.data[8]
+      value: 
+      objectReference: {fileID: 1690560839}
     - target: {fileID: 6446907551819808279, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: a
       value: 
@@ -11942,6 +11969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpText: {fileID: 1405389959}
   dispalyX: 0
+  gs: {fileID: 0}
 --- !u!114 &114861472473357581
 MonoBehaviour:
   m_ObjectHideFlags: 0
