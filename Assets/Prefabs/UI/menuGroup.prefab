@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Illustrated Book
+  m_Text: Illustrated
 --- !u!1 &666001869
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Barracks
+  m_Text: team
 --- !u!1 &805322236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: main story
+  m_Text: levels
 --- !u!1 &2653045728301843662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1149549720, guid: cb1a9039e9d5b15458ca0c456822e185, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bcff6b0a3380d240a85f91d2c0d449e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2176,7 +2176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: wish
+  m_Text: gacha
 --- !u!1 &2653045729085421330
 GameObject:
   m_ObjectHideFlags: 0

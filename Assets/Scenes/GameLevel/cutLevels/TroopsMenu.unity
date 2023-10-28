@@ -5772,8 +5772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264.9, y: -145.6}
-  m_SizeDelta: {x: 268.56, y: 250.22}
+  m_AnchoredPosition: {x: -260, y: -130}
+  m_SizeDelta: {x: 630.7258, y: 683.0568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978946613
 MonoBehaviour:
@@ -5860,7 +5860,7 @@ PrefabInstance:
     - target: {fileID: 2653045728416639815, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1149549720, guid: cb1a9039e9d5b15458ca0c456822e185, type: 3}
+      objectReference: {fileID: 21300000, guid: 0bcff6b0a3380d240a85f91d2c0d449e, type: 3}
     - target: {fileID: 2653045728633467208, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_Name
       value: menuGroup
