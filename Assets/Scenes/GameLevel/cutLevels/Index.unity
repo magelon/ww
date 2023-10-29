@@ -10444,6 +10444,7 @@ MonoBehaviour:
   textM: {fileID: 0}
   energySlider: {fileID: 0}
   pdt: {fileID: 0}
+  ss: {fileID: 0}
   panelDisplayTip: {fileID: 0}
   panelAskTip: {fileID: 1000011321318197}
   panelAskSkip: {fileID: 1000010832825357}
@@ -14093,6 +14094,18 @@ PrefabInstance:
     - target: {fileID: 3198672748093280288, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198672748093280288, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198672748093280288, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198672748093280288, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3198672748093280288, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: m_LocalPosition.x

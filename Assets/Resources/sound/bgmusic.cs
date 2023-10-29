@@ -8,14 +8,9 @@ public class bgmusic : MonoBehaviour
     //https://opengameart.org/content/drums-of-dawn
     //Copyright/Attribution Notice: 
     //Tomasz Kucza / magory.games
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+//    Main Theme (Overture) | The Grand Score by Alexander Nakarada | https://creatorchords.com/
+// Music promoted by https://www.chosic.com/free-music/all/
+// Attribution 4.0 International (CC BY 4.0)
+// https://creativecommons.org/licenses/by/4.0/
+ 
 }

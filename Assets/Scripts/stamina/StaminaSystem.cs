@@ -36,6 +36,7 @@ public class StaminaSystem : MonoBehaviour
         lastStaminaUpdateTime = DateTime.Now;
         PlayerPrefs.SetString("LastStaminaUpdateTime", lastStaminaUpdateTime.Ticks.ToString());
         PlayerPrefs.SetInt("CurrentStamina", currentStamina);
+        UpdateSlider();
     }
 
     public bool UseStamina(int amount)
@@ -75,7 +76,7 @@ public class StaminaSystem : MonoBehaviour
         UpdateSlider();
     }
 
-     private void UpdateSlider()
+     public void UpdateSlider()
     {
         // Update the slider's value based on current stamina
         sl.value = (float)currentStamina / maxStamina;
