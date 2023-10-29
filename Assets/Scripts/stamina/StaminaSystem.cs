@@ -7,6 +7,7 @@ public class StaminaSystem : MonoBehaviour
     public int maxStamina = 100;
     public int staminaRegenerationRate = 1; // Stamina per minute
     public float timeToRegenerate = 60.0f; // Time to regenerate 1 stamina (in seconds)
+    public Text staminaText; 
 
     private int currentStamina;
     private DateTime lastStaminaUpdateTime;
@@ -20,6 +21,8 @@ public class StaminaSystem : MonoBehaviour
         //Debug.Log(currentStamina);
         //UseStamina(20);
         sl = GetComponent<Slider>();
+
+        UpdateSlider();
 
         long ticks = Convert.ToInt64(PlayerPrefs.GetString("LastStaminaUpdateTime", DateTime.Now.Ticks.ToString()));
         lastStaminaUpdateTime = new DateTime(ticks);
@@ -77,6 +80,11 @@ public class StaminaSystem : MonoBehaviour
     {
         // Update the slider's value based on current stamina
         sl.value = (float)currentStamina / maxStamina;
+         // Update the stamina text (optional)
+        if (staminaText != null)
+        {
+            staminaText.text = "stamina: "+$"{currentStamina} / {maxStamina}";
+        }
     }
 
 }
