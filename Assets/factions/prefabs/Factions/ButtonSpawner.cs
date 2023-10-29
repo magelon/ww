@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//for test 
+//button spawners and energy generate
 public class ButtonSpawner : MonoBehaviour
 {
     public Transform po;
