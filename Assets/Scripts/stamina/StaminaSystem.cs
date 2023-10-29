@@ -22,8 +22,6 @@ public class StaminaSystem : MonoBehaviour
         //UseStamina(20);
         sl = GetComponent<Slider>();
 
-        UpdateSlider();
-
         long ticks = Convert.ToInt64(PlayerPrefs.GetString("LastStaminaUpdateTime", DateTime.Now.Ticks.ToString()));
         lastStaminaUpdateTime = new DateTime(ticks);
 
@@ -74,6 +72,7 @@ public class StaminaSystem : MonoBehaviour
         currentStamina = Mathf.Min(maxStamina, currentStamina + regeneratedStamina);
         PlayerPrefs.SetInt("CurrentStamina", currentStamina);
         sl.value = (float)currentStamina / maxStamina;
+        UpdateSlider();
     }
 
      private void UpdateSlider()
