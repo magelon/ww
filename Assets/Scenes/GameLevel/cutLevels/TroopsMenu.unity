@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemLevelText: {fileID: 266215881}
+  expbar: {fileID: 1405389961}
   level: 0
   experienceRequired: 0
 --- !u!1 &104974751

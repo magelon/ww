@@ -14,4 +14,10 @@ public class ExpBar : MonoBehaviour
         t.text = "Exp: " + xp;
     }
 
+    public void xpUpdate(){
+        xp = PlayerPrefs.GetInt("totalXp");
+        t = GetComponent<Text>();
+        t.text = "Exp: " + xp;
+    }
+
 }

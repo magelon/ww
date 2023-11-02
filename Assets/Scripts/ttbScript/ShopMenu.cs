@@ -222,7 +222,10 @@ public class ShopMenu : MonoBehaviour {
             if (GameData.getInstance().itemLock[i] == 0)
             {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = true;
-				levelupBut.SetActive(false);
+				if(levelupBut!=null){
+					levelupBut.SetActive(false);
+				}
+				
                 if (os)
                 {
                     os.HideImage(i);

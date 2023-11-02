@@ -5,6 +5,7 @@ public class ItemLevelSystem : MonoBehaviour
 {
     private int experience;
     public Text itemLevelText; // Reference to the UI Text component
+    public ExpBar expbar;
     private string itemName;
 
     public int level;        // Current level of the item
@@ -37,6 +38,8 @@ public class ItemLevelSystem : MonoBehaviour
     {
         Debug.LogError("Item not found: " + itemName);
     }
+    
+        expbar.GetComponent<ExpBar>().xpUpdate();
 
     }
 
