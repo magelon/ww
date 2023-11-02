@@ -148,7 +148,7 @@ public class Enime : MonoBehaviour
                 {
                     Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
                     
-                    Debug.Log("win");
+                    //Debug.Log("win");
                     if (gameObject.name.Substring(0, 4) == "base")
                     {
                         // GameData.getInstance().coin += 500;

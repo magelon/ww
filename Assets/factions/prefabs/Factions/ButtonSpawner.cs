@@ -14,28 +14,31 @@ public class ButtonSpawner : MonoBehaviour
     private Image im;
     public Text text;
     public float energyCost;
+    private bool loaded;
 
     private string imgName;
     
     private void Start()
     {
-        Invoke("laterStart", 2f);
+        loaded=false;
+        //Invoke("laterStart", 2f);
         text.text = energyCost*100+"";
     }
 
     void laterStart()
     {
-        
+        if(!loaded){
             im =transform.Find("Image").GetComponent<Image>();
             if (im.sprite)
             {
+                loaded=true;
                 imgName = im.sprite.name;
                 white = Resources.Load<GameObject>("sumPrefabs/" + imgName);
                 energyCost = white.GetComponent<Enime>().energy;
                 text.text = energyCost * 100 + "";
                 poolManager.instance.CreatePool(white, 15);
             }
-        
+        }
     }
 
     void Update()
@@ -45,6 +48,7 @@ public class ButtonSpawner : MonoBehaviour
         {
             im.fillAmount = startTime / spawnTime;
         }
+        laterStart();
 
     }
 

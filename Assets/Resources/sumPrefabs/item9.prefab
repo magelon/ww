@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6773467585653134563}
   - component: {fileID: 6773467585469824556}
   - component: {fileID: 1936332158417894283}
+  - component: {fileID: -8579289562628883946}
   m_Layer: 0
   m_Name: item9
   m_TagString: creature
@@ -386,6 +387,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06093076, y: 0.07016908}
   m_EdgeRadius: 0
+--- !u!114 &-8579289562628883946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773467585653134562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f167704460f43a94b80e7e2e8b5f0bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2723827177172797149
 PrefabInstance:
   m_ObjectHideFlags: 0

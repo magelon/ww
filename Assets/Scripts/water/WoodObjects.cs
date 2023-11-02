@@ -30,7 +30,7 @@ public class FloatingObject : MonoBehaviour
                  RaycastHit2D hit;
                  hit=Physics2D.Raycast(transform.position,transform.TransformDirection(Vector2.down),Mathf.Infinity, waterLayer);
                   if (hit.collider != null){
-                      Debug.Log(hit.collider.name);
+                      //Debug.Log(hit.collider.name);
                      
                   }
                  float distance = Mathf.Abs(hit.point.y - transform.position.y);
