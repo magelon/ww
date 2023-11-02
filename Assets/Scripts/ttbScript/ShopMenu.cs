@@ -116,6 +116,7 @@ public class ShopMenu : MonoBehaviour {
 		}
 
 		public GameObject levelButton;//the level button template instance
+		public GameObject levelupBut;
 		public GameObject dot;//the page dot for turn page
 
 		public int page = 0;//current page
@@ -152,7 +153,7 @@ public class ShopMenu : MonoBehaviour {
 
 				gContainer = new List<GameObject>();
 				gContainer.Add (levelButton.transform.parent.gameObject);
-						levelButton.GetComponent<RectTransform> ().localScale = Vector3.one;
+				levelButton.GetComponent<RectTransform> ().localScale = Vector3.one;
 				Transform container = levelButton.transform.parent;
         //container.transform.localScale = Vector3.one;
 
@@ -221,6 +222,7 @@ public class ShopMenu : MonoBehaviour {
             if (GameData.getInstance().itemLock[i] == 0)
             {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = true;
+				levelupBut.SetActive(false);
                 if (os)
                 {
                     os.HideImage(i);

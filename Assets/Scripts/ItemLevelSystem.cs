@@ -5,75 +5,33 @@ public class ItemLevelSystem : MonoBehaviour
 {
     private int experience;
     public Text itemLevelText; // Reference to the UI Text component
+    private string itemName;
 
-    [System.Serializable]
-    public class ItemLevelData
-    {
-        public string itemName;  // Name of the item
-        public int level;        // Current level of the item
-        public int experienceRequired;   // Experience needed for the item's next level
-    }
-
-    public ItemLevelData[] items;
+    public int level;        // Current level of the item
+    public int experienceRequired;   // Experience needed for the item's next level
 
     void Start()
     {
+        itemName = gameObject.name;
         LoadData();
-        InitializeDefaultItems(); // Initialize default items
-    }
-
-    // Initialize default items from item0 to item9
-    void InitializeDefaultItems()
-    {
-        if (items.Length == 0)
-        {
-            items = new ItemLevelData[10]; // Create an array with 10 slots
-
-            for (int i = 0; i < items.Length; i++)
-            {
-                items[i] = new ItemLevelData
-                {
-                    itemName = "item" + i,
-                    level = 1,  // You can set the default level here
-                    experienceRequired = 100,  // You can set the default experience requirement here
-                };
-            }
-
-            SaveData(); // Save the default items to PlayerPrefs
-        }
     }
 
     public void LevelUp()
     {
-        // Get the item name from the GameObject's name
-    string itemName = gameObject.name;
 
-    // Find the specific item you want to level up based on its name
-    ItemLevelData itemToLevelUp = null;
-
-    foreach (var item in items)
+    if (itemName != null)
     {
-        if (item.itemName == itemName)
+        if (experience >= level*100)
         {
-            itemToLevelUp = item;
-            break;
-        }
-    }
-
-    if (itemToLevelUp != null)
-    {
-        if (experience >= itemToLevelUp.experienceRequired)
-        {
-        itemToLevelUp.level++;
-        experience -= itemToLevelUp.experienceRequired;
-        itemToLevelUp.experienceRequired = CalculateExperienceRequiredForNextLevel(itemToLevelUp);
+            level++;
+            experience -= level*100;
         SaveData();
-        Debug.Log("Level Up! " + itemToLevelUp.itemName + " New Level: " + itemToLevelUp.level);
+        Debug.Log("Level Up! " + itemName + " New Level: " + level);
         }else
         {
-            Debug.LogError("Not enough experience to level up " + itemToLevelUp.itemName);
+            Debug.LogError("Not enough experience to level up " + itemName);
         }
-        UpdateItemLevelText(itemName);
+        UpdateItemLevelText();
     }
     else
     {
@@ -82,22 +40,12 @@ public class ItemLevelSystem : MonoBehaviour
 
     }
 
-    public void UpdateItemLevelText(string itemName)
+    public void UpdateItemLevelText()
     {
-    ItemLevelData itemToUpdate = null;
 
-    foreach (var item in items)
+    if (itemName != null)
     {
-        if (item.itemName == itemName)
-        {
-            itemToUpdate = item;
-            break;
-        }
-    }
-
-    if (itemToUpdate != null)
-    {
-        itemLevelText.text = "Level: " + itemToUpdate.level.ToString();
+        itemLevelText.text = "Level: " + level.ToString();
     }
     else
     {
@@ -105,50 +53,27 @@ public class ItemLevelSystem : MonoBehaviour
     }
     }
 
-
-    private int CalculateExperienceRequiredForNextLevel(ItemLevelData item)
-    {
-        return item.experienceRequired * 2; // Adjust as needed
-    }
-
     private void SaveData()
     {
         PlayerPrefs.SetInt("totalXp", experience);
-
-        foreach (ItemLevelData item in items)
-        {
-            PlayerPrefs.SetInt(GetPlayerPrefsKey(item.itemName, "Level"), item.level);
-            PlayerPrefs.SetInt(GetPlayerPrefsKey(item.itemName, "ExperienceRequired"), item.experienceRequired);
-        }
-
+        PlayerPrefs.SetInt(itemName+"Level",level);
         PlayerPrefs.Save();
     }
 
     private void LoadData()
-    {
-        string itemName = gameObject.name;
-        UpdateItemLevelText(itemName);
+    { 
         if (PlayerPrefs.HasKey("totalXp"))
         {
             experience = PlayerPrefs.GetInt("totalXp");
         }
 
-        foreach (ItemLevelData item in items)
-        {
-            if (PlayerPrefs.HasKey(GetPlayerPrefsKey(item.itemName, "Level")))
-            {
-                item.level = PlayerPrefs.GetInt(GetPlayerPrefsKey(item.itemName, "Level"));
-            }
-
-            if (PlayerPrefs.HasKey(GetPlayerPrefsKey(item.itemName, "ExperienceRequired")))
-            {
-                item.experienceRequired = PlayerPrefs.GetInt(GetPlayerPrefsKey(item.itemName, "ExperienceRequired"));
-            }
+        if(PlayerPrefs.HasKey(itemName+"Level")){
+            itemLevelText.text = "Level: " + PlayerPrefs.GetInt(itemName+"Level").ToString();
+            level=PlayerPrefs.GetInt(itemName+"Level");
+            experienceRequired=100*level;
+        }else{
+            PlayerPrefs.SetInt(itemName+"Level",1);
         }
     }
 
-    private string GetPlayerPrefsKey(string itemName, string dataType)
-    {
-        return itemName + "_" + dataType;
-    }
 }
