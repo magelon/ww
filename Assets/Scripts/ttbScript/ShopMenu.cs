@@ -21,7 +21,7 @@ public class ShopMenu : MonoBehaviour {
                  
 				GameManager.getInstance ().init();
 				GameData.getInstance ().resetData();
-
+				
 				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
                 
 				initView ();
@@ -170,62 +170,32 @@ public class ShopMenu : MonoBehaviour {
             //tgroup.transform.parent = levelButton.transform.parent.gameObject.transform.parent;
         }
 
-
         for (int i = 0; i < GameData.totalItem; i++) {
-						GameObject tbtn = Instantiate (levelButton, Vector3.zero, Quaternion.identity) as GameObject;
+						
+			GameObject tbtn = Instantiate (levelButton, Vector3.zero, Quaternion.identity) as GameObject;
 
-						int tContainerNo = Mathf.FloorToInt (i / perpage);
-                        tbtn.transform.SetParent(gContainer[tContainerNo].transform);
-						//tbtn.transform.parent = gContainer[tContainerNo].transform;
-						//			gContainer[tContainerNo].GetComponent<RectTransform> ().localScale = Vector3.one;
-						tbtn.SetActive (true);
-
+			int tContainerNo = Mathf.FloorToInt (i / perpage);
+            tbtn.transform.SetParent(gContainer[tContainerNo].transform);
+			//tbtn.transform.parent = gContainer[tContainerNo].transform;
+			//			gContainer[tContainerNo].GetComponent<RectTransform> ().localScale = Vector3.one;
+			tbtn.SetActive (true);
             tbtn.transform.localScale = new Vector3(1, 1, 1);
             //put item names
-            tbtn.GetComponentInChildren<Text> ().text = "item"+i;
-						//tbtn.transform.parent.localScale = Vector3.one;
-
-
-
-
-						Text ttext = tbtn.GetComponentInChildren<Text> ();
-
-            /*
-						if (GameData.getInstance ().lvStar.Count > i+1) {
-
-								int starCount = GameData.getInstance ().lvStar [i+1];
-
-
-								if (GameData.getInstance ().lvStar.Count > i+1) {
-										for (int j = 1; j <= starCount; j++) {
-												ttext.transform.parent.Find ("star" + j).GetComponent<Image> ().enabled = true;
-										}
-								}
-						}
-
-
-						if (i >= GameData.getInstance ().levelPassed && i > 0) {
-
-								ttext.enabled = false;
-                
-						} else {
-
-
-								tbtn.name = "level"+(i+1);
-								//tbtn.GetComponent<UnityEngine.UI.Button> ().onClick.AddListener (() => clickLevel (tbtn));
-								ttext.gameObject.transform.parent.Find ("lock").GetComponent<Image> ().enabled = false;
-
-						}**/
+            tbtn.GetComponentInChildren<Text>().text = "item"+i;
+			//tbtn.transform.parent.localScale = Vector3.one;
+			Text ttext = tbtn.GetComponentInChildren<Text> ();
 
             //dispaly item lock condition
             tbtn.name = "item" + i;
+			
             if (GameData.getInstance().itemLock[i] == 0)
             {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = true;
-				if(levelupBut!=null){
-					levelupBut.SetActive(false);
+				if(ttext.gameObject.transform.parent.Find("LvUpButton")!=null){
+					GameObject lvbt=ttext.gameObject.transform.parent.Find("LvUpButton").gameObject;
+					lvbt.SetActive(false);
 				}
-				
+					
                 if (os)
                 {
                     os.HideImage(i);
@@ -240,6 +210,9 @@ public class ShopMenu : MonoBehaviour {
                 ttext.gameObject.transform.parent.Find("Image").
                     GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/item" + i);
                 tbtn.GetComponentInChildren<Text>().text = "";
+				// if(levelupBut!=null){
+				// 	levelupBut.SetActive(true);
+				// }
             }
 
 		}

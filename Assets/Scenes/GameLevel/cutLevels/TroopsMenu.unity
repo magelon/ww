@@ -1266,21 +1266,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266215879}
   m_CullTransparentMesh: 0
---- !u!115 &274711771
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 2
-  m_ExecutionOrder: 0
-  m_ClassName: IAPButton
-  m_Namespace: UnityEngine.Purchasing
-  m_AssemblyName: 
 --- !u!1 &306947952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,7 +2549,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 823873681}
-  - component: {fileID: 823873686}
   - component: {fileID: 823873685}
   - component: {fileID: 823873684}
   - component: {fileID: 823873683}
@@ -2702,18 +2686,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823873680}
   m_CullTransparentMesh: 0
---- !u!114 &823873686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823873680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 274711771}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &845267897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3028,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1012436182}
-  - component: {fileID: 1012436187}
   - component: {fileID: 1012436186}
   - component: {fileID: 1012436185}
   - component: {fileID: 1012436184}
@@ -3194,18 +3165,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012436181}
   m_CullTransparentMesh: 0
---- !u!114 &1012436187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012436181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 274711771}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1052340518 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6446907551819808276, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
@@ -3477,7 +3436,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1210531081}
-  - component: {fileID: 1210531086}
   - component: {fileID: 1210531085}
   - component: {fileID: 1210531084}
   - component: {fileID: 1210531083}
@@ -3615,18 +3573,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210531080}
   m_CullTransparentMesh: 0
---- !u!114 &1210531086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210531080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 274711771}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1252448869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,7 +4043,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414216097}
-  - component: {fileID: 1414216102}
   - component: {fileID: 1414216101}
   - component: {fileID: 1414216100}
   - component: {fileID: 1414216099}
@@ -4235,18 +4180,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414216096}
   m_CullTransparentMesh: 0
---- !u!114 &1414216102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414216096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 274711771}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1416398582
 GameObject:
   m_ObjectHideFlags: 0
