@@ -398,7 +398,7 @@ public class MainScript : MonoBehaviour {
 				case "btnContinue":
 						if(GameData.getInstance().cLevel < GameData.totalLevel-1){
 								GameData.getInstance().cLevel++;
-						}SceneManager.LoadScene("level" + (GameData.getInstance().cLevel + 1));
+						}SceneManager.LoadScene("level " + (GameData.getInstance().cLevel + 1));
 						GameManager.getInstance ().playSfx ("click");
 						break;
 				case "btnAction":
@@ -546,7 +546,7 @@ public class MainScript : MonoBehaviour {
 
         public void nextLevelSkip()
     {
-        fadeIn("level" + (clevel + 1));
+        fadeIn("level " + (clevel + 1));
     }
 
 		public void nextLevel(){
@@ -564,11 +564,11 @@ public class MainScript : MonoBehaviour {
         }
         else if(clevel%9999==0&&intershowed)
         {
-            fadeIn("level" + (clevel + 1));
+            fadeIn("level " + (clevel + 1));
         }
         else
         {
-            fadeIn("level" + (clevel + 1));
+            fadeIn("level " + (clevel + 1));
         }
     }
 

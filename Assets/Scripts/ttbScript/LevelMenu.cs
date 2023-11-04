@@ -184,7 +184,7 @@ public class LevelMenu : MonoBehaviour {
 
 						} else {
 
-								tbtn.name = "level"+(i+1);
+								tbtn.name = "level "+(i+1);
 								tbtn.GetComponent<UnityEngine.UI.Button> ().onClick.AddListener (() => clickLevel (tbtn));
 								ttext.gameObject.transform.parent.Find ("lock").GetComponent<Image> ().enabled = false;
 
