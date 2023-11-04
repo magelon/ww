@@ -207,7 +207,7 @@ public class GameManager{
         for (int i = 0; i <= GameData.totalItem; i++)
         {
             //int value of each item defalut 0
-            int tStar = PlayerPrefs.GetInt("item_" + i.ToString(), 0);
+            int tStar = PlayerPrefs.GetInt("item" + i.ToString(), 0);
             itemLock.Add(tStar);   
         }
                 GameData.getInstance().itemLock = itemLock;
@@ -237,7 +237,7 @@ public class GameManager{
             for (int i = 0; i <= GameData.totalItem; i++)
             {
             //int value of each item defalut 0
-            int tStar = PlayerPrefs.GetInt("item_" + i.ToString(), 0);
+            int tStar = PlayerPrefs.GetInt("item" + i.ToString(), 0);
 
             GameData.getInstance().itemLock.Add(tStar);
             }

@@ -177,7 +177,7 @@ public class ShopMenu : MonoBehaviour {
 			int tContainerNo = Mathf.FloorToInt (i / perpage);
             tbtn.transform.SetParent(gContainer[tContainerNo].transform);
 			//tbtn.transform.parent = gContainer[tContainerNo].transform;
-			//			gContainer[tContainerNo].GetComponent<RectTransform> ().localScale = Vector3.one;
+			//gContainer[tContainerNo].GetComponent<RectTransform> ().localScale = Vector3.one;
 			tbtn.SetActive (true);
             tbtn.transform.localScale = new Vector3(1, 1, 1);
             //put item names
@@ -227,11 +227,7 @@ public class ShopMenu : MonoBehaviour {
 				int tdotIndex = int.Parse(tdot.transform.parent.name.Substring (4, tdot.transform.parent.name.Length - 4));
 				page = tdotIndex;
 				canmove = false;
-
-
 				ATween.MoveTo(gContainer[0].transform.parent.gameObject, ATween.Hash("ignoretimescale",true,"islocal", true,"x", -gContainer[page].transform.localPosition.x, "time",.3f,"easeType", "easeOutExpo", "oncomplete", "dotclicked","oncompletetarget",this.gameObject));
-
-
 		}	
 
 		/// <summary>

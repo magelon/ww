@@ -28,6 +28,7 @@ public class MainScript : MonoBehaviour {
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
         //PlayerPrefs.DeleteAll();
+		
         //gameWin();
         GameData.getInstance().energy = 0.4f;
 

@@ -7,6 +7,7 @@ public class PanelAskSkip : MonoBehaviour {
 
 	// Use this for initialization
 //	dfLabel lb_tipLeft,lb_skipins;
+//gacha button script here
 
 
 		public Transform panel;

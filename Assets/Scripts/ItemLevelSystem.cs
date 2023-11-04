@@ -30,13 +30,13 @@ public class ItemLevelSystem : MonoBehaviour
         Debug.Log("Level Up! " + itemName + " New Level: " + level);
         }else
         {
-            Debug.LogError("Not enough experience to level up " + itemName);
+            Debug.Log("Not enough experience to level up " + itemName);
         }
         UpdateItemLevelText();
     }
     else
     {
-        Debug.LogError("Item not found: " + itemName);
+        Debug.Log("Item not found: " + itemName);
     }
     
         expbar.GetComponent<ExpBar>().xpUpdate();

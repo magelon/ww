@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
-
+//unite or items in team
 public class GachClick : MonoBehaviour
 {
     //a queue of equipted items
