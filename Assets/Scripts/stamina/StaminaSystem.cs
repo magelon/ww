@@ -7,7 +7,7 @@ public class StaminaSystem : MonoBehaviour
     public int maxStamina = 100;
     public int staminaRegenerationRate = 1; // Stamina per minute
     public float timeToRegenerate = 60.0f; // Time to regenerate 1 stamina (in seconds)
-    public Text staminaText; 
+    public Text staminaText;
 
     private int currentStamina;
     private DateTime lastStaminaUpdateTime;
@@ -71,6 +71,7 @@ public class StaminaSystem : MonoBehaviour
 
         // Update current stamina while respecting the maximum limit
         currentStamina = Mathf.Min(maxStamina, currentStamina + regeneratedStamina);
+        currentStamina=PlayerPrefs.GetInt("CurrentStamina");
         PlayerPrefs.SetInt("CurrentStamina", currentStamina);
         sl.value = (float)currentStamina / maxStamina;
         UpdateSlider();

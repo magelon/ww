@@ -1915,6 +1915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ss: {fileID: 1561999597}
+  txtCoin: {fileID: 222473766}
 --- !u!1 &785521473
 GameObject:
   m_ObjectHideFlags: 0

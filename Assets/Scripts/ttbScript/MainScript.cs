@@ -45,8 +45,7 @@ public class MainScript : MonoBehaviour {
 
 		}
 
-    private void Update()
-    {
+    private void Update(){
        
         if (GameData.getInstance(). energy < 1)
         {
@@ -186,7 +185,7 @@ public class MainScript : MonoBehaviour {
                 
     }
 
-		IEnumerator win(){
+	IEnumerator win(){
 				yield return new WaitForSeconds (1);
 
 	
@@ -343,7 +342,7 @@ public class MainScript : MonoBehaviour {
 				StartCoroutine ("fail");
 
 		}
-		IEnumerator fail(){
+	IEnumerator fail(){
 				yield return new WaitForSeconds (1);
 		
 				panelFail.SetActive(true);
@@ -361,7 +360,7 @@ public class MainScript : MonoBehaviour {
 		/// Deal with button actions
 		/// </summary>
 		/// <param name="g">The green component.</param>
-		public void buttonHandler(GameObject g){
+	public void buttonHandler(GameObject g){
 
 				switch(g.name){
 				case "btnMain":
@@ -487,20 +486,21 @@ public class MainScript : MonoBehaviour {
 		/// <summary>
 		/// Loads the main scene.
 		/// </summary>
-		public void loadMainScene(){
+	public void loadMainScene(){
         SceneManager.LoadScene("MainMenu");
                
 		}
 		/// <summary>
 		/// Loads the level scene.
 		/// </summary>
-		public void loadLevelScene(){
+	public void loadLevelScene(){
         SceneManager.LoadScene("LevelMenu");
 		}
-		//--------------------
+	
+	
 
 
-		void disableAll(){
+	void disableAll(){
 				GameObject tipWindow = GameObject.Find("panelHelp");
 				if (tipWindow != null) {
 
@@ -508,7 +508,7 @@ public class MainScript : MonoBehaviour {
 		}
 
 
-		public void OnClick(GameObject g){
+	public void OnClick(GameObject g){
 				switch (g.name) {
 				case "btnBuyCoin":
 						panelBuyCoin.SetActive (true);
@@ -544,12 +544,11 @@ public class MainScript : MonoBehaviour {
                 }
 		}
 
-        public void nextLevelSkip()
-    {
+    public void nextLevelSkip(){
         fadeIn("level " + (clevel + 1));
     }
 
-		public void nextLevel(){
+	public void nextLevel(){
         if (adFree == 1)
         {
             intershowed = true;   
@@ -576,7 +575,7 @@ public class MainScript : MonoBehaviour {
 		/// camera fade out
 		/// </summary>
 		public Image mask;
-		void fadeOut(){
+	void fadeOut(){
 				mask.gameObject.SetActive (true);
 				mask.color = Color.black;
 				ATween.ValueTo (mask.gameObject, ATween.Hash ("ignoretimescale",true,"from", 1, "to", 0, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeOutOver","oncompletetarget",this.gameObject));
@@ -595,11 +594,11 @@ public class MainScript : MonoBehaviour {
 		}
 
 
-		void fadeInOver(string sceneName){
+	void fadeInOver(string sceneName){
 				SceneManager.LoadScene(sceneName);
 		}
 
-		void fadeOutOver(){
+	void fadeOutOver(){
 				mask.gameObject.SetActive (false);
 		}
 
@@ -608,7 +607,7 @@ public class MainScript : MonoBehaviour {
 		/// tween update event
 		/// </summary>
 		/// <param name="value">Value.</param>
-		void OnUpdateTween(float value)
+	void OnUpdateTween(float value)
 		{
 				mask.color = new Color(0,0,0,value);
 		}
