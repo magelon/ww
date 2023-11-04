@@ -134,8 +134,11 @@ public class GachClick : MonoBehaviour
 
                     GameObject removeItem = itemB.Dequeue();
                     //Debug.Log(removeItem.name + "removed");
-                    removeItem.transform.Find("tick").GetComponent<Image>().enabled = false;
-                    equiptedL.Remove(removeItem.name);
+                    if(removeItem){
+                        removeItem.transform.Find("tick").GetComponent<Image>().enabled = false;
+                        equiptedL.Remove(removeItem.name);
+                    }
+                    
 
                     //put item name into queue
                     itemB.Enqueue(g);
