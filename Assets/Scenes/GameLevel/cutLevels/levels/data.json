@@ -4,7 +4,7 @@
         "levelName": "level",
         "items": 
           {
-             "item1": "redhood","wave1":10,
+             "item1": "spr","wave1":10,
              "item2": "yellow","wave2":30,
              "item3": "yellow","wave3":60
           }
@@ -26,7 +26,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "knight","wave2":5,
-            "item3": "yellow","wave3":6
+            "item3": "b_witch","wave3":6
           }
       }
       ,
@@ -36,7 +36,7 @@
           {
             "item1": "yellow","wave1":5,
             "item2": "yellow","wave2":6,
-            "item3": "Rocket","wave3":7
+            "item3": "spr","wave3":7
           }
       }
       ,
