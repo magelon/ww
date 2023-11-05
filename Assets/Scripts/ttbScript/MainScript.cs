@@ -47,6 +47,7 @@ public class MainScript : MonoBehaviour {
 
     private void Update(){
        
+	   	txtCoin.text = PlayerPrefs.GetInt("coin").ToString();
         if (GameData.getInstance(). energy < 1)
         {
            GameData.getInstance(). energy += 0.002f;
@@ -122,20 +123,6 @@ public class MainScript : MonoBehaviour {
 		/// Inits the game view.
 		/// </summary>
 		void initGameView(){
-				//int tnFloor = (int)Random.Range (1, 5);
-				//int tnWall = (int)Random.Range (1, 4);
-				//GameObject tFloor = Resources.Load ("floor" + tnFloor) as GameObject;
-				//GameObject tWall = Resources.Load ("wall" + tnWall) as GameObject;
-				//GameObject tcorner = Resources.Load ("cornerbar") as GameObject;
-				//tFloor = Instantiate(tFloor,new Vector3(0,-2.5f,0),Quaternion.identity) as GameObject;
-				//tWall = Instantiate(tWall,new Vector3(0,.5f,0),Quaternion.identity) as GameObject;
-				//tcorner = Instantiate (tcorner, new Vector3 (0, -2, 0), Quaternion.identity) as GameObject;
-				//if (Camera.main.transform.position.y == 1) {
-						//tFloor.transform.position = new Vector3(0,-1.5f,0);
-						//tWall.transform.position = new Vector3(0,1.5f,0);
-						//tcorner.transform.position = new Vector3(0, -1, 0);
-				//}
-
 				txtCoin.text = GameData.getInstance ().coin.ToString();
 				if (GameData.getInstance ().cLevel >= GameData.totalLevel) {
                  if (GameObject.Find("btnSkip"))

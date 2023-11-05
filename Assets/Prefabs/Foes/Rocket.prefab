@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12604db147ad44b3bf21d5531d3d276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2726998577009670677, guid: 3618cb6e2e7f6e3409eee2ffee40abb5, type: 3}
+  bullet: {fileID: 2726998577009670677, guid: 18328720deb413146b0f6e09bcb37e89, type: 3}
   turret: {fileID: 6773467585274240442}
   face: 1
   creatures: []

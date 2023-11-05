@@ -365,6 +365,7 @@ MonoBehaviour:
   slowDownLength: 2
   alive: 0
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
+  gem: {fileID: 7075065339907908168, guid: f2527d34ec5f8704ab0d88fb50a543cc, type: 3}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 1002505266610503597, guid: 14796d9d93dbf8e469350fb6ad1f8643, type: 3}
   f: 3

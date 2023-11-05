@@ -22,8 +22,8 @@ public class ItemEnhance : MonoBehaviour
        name=RemoveCloneSuffix(name);
        level=PlayerPrefs.GetInt(name+"Level",1);
        Debug.Log(name);
-       ta.damage=(float)atk*level;
-       en.health=hp*level;
+       ta.damage=(float)atk+level;
+       en.health=hp+level;
     }
 
     public static string RemoveCloneSuffix(string input)

@@ -22,10 +22,10 @@ public class ItemLevelSystem : MonoBehaviour
 
     if (itemName != null)
     {
-        if (experience >= level*100)
+        if (experience >= level*1000)
         {
             level++;
-            experience -= level*100;
+            experience -= level*1000;
         SaveData();
         Debug.Log("Level Up! " + itemName + " New Level: " + level);
         }else
@@ -73,7 +73,7 @@ public class ItemLevelSystem : MonoBehaviour
         if(PlayerPrefs.HasKey(itemName+"Level")){
             itemLevelText.text = "Level: " + PlayerPrefs.GetInt(itemName+"Level").ToString();
             level=PlayerPrefs.GetInt(itemName+"Level");
-            experienceRequired=100*level;
+            experienceRequired=1000*level;
         }else{
             PlayerPrefs.SetInt(itemName+"Level",1);
         }

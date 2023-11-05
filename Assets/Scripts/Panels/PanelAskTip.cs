@@ -54,10 +54,6 @@ public class PanelAskTip : MonoBehaviour {
 				panel.transform.Find ("btnCancel").GetComponentInChildren<Text> ().text = Localization.Instance.GetString ("btnCancel");
 		}
 	
-	// Update is called once per frame
-	void Update () {
-				
-	}
 	
 	bool locker;
 		public void OnClick(GameObject g )

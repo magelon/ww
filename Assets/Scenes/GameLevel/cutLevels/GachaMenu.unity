@@ -4016,6 +4016,10 @@ PrefabInstance:
       propertyPath: spinButton
       value: 
       objectReference: {fileID: 797085182}
+    - target: {fileID: 3903741672299789265, guid: 95e065149732fdd49b8818e188b00315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6568409056782039472, guid: 95e065149732fdd49b8818e188b00315, type: 3}
       propertyPath: txtCoin
       value: 

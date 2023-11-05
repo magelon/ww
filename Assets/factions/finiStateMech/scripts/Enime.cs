@@ -23,6 +23,7 @@ public class Enime : MonoBehaviour
     private bool die=false;
 
     public GameObject gost;
+    public GameObject gem;
     public GameObject gostFlip;
     public GameObject gainText;
     private Canvas canvasSp;
@@ -83,6 +84,9 @@ public class Enime : MonoBehaviour
         //qm = player.GetComponent<QuestManager>();
         rb2d = GetComponent<Rigidbody2D>();
         poolManager.instance.CreatePool(gost, 10);
+        if(gem){
+            poolManager.instance.CreatePool(gem, 20);
+        }
         poolManager.instance.CreatePool(gostFlip, 10);
         poolManager.instance.CreatePool(gainText, 10);
 
@@ -123,10 +127,19 @@ public class Enime : MonoBehaviour
                     Debug.Log(e);
                 }
            
+            //call foedrop if not null
 
            if(!die){
             //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
                 die=true;
+                if(gem){
+                    poolManager.instance.ReuseObject(gem, this.gameObject.transform.position, Quaternion.identity);
+                    int co=PlayerPrefs.GetInt("coin");
+                    co++;
+                    Debug.Log(co);
+                    PlayerPrefs.SetInt("coin",co);
+                }
+                
                 if (tank.face)
                 {
                     //flip  x true;
