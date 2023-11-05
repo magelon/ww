@@ -4,7 +4,7 @@
         "levelName": "level",
         "items": 
           {
-             "item1": "yellow","wave1":10,
+             "item1": "redhood","wave1":10,
              "item2": "yellow","wave2":30,
              "item3": "yellow","wave3":60
           }
@@ -16,7 +16,7 @@
           {
              "item1": "yellow","wave1":5,
              "item2": "wolf","wave2":10,
-             "item3": "yellow","wave3":6
+             "item3": "redhood","wave3":6
           }
         
       },
