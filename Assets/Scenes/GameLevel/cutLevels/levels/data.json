@@ -4,9 +4,9 @@
         "levelName": "level",
         "items": 
           {
-             "item1": "spr","wave1":10,
-             "item2": "yellow","wave2":30,
-             "item3": "yellow","wave3":60
+             "item1": "archer","wave1":10,
+             "item2": "toast","wave2":30,
+             "item3": "slim","wave3":60
           }
         
       },
@@ -46,7 +46,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "RangerFoe","wave2":5,
-            "item3": "yellow","wave3":6
+            "item3": "toast","wave3":6
           }
       }
       ,
@@ -56,7 +56,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "shield","wave2":5,
-            "item3": "yellow","wave3":6
+            "item3": "slim","wave3":6
           }
       }
       ,
