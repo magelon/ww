@@ -5,8 +5,8 @@
         "items": 
           {
              "item1": "archer","wave1":10,
-             "item2": "yellow","wave2":30,
-             "item3": "slim","wave3":60
+             "item2": "schoolgirl","wave2":30,
+             "item3": "warrior","wave3":60
           }
         
       },
@@ -75,7 +75,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "swordman","wave2":5,
-            "item3": "yellow","wave3":6
+            "item3": "schoolgirl","wave3":6
           }
       },
       {
@@ -83,7 +83,7 @@
         "items": 
           {
             "item1": "yellow","wave1":4,
-            "item2": "yellow","wave2":5,
+            "item2": "warrior","wave2":5,
             "item3": "horse","wave3":6
           }
       },
