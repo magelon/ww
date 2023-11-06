@@ -394,14 +394,14 @@ public class Enime : MonoBehaviour
         //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         //Invoke("recoveFromFreeze", 1);
         //knockBack(knockBackForce);
-        knockUp(30);
+        knockUp(3);
         health -= dam;
     }
 
     //damage by player
     public void damageByU(int dam)
     {
-        knockUpWard(50);
+        knockUpWard(5);
         health -= dam;
 
     }
@@ -410,7 +410,7 @@ public class Enime : MonoBehaviour
     {
         dazedTime = startDazed;
         //blood split
-        knockUp(30);
+        knockUp(3);
         health -= dam;
     }
 
