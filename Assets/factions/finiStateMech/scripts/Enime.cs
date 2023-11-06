@@ -209,6 +209,64 @@ public class Enime : MonoBehaviour
                 }
             }
 
+             try
+                {
+                    GetComponent<Animator>().SetBool("die", true);
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e);
+                }
+
+            if(!die){
+            //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
+                die=true;
+                if (tank.face)
+                {
+                    //flip  x true;
+                    poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
+
+                }
+                else
+                {
+                
+                    poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
+                }
+
+                GameManager.getInstance().playSfx("died");
+                Invoke("changeLayer", 2f);
+           }
+
+           
+                //this will change by different level manuelly
+                if (f != Factions.yellow)
+                {
+                    Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
+                    
+                    Debug.Log("win");
+                    if (gameObject.name.Substring(0, 4) == "base")
+                    {
+                        // GameData.getInstance().coin += 500;
+                        if(!win){
+                            poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
+                            win=true;
+                            GameData.getInstance().main.gameWin();
+                        }
+                    }
+                    //GameData.getInstance().energy += 0.05f;
+                    //GameData.getInstance().coin += 50;
+                    //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
+                    //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
+                }
+                else
+                {
+                    if (gameObject.name.Substring(0, 4) == "base" && !lose) {
+                        lose=true;
+                        GameData.getInstance().main.gameFailed();
+                    }
+                      
+                }
+
         }
         else
         {
@@ -265,109 +323,6 @@ public class Enime : MonoBehaviour
             speed = 0;
             dazedTime -= Time.deltaTime;
         }
-    }
-
-    private void FixedUpdate()
-    {
-
-        if (rb2d&&(rb2d.velocity.sqrMagnitude > 2))
-        {
-            //smoothness of the slowdown is controlled by the 0.99f, 
-            //0.5f is less smooth, 0.9999f is more smooth
-            rb2d.velocity *= 0.99f;
-        }
-
-        if (GetComponent<Rigidbody>() && (GetComponent<Rigidbody>().velocity.sqrMagnitude > 2))
-        {
-            //smoothness of the slowdown is controlled by the 0.99f, 
-            //0.5f is less smooth, 0.9999f is more smooth
-            GetComponent<Rigidbody>().velocity *= 0.99f;
-        }
-
-
-        if (health <= 0)
-        {
-            //recycle enime
-            //here is a solution for slow down specific objects
-            //speed up or slow down a gameobject with anim speed and movement speed variables
-
-            //knockDie(dieForce);
-            //GetComponent<Rigidbody2D>().AddTorque(2 * Time.fixedDeltaTime * 100f, ForceMode2D.Force);
-            //Destroy(GetComponent<Rigidbody2D>());
-            //Destroy(GetComponent<BoxCollider2D>());
-
-            //this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(gameObject.name+"die");
-           
-                try
-                {
-                    GetComponent<Animator>().SetBool("die", true);
-                }
-                catch (Exception e)
-                {
-                    Debug.Log(e);
-                }
-           
-
-           if(!die){
-            //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
-                die=true;
-                if (tank.face)
-                {
-                    //flip  x true;
-                    poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
-
-                }
-                else
-                {
-                
-                    poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
-                }
-
-                GameManager.getInstance().playSfx("died");
-                Invoke("changeLayer", 2f);
-           }
-                
-               
-
-                //this will change by different level manuelly
-                if (f != Factions.yellow)
-                {
-                    Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    
-                    Debug.Log("win");
-                    if (gameObject.name.Substring(0, 4) == "base")
-                    {
-                        // GameData.getInstance().coin += 500;
-                        if(!win){
-                            poolManager.instance.ReuseObject(gainText, t, Quaternion.identity);
-                            win=true;
-                            GameData.getInstance().main.gameWin();
-                        }
-                    }
-                    //GameData.getInstance().energy += 0.05f;
-                    //GameData.getInstance().coin += 50;
-                    //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
-                    //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
-                }
-                else
-                {
-                    if (gameObject.name.Substring(0, 4) == "base" && !lose) {
-                        lose=true;
-                        GameData.getInstance().main.gameFailed();
-                    }
-                      
-                }
-
-            //slowMotion();
-
-
-        }
-        if (slowOn == false)
-        {
-            //Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
-            //Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
-        }
-
     }
 
     public void slowMotion()
