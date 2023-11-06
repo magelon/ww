@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6cf1f5c57aa4927a1db40ba8d1521e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 7
   energy: 0
   speed: 0
   dazedTime: 0
