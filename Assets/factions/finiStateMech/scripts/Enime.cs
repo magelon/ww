@@ -34,9 +34,7 @@ public class Enime : MonoBehaviour
 
     private TankAI tank;
     private GameObject player;
-    //    private CoinQuest cq;
-    //  private QuestManager qm;
-    //  public RandomLootSystem rls;
+
     private Rigidbody2D rb2d;
 
     public Factions f = Factions.white;
@@ -45,8 +43,6 @@ public class Enime : MonoBehaviour
     private void OnEnable()
     {
         alive = true;
-        //Destroy(GetComponent<Rigidbody>());
-        //Destroy(GetComponent<BoxCollider>());
 
         GetComponent<Animator>().enabled = true;
         //health = 3;
@@ -80,8 +76,7 @@ public class Enime : MonoBehaviour
     {
         tank = GetComponent<TankAI>();
         player = GameObject.FindGameObjectWithTag("Player");
-        //cq =player.GetComponent<CoinQuest>();
-        //qm = player.GetComponent<QuestManager>();
+       
         rb2d = GetComponent<Rigidbody2D>();
         poolManager.instance.CreatePool(gost, 10);
         if(gem){
@@ -103,7 +98,6 @@ public class Enime : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit"))
         {
-            slowMotion();
             slowOn = true;
         }
         if (Input.GetButtonUp("Submit"))
@@ -144,23 +138,19 @@ public class Enime : MonoBehaviour
                 {
                     //flip  x true;
                     poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
-
                 }
                 else
                 {
-                
                     poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
                 }
 
                 GameManager.getInstance().playSfx("died");
                 Invoke("changeLayer", 2f);
                 }
-                
                 //this will change by different level manuelly
                 if (f != Factions.yellow)
                 {
                     Vector3 t = new Vector3(gameObject.transform.position.x + 0.2f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    
                     //Debug.Log("win");
                     if (gameObject.name.Substring(0, 4) == "base")
                     {
@@ -171,10 +161,6 @@ public class Enime : MonoBehaviour
                             GameData.getInstance().main.gameWin();
                         }
                     }
-                    //GameData.getInstance().energy += 0.05f;
-                    //GameData.getInstance().coin += 50;
-                    //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
-                    //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
                 }
                 else
                 {
@@ -192,12 +178,7 @@ public class Enime : MonoBehaviour
             alive = false;
             //Debug.Log("died");
             this.gameObject.layer = LayerMask.NameToLayer("dead");
-            //killing quest
-            //rls.loot();
-            //when it died remove 2d rigdbody and 2d colidder add 3d rig and collider let is fell in to water
-            //Destroy(this.gameObject);
-
-            //instan gost
+           
             this.gameObject.GetComponent<TankAI>().StopRange();
             this.gameObject.GetComponent<TankAI>().StopFiring();
 
@@ -208,7 +189,6 @@ public class Enime : MonoBehaviour
                     foeSpawner.SetActive(false);
                 }
             }
-
              try
                 {
                     GetComponent<Animator>().SetBool("die", true);
@@ -217,25 +197,6 @@ public class Enime : MonoBehaviour
                 {
                     Debug.Log(e);
                 }
-
-            if(!die){
-            //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
-                die=true;
-                if (tank.face)
-                {
-                    //flip  x true;
-                    poolManager.instance.ReuseObject(gostFlip, this.gameObject.transform.position, Quaternion.identity);
-
-                }
-                else
-                {
-                
-                    poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
-                }
-
-                GameManager.getInstance().playSfx("died");
-                Invoke("changeLayer", 2f);
-           }
 
            
                 //this will change by different level manuelly
@@ -253,10 +214,6 @@ public class Enime : MonoBehaviour
                             GameData.getInstance().main.gameWin();
                         }
                     }
-                    //GameData.getInstance().energy += 0.05f;
-                    //GameData.getInstance().coin += 50;
-                    //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
-                    //GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
                 }
                 else
                 {
@@ -264,9 +221,7 @@ public class Enime : MonoBehaviour
                         lose=true;
                         GameData.getInstance().main.gameFailed();
                     }
-                      
                 }
-
         }
         else
         {
@@ -325,30 +280,9 @@ public class Enime : MonoBehaviour
         }
     }
 
-    public void slowMotion()
-    {
-
-       // There is no need to hack "Time.fixedDeltaTime".Instead select "Interpolate" in Rigidbody.
-//====================
-//Good to mention. In your case changing "Time.fixedDeltaTime" will lead to inaccurate physics calculation, as long as internaly engine sees increase Physics frame rate.
-//Why "inaccurate": physics engine is not perfect and results will always be different with different "Physics frame rate" values.
-//====================
-//For quick test DO:
-//1. Remove Line #17 in TimeManager.cs (t.e. Time.fixedDeltaTime = Time.timeScale * .02f;)
-//2. Every Cube's rigidbody should have "Interpolate" field set to "Interpolate"﻿
-
-
-        Time.timeScale = slowDownFactor;
-        
-        //Time.fixedDeltaTime = Time.timeScale * 0.02f;
-    }
     //damage by other creatures
     public void damage(int dam) {
         dazedTime = startDazed;
-        //blood split
-        //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        //Invoke("recoveFromFreeze", 1);
-        //knockBack(knockBackForce);
         knockUp(3);
         health -= dam;
     }
@@ -358,7 +292,6 @@ public class Enime : MonoBehaviour
     {
         knockUpWard(5);
         health -= dam;
-
     }
 
     public void damageHeavy(int dam)

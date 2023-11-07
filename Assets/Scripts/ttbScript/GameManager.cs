@@ -215,7 +215,7 @@ public class GameManager{
 				GameData.getInstance().isSoundOn = (int)PlayerPrefs.GetInt("sound",0);
 				GameData.getInstance().isSfxOn = (int)PlayerPrefs.GetInt("sfx",0);
 				Debug.Log("soundstate:"+GameData.getInstance().isSoundOn+"sfxstate:"+GameData.getInstance().isSfxOn);
-				initGameCenter();
+				//initGameCenter();
 		}
 		public bool noToggleSound = false;
 		/// <summary>

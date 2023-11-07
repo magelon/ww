@@ -29,59 +29,11 @@ public class musicScript : MonoBehaviour {
 		}
 	}
 
-
-
-
 	void OnApplicationPause(bool pauseStatus)
 	{ 
-//		Application.LoadLevel (Application.loadedLevelName);
-
-
-//		if(!pauseStatus){
-//			if(GameData.back2main % 3 == 0){
-//				GameManager.getInstance ().showInterestitial ();
-//				GameData.back2main++;
-//			}
-//
-//		}
 
 
 	}
-
-
-
-    /*
-void Update () {
-    if (Input.GetKeyDown (KeyCode.Escape)) {
-        Time.timeScale = 1;
-        //			GameData.getInstance().init();
-        //Debug.Log(Application.loadedLevelName);
-        if (SceneManager.GetActiveScene().name.Substring(0, 5) == "level"){
-            SceneManager.LoadScene("LevelMenu");
-        }else if (SceneManager.GetActiveScene().name == "LevelMenu")
-        {
-            SceneManager.LoadScene("MainMenu");
-        }else if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-
-        }
-
-        if (Application.loadedLevelName.Substring(0,5) == "level") {
-
-            Application.LoadLevel ("LevelMenu");
-        } else if(Application.loadedLevelName == "LevelMenu" ){
-
-            Application.LoadLevel ("MainMenu");
-        }else if(Application.loadedLevelName == "MainMenu"){
-
-
-        }
-       
-
-
-        }
-	}
-    **/
 
 	public AudioSource PlayAudioClip(AudioClip clip,bool isloop = false)
 	{
@@ -104,20 +56,12 @@ void Update () {
 						//tExist = true;
 						source.Play();
 						return source;
-						break;
 					}
 				}
 			}
 		}
 
 		source = (AudioSource)gameObject.AddComponent<AudioSource>();
-
-
-		//		if (!tExist) {
-		//			source = (AudioSource)gameObject.AddComponent<AudioSource>();
-		//		}
-
-
 
 		source.clip = clip;source.minDistance = 1.0f;source.maxDistance = 50;source.rolloffMode = AudioRolloffMode.Linear;
 		source.transform.position = transform.position;

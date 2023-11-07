@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PanelAskSkip : MonoBehaviour {
 
-	// Use this for initialization
-//	dfLabel lb_tipLeft,lb_skipins;
+// Use this for initialization
+//dfLabel lb_tipLeft,lb_skipins;
 //gacha button script here
 
 
@@ -113,7 +113,10 @@ public class PanelAskSkip : MonoBehaviour {
                         //gacha animation
                         if (gachaButtonX)
                         {
+                            if(gachaButtonX.GetComponent<Animator>()){
                             gachaButtonX.GetComponent<Animator>().SetTrigger("spin");
+                            }
+                            
                             GameManager.getInstance().playSfx("win");
                             //get result from it
                             Invoke("dispalySpinResultX", 1f);
