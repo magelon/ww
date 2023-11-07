@@ -25,13 +25,11 @@ public class TankAI : MonoBehaviour
     
     public Transform pivot;
     
-
     private void OnEnable()
     {
         distance = 999999;
         StopFiring();
         StopRange();
-        
     }
 
     public GameObject GetPlayer() {
@@ -181,7 +179,6 @@ public class TankAI : MonoBehaviour
     }
     private void Update()
     {
-       
         // anim.SetFloat("distance", Vector2.Distance(transform.position, player.transform.position));
         if (re)
         {
@@ -191,10 +188,6 @@ public class TankAI : MonoBehaviour
         {
             anim.SetFloat("distance", 999999);
         }
-        //faction 
-        /*
-       
-        **/
     }
 
     public void Flip()

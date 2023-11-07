@@ -15,17 +15,14 @@ public class NPCBase : StateMachineBehaviour
     {
         NPC = animator.gameObject;
         speed = NPC.GetComponent<Enime>().speed;
-
         //opponent = NPC.GetComponent<TankAI>().GetPlayer();
         opponent = NPC.GetComponent<TankAI>().GetClosest();
         pivot = NPC.GetComponent<TankAI>().pivot;
-
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-            opponent = NPC.GetComponent<TankAI>().GetClosest();
-
+        opponent = NPC.GetComponent<TankAI>().GetClosest();
     }
 
 }

@@ -20,7 +20,6 @@ public class Patrol : NPCBase
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        
         //start patrol from 0 position
         currentWP = 0;
     }
@@ -59,12 +58,7 @@ public class Patrol : NPCBase
             }
             NPC.transform.Translate(Vector2.left * Time.deltaTime * speed);
         }
-        //rotate towards target
-        //var direction = wayP[currentWP].transform.position - NPC.transform.position;
-        //NPC.transform.rotation = Quaternion.Slerp(NPC.transform.rotation,
-        //Quaternion.LookRotation(direction),
-        //rotSpeed * Time.deltaTime);
-
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
