@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatHeight: 1.2
-  liftForce: 20
+  liftForce: 12.8
   damping: 0.5
   waterLayer:
     serializedVersion: 2

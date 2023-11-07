@@ -74,6 +74,7 @@ public class Enime : MonoBehaviour
 
     private void Start()
     {
+        speed = 0.1f;
         tank = GetComponent<TankAI>();
         player = GameObject.FindGameObjectWithTag("Player");
        
@@ -256,21 +257,21 @@ public class Enime : MonoBehaviour
         {
             if (gameObject.name.Substring(4, 1) == "3"|| (gameObject.name.Length >= 5&&gameObject.name.Substring(0,5) =="horse"))
             {
-                speed = 0.4f;
+                speed = 0.2f;
             } else if (gameObject.name.Substring(4, 1) == "4"|| (gameObject.name.Length>=6 && gameObject.name.Substring(0, 6) == "shield"))
-            {
-                speed = 0.1f;
-            }
-            else if(gameObject.name.Substring(0, 5) == "Drago"|| gameObject.name.Substring(4, 1) == "6")//because the shortest is only 5 long it will error
-            {
-                speed = 0.03f;
-            }else if (gameObject.name.Substring(4, 1) == "9" ||
-                   (gameObject.name.Length > 7 && gameObject.name.Substring(0, 7) == "wizardK"))
             {
                 speed = 0.05f;
             }
+            else if(gameObject.name.Substring(0, 5) == "Drago"|| gameObject.name.Substring(4, 1) == "6")//because the shortest is only 5 long it will error
+            {
+                speed = 0.1f;
+            }else if (gameObject.name.Substring(4, 1) == "9" ||
+                   (gameObject.name.Length > 7 && gameObject.name.Substring(0, 7) == "wizardK"))
+            {
+                speed = 0.1f;
+            }
             else { 
-            speed = 0.2f;
+            speed = 0.1f;
             }
         }
         else
