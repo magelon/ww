@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6773467585653134563}
   - component: {fileID: 6773467585469824556}
   - component: {fileID: 1936332158417894283}
+  - component: {fileID: -6155421019676676437}
   - component: {fileID: 3684470611096900009}
   m_Layer: 0
   m_Name: item0
@@ -281,6 +282,7 @@ MonoBehaviour:
   slowDownLength: 2
   alive: 0
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
+  gem: {fileID: 0}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 1002505266610503597, guid: 14796d9d93dbf8e469350fb6ad1f8643, type: 3}
   f: 1
@@ -386,6 +388,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06093076, y: 0.14420255}
   m_EdgeRadius: 0
+--- !u!114 &-6155421019676676437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773467585653134562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!114 &3684470611096900009
 MonoBehaviour:
   m_ObjectHideFlags: 0

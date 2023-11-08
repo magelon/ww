@@ -17,7 +17,6 @@ public class ItemEnhance : MonoBehaviour
        ta=GetComponent<TankAI>();
        atk=(int)ta.damage;
        hp=en.health;
-      
        name=gameObject.name;
        name=RemoveCloneSuffix(name);
        level=PlayerPrefs.GetInt(name+"Level",1);
@@ -30,7 +29,6 @@ public class ItemEnhance : MonoBehaviour
     {
         // Check if the input string contains "(Clone)"
         int cloneIndex = input.IndexOf("(Clone)");
-
         if (cloneIndex != -1)
         {
             // Remove "(Clone)" and any leading/trailing spaces
