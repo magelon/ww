@@ -17,12 +17,12 @@
       "itemsName": "item1",
       "attributes": 
         {
-           "hp": 6,
+           "hp": 3,
            "atk": 1,
            "mess": 1,
            "speed": 0.1,
-           "energy":0.2,
-           "force":5
+           "energy":0.3,
+           "force":30
         }
       
     },
@@ -30,15 +30,120 @@
       "itemsName": "item2",
       "attributes": 
         {
-           "hp": 6,
+           "hp": 3,
            "atk": 1,
            "mess": 1,
            "speed": 0.1,
-           "energy":0.2,
-           "force":5
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item3",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item4",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item5",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item6",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item7",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item8",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item9",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "item10",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
         }
       
     }
+    
   ]
 }
 
