@@ -9930,7 +9930,9 @@ MonoBehaviour:
   spawnTime: 1
   startTime: 0
   text: {fileID: 1180208623}
-  energyCost: 0.2
+  energyCost: 0
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!1 &854657895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10802,7 +10804,9 @@ MonoBehaviour:
   spawnTime: 1
   startTime: 0
   text: {fileID: 411186832}
-  energyCost: 0.2
+  energyCost: 0
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!114 &1238064429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11873,7 +11877,9 @@ MonoBehaviour:
   spawnTime: 1
   startTime: 0
   text: {fileID: 1259840973}
-  energyCost: 0.2
+  energyCost: 0
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!114 &1670595268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20131,6 +20137,7 @@ MonoBehaviour:
   slowDownLength: 2
   alive: 1
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
+  gem: {fileID: 0}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
@@ -20247,6 +20254,7 @@ MonoBehaviour:
   slowDownLength: 2
   alive: 1
   gost: {fileID: 7836417174641805552, guid: 93d0c66abe417464abaa7cc6a6e584a9, type: 3}
+  gem: {fileID: 0}
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3

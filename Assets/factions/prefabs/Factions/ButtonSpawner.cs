@@ -3,6 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class Attributes
+{
+    public int hp;
+    public int atk;
+    public int mess;
+    public float speed;
+    public float energy;
+    public int force;
+}
+
+[System.Serializable]
+public class Item
+{
+    public string itemsName;
+    public Attributes attributes;
+}
+
+[System.Serializable]
+public class ItemsData
+{
+    public List<Item> items;
+}
+
 //button spawners and energy generate
 public class ButtonSpawner : MonoBehaviour
 {
@@ -16,27 +40,42 @@ public class ButtonSpawner : MonoBehaviour
     public float energyCost;
     private bool loaded;
 
+    public TextAsset jsonFile;
+
     private string imgName;
+
+    public List<Item> loadedItems;
     
     private void Start()
     {
         loaded=false;
         //Invoke("laterStart", 2f);
-        text.text = energyCost*100+"";
+        //text.text = energyCost*100+"";
     }
 
     void laterStart()
     {
         if(!loaded){
             im =transform.Find("Image").GetComponent<Image>();
-            if (im.sprite)
+            if (im.sprite && jsonFile != null)
             {
                 loaded=true;
+                
+                string jsonText = jsonFile.text;
+                ItemsData itemsData = JsonUtility.FromJson<ItemsData>(jsonText);
+
                 imgName = im.sprite.name;
-                white = Resources.Load<GameObject>("sumPrefabs/" + imgName);
-                energyCost = white.GetComponent<Enime>().energy;
-                text.text = energyCost * 100 + "";
-                poolManager.instance.CreatePool(white, 15);
+                loadedItems = itemsData.items;
+                Item item = loadedItems.Find(i => i.itemsName == imgName);
+                Debug.Log(imgName);
+
+                if(item!=null){
+                    energyCost = item.attributes.energy;
+                    text.text = energyCost * 100 + "";
+                    white = Resources.Load<GameObject>("sumPrefabs/" + imgName);
+                    poolManager.instance.CreatePool(white, 15);
+                }
+                
             }
         }
     }
@@ -49,7 +88,6 @@ public class ButtonSpawner : MonoBehaviour
             im.fillAmount = startTime / spawnTime;
         }
         laterStart();
-
     }
 
     public void spawn()

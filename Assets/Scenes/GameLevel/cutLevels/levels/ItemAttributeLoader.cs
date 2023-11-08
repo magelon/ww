@@ -2,30 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Attributes
-{
-    public int hp;
-    public int atk;
-    public int mess;
-    public float speed;
-    public int energy;
-    public int force;
-}
-
-[System.Serializable]
-public class Item
-{
-    public string itemName;
-    public Attributes attributes;
-}
-
-[System.Serializable]
-public class ItemsData
-{
-    public List<Item> items;
-}
-
 public class ItemAttributeLoader : MonoBehaviour
 {
     public TextAsset jsonFile; // Reference to your JSON file
@@ -34,19 +10,18 @@ public class ItemAttributeLoader : MonoBehaviour
     private Enime en;
     private TankAI ta;
 
-    void Start()
+    void Awake()
     {
-       
-
         if (jsonFile != null)
         {
             string jsonText = jsonFile.text;
             ItemsData itemsData = JsonUtility.FromJson<ItemsData>(jsonText);
             loadedItems = itemsData.items;
 
-             // Find the item with the same name as the GameObject
+            // Find the item with the same name as the GameObject
             string objectName = gameObject.name;
-            Item item = loadedItems.Find(i => i.itemName == objectName);
+            string dataName=RemoveCloneSuffix(objectName);
+            Item item = loadedItems.Find(i => i.itemsName == dataName);
 
             if (item != null)
             {
@@ -64,14 +39,31 @@ public class ItemAttributeLoader : MonoBehaviour
         }
     }
 
+    public static string RemoveCloneSuffix(string input)
+    {
+        // Check if the input string contains "(Clone)"
+        int cloneIndex = input.IndexOf("(Clone)");
+        if (cloneIndex != -1)
+        {
+            // Remove "(Clone)" and any leading/trailing spaces
+            string result = input.Substring(0, cloneIndex).Trim();
+            return result;
+        }
+        else
+        {
+            // Return the original string if "(Clone)" is not found
+            return input;
+        }
+    }
+
     private void ApplyAttributesToGameObject(Attributes attributes)
     {
         en=GetComponent<Enime>();
         ta=GetComponent<TankAI>();
         ta.damage=attributes.atk;
         en.health=attributes.hp;
-        en.energy=(float)attributes.energy;
-        en.speed=(float)attributes.speed;
+        en.energy=attributes.energy;
+        en.speed=attributes.speed;
         en.knockBackForce=(float)attributes.force;
     }
 }

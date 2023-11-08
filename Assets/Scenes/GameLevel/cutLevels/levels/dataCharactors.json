@@ -4,12 +4,12 @@
       "itemsName": "item0",
       "attributes": 
         {
-           "hp": 6,
+           "hp": 3,
            "atk": 1,
            "mess": 1,
            "speed": 0.1,
-           "energy":20,
-           "force":5
+           "energy":0.3,
+           "force":30
         }
       
     },
@@ -21,7 +21,7 @@
            "atk": 1,
            "mess": 1,
            "speed": 0.1,
-           "energy":20,
+           "energy":0.2,
            "force":5
         }
       
@@ -34,7 +34,7 @@
            "atk": 1,
            "mess": 1,
            "speed": 0.1,
-           "energy":20,
+           "energy":0.2,
            "force":5
         }
       
