@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6773467585653134563}
   - component: {fileID: 6773467585469824556}
   - component: {fileID: 1936332158417894283}
+  - component: {fileID: 7073247864764803556}
   m_Layer: 0
   m_Name: wizardKing
   m_TagString: creature
@@ -387,6 +388,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06093076, y: 0.07016908}
   m_EdgeRadius: 0
+--- !u!114 &7073247864764803556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773467585653134562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!1001 &2723827177172797149
 PrefabInstance:
   m_ObjectHideFlags: 0

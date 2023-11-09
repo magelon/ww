@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 4752136799062228167}
   - component: {fileID: 8983416556221602874}
   - component: {fileID: 5099792463154934481}
+  - component: {fileID: 4669478830524574514}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: creature
@@ -386,6 +387,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06290354, y: 0.07727159}
   m_EdgeRadius: 0
+--- !u!114 &4669478830524574514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983416556221602875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  loadedItems: []
 --- !u!1001 &1095574359790052220
 PrefabInstance:
   m_ObjectHideFlags: 0

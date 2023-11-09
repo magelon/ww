@@ -142,6 +142,266 @@
            "force":30
         }
       
+    },
+    {
+      "itemsName": "yellow",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "wolf",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "wizardKing",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "warrior",
+      "attributes": 
+        {
+           "hp": 6,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.2,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "toast",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "swordman",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "spr",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "soldier",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "slim",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "shield",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "schoolgirl",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "Rocket",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "redhood",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "RangerFoe",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "knight",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "horse",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "fknight",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "Dragon",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "b_witch",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
+    },
+    {
+      "itemsName": "archer",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30
+        }
+      
     }
     
   ]
