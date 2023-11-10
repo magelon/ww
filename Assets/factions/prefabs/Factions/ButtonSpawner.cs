@@ -73,6 +73,7 @@ public class ButtonSpawner : MonoBehaviour
                     energyCost = item.attributes.energy;
                     text.text = energyCost * 100 + "";
                     white = Resources.Load<GameObject>("sumPrefabs/" + imgName);
+                    white.GetComponent<Enime>().f=Factions.yellow;
                     poolManager.instance.CreatePool(white, 15);
                 }
                 

@@ -37,7 +37,7 @@ public class Enime : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
-    public Factions f = Factions.white;
+    public Factions f;
 
     //on enable dont have enough time to up date a lot of component add in update function
     private void OnEnable()
@@ -74,6 +74,10 @@ public class Enime : MonoBehaviour
 
     private void Start()
     {
+        if(f==null){
+            f = Factions.white;
+        }
+        
         if(speed==0){
             speed = 0.1f;
         }
