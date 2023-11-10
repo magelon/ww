@@ -133,7 +133,7 @@ public class Enime : MonoBehaviour
            if(!die){
             //Instantiate(gost, this.gameObject.transform.position, Quaternion.identity);
                 die=true;
-                if(gem){
+                if(gem && f != Factions.yellow){
                     poolManager.instance.ReuseObject(gem, this.gameObject.transform.position, Quaternion.identity);
                     int co=PlayerPrefs.GetInt("coin");
                     co++;
