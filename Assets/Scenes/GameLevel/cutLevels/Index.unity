@@ -5305,6 +5305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7beb4900a3fc141bf0dc06a78ee2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jsonFile: {fileID: 0}
   os: {fileID: 2123336069}
   levelButton: {fileID: 83342543}
   levelupBut: {fileID: 0}
@@ -14151,6 +14152,10 @@ PrefabInstance:
     - target: {fileID: 3198672748093280295, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: m_Name
       value: AutoPlayAnimations
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198672748093280295, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6446907550476881710, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: a
