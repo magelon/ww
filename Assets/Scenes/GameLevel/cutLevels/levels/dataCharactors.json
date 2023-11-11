@@ -1,149 +1,6 @@
 {
   "items": [
     {
-      "itemsName": "item0",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item1",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item2",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item3",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item4",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item5",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item6",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item7",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item8",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item9",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "item10",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
       "itemsName": "yellow",
       "attributes": 
         {
@@ -152,7 +9,9 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":3,
+           "art":"lon"
         }
       
     },
@@ -165,7 +24,9 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":3,
+           "art":"lon"
         }
       
     },
@@ -178,12 +39,14 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"lon"
         }
       
     },
     {
-      "itemsName": "warrior",
+      "itemsName": "Dragon",
       "attributes": 
         {
            "hp": 6,
@@ -191,150 +54,9 @@
            "mess": 1,
            "speed": 0.2,
            "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "toast",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "swordman",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "spr",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "soldier",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "slim",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "shield",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "schoolgirl",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "Rocket",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "redhood",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "RangerFoe",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
-        }
-      
-    },
-    {
-      "itemsName": "knight",
-      "attributes": 
-        {
-           "hp": 3,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"lon"
         }
       
     },
@@ -347,7 +69,174 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "swordman",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "knight",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "soldier",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "RangerFoe",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "shield",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "Rocket",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "schoolgirl",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"ShatteredReality"
+        }
+      
+    },
+    {
+      "itemsName": "redhood",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"Legnops"
+        }
+      
+    },
+    {
+      "itemsName": "slim",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"rvros"
+        }
+      
+    },
+    {
+      "itemsName": "spr",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"oco"
+        }
+      
+    },
+    {
+      "itemsName": "toast",
+      "attributes": 
+        {
+           "hp": 3,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":30,
+           "rate":5,
+           "art":"Penusbmic"
         }
       
     },
@@ -360,12 +249,14 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"aamatniekss"
         }
       
     },
     {
-      "itemsName": "Dragon",
+      "itemsName": "warrior",
       "attributes": 
         {
            "hp": 3,
@@ -373,7 +264,9 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"clembod"
         }
       
     },
@@ -386,7 +279,9 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"9eo"
         }
       
     },
@@ -399,7 +294,9 @@
            "mess": 1,
            "speed": 0.1,
            "energy":0.3,
-           "force":30
+           "force":30,
+           "rate":5,
+           "art":"oco"
         }
       
     }

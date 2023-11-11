@@ -12,6 +12,7 @@ public class Attributes
     public float speed;
     public float energy;
     public int force;
+    public int rate;
 }
 
 [System.Serializable]
@@ -73,7 +74,7 @@ public class ButtonSpawner : MonoBehaviour
                     energyCost = item.attributes.energy;
                     text.text = energyCost * 100 + "";
                     //white = Resources.Load<GameObject>("sumPrefabs/" + imgName);
-                    white = Resources.Load<GameObject>("leftPrefabs/" + "slim");
+                    white = Resources.Load<GameObject>("leftPrefabs/" + imgName);
                     white.GetComponent<Enime>().f=Factions.yellow;
                     poolManager.instance.CreatePool(white, 15);
                 }

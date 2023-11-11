@@ -14,15 +14,53 @@ public class ShopMenu : MonoBehaviour {
 		GameObject mainContainer;
 		List<GameObject> groups;
         AttributeInfor ai;
+		public TextAsset jsonFile;
+    	private List<Item2> loadedItems;
+		private List<Item2> simplifiedItemList;
 
         public OrderShow os;
 
 		void Start () {
                  
-				GameManager.getInstance ().init();
-				GameData.getInstance ().resetData();
+			GameManager.getInstance ().init();
+			GameData.getInstance ().resetData();
 				
-				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
+			Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
+
+			if(jsonFile != null){
+
+            string jsonText = jsonFile.text;
+            ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
+            loadedItems = itemsData.items;
+           
+            simplifiedItemList = new List<Item2>();
+            
+            //Extract only itemsName and rate
+            foreach (Item2 item in loadedItems)
+            	{
+                	Item2 item2gacha = new Item2
+                	{
+                    	itemsName = item.itemsName,
+                    	attributes = new Attributes2
+                    	{
+							rate = item.attributes.rate,
+							hp = item.attributes.hp,
+							atk = item.attributes.atk,
+							mess = item.attributes.mess,
+							speed = item.attributes.speed,
+							energy = item.attributes.energy,
+							force = item.attributes.force,
+							art = item.attributes.art
+                    	}
+                	};
+                simplifiedItemList.Add(item2gacha);
+            	}
+
+        	}
+        	else
+        	{
+            	Debug.LogError("No JSON file assigned.");
+        	}
                 
 				initView ();
 				mainContainer = GameObject.Find ("mainContainer");
@@ -140,7 +178,7 @@ public class ShopMenu : MonoBehaviour {
         pageDots = new List<GameObject> ();
 
 				pages = Mathf.FloorToInt (GameData.totalItem / perpage);
-                Debug.Log(pages);
+                //Debug.Log(pages);
 				for (int i = 0; i < pages; i++) {
 						GameObject tdot = Instantiate (dot, dot.transform.parent) as GameObject;
 						tdot.SetActive (true);
@@ -181,14 +219,16 @@ public class ShopMenu : MonoBehaviour {
 			tbtn.SetActive (true);
             tbtn.transform.localScale = new Vector3(1, 1, 1);
             //put item names
-            tbtn.GetComponentInChildren<Text>().text = "item"+i;
+            tbtn.GetComponentInChildren<Text>().text = simplifiedItemList[i].itemsName;
 			//tbtn.transform.parent.localScale = Vector3.one;
 			Text ttext = tbtn.GetComponentInChildren<Text> ();
 
             //dispaly item lock condition
-            tbtn.name = "item" + i;
+            tbtn.name = simplifiedItemList[i].itemsName;
+
 			
-            if (GameData.getInstance().itemLock[i] == 0)
+
+            if (!PlayerPrefs.HasKey(simplifiedItemList[i].itemsName))
             {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = true;
 				if(ttext.gameObject.transform.parent.Find("LvUpButton")!=null){
@@ -200,19 +240,18 @@ public class ShopMenu : MonoBehaviour {
                 {
                     os.HideImage(i);
                 }
+				
                
             }
             else
             {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = false;
                 ttext.gameObject.transform.parent.Find("Image").
-                    GetComponent<Image>().enabled = true;
+                GetComponent<Image>().enabled = true;
                 ttext.gameObject.transform.parent.Find("Image").
-                    GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/item" + i);
+                GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + simplifiedItemList[i].itemsName);
                 tbtn.GetComponentInChildren<Text>().text = "";
-				// if(levelupBut!=null){
-				// 	levelupBut.SetActive(true);
-				// }
+				
             }
 
 		}

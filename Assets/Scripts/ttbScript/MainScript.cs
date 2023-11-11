@@ -13,13 +13,12 @@ public class MainScript : MonoBehaviour {
     //private rewardVideo rv;//rewardVideo rv;
     private GameObject inter;// InterstitialAdScript inter;
     private bool intershowed;
-    private int adFree=0;
 		//data
-		public int timeCount = 0;
-		public Text txtCoin;
-        public Text txtLevel;
-        public GameObject GachaGroup;
-        private int clevel=0;
+	public int timeCount = 0;
+	public Text txtCoin;
+    public Text txtLevel;
+    public GameObject GachaGroup;
+    private int clevel=0;
     public Text textM;
     public Slider energySlider;
     public PanelDisplayTip pdt;
@@ -32,15 +31,10 @@ public class MainScript : MonoBehaviour {
         //gameWin();
         GameData.getInstance().energy = 0.4f;
 
-        if (PlayerPrefs.GetInt("adFree",0)!=0)
-        {
-            adFree = PlayerPrefs.GetInt("adFree");
-        }
-
-				initData ();
-				initView ();	
+		initData ();
+		initView ();	
         //rv = GetComponent<rewardVideo>();
-       // inter = GetComponent<InterstitialAdScript>();
+        // inter = GetComponent<InterstitialAdScript>();
         StartCoroutine("waitAsecond");
 
 		}
@@ -159,7 +153,6 @@ public class MainScript : MonoBehaviour {
 
 		}
         
-
 		public GameObject panelWin;
 
 		public void gameWin(bool directWin = false){
@@ -229,10 +222,6 @@ public class MainScript : MonoBehaviour {
 						nStar = 0;
 				}
 
-
-
-
-
 				for(int i = 1;i<=3;i++){
 						GameObject tstar = GameObject.Find("star"+i);
 						if(i <= nStar){
@@ -272,33 +261,25 @@ public class MainScript : MonoBehaviour {
 						PlayerPrefs.SetInt ("levelScore_"+GameData.getInstance ().cLevel, tScore);
 						print (tScore+"tallscore "+GameData.getInstance().cLevel);
 						//save to GameData instantlly
-						//			print(GameData.getInstance().lvStar.Count+"    "+GameData.getInstance().cLevel);
+						//print(GameData.getInstance().lvStar.Count+"    "+GameData.getInstance().cLevel);
 						if(GameData.getInstance().lvStar.Count != 0){
 								GameData.getInstance().lvStar[GameData.getInstance ().cLevel] = nStar;
-								//			print ("save new score"+cLvScore+"_"+timeCount);
-
-
+								//print ("save new score"+cLvScore+"_"+timeCount);
 								//submitscore
 								int tallScore = 0;
 								for(int i = 0;i<GameData.totalLevel;i++){
 										int tlvScore = PlayerPrefs.GetInt("levelScore_"+i.ToString(),0);
 										tallScore += tlvScore;
-
 								}
-
 								GameData.getInstance().bestScore = tallScore;
 								GameManager.getInstance().submitGameCenter();
-
 						}
-
 						//check star
 						int cLvStar = PlayerPrefs.GetInt ("levelStar_"+GameData.getInstance ().cLevel, 0);
-						//		print ("getstar"+cLvStar+"   "+nStar);
+						//print ("getstar"+cLvStar+"   "+nStar);
 						if (cLvStar < nStar) {
-
 								PlayerPrefs.SetInt ("levelStar_"+GameData.getInstance ().cLevel, nStar);
 								for (int i = 1; i<=nStar; i++) {
-
 								}
 						}
 
@@ -347,7 +328,7 @@ public class MainScript : MonoBehaviour {
 		/// Deal with button actions
 		/// </summary>
 		/// <param name="g">The green component.</param>
-	public void buttonHandler(GameObject g){
+		public void buttonHandler(GameObject g){
 
 				switch(g.name){
 				case "btnMain":
@@ -536,10 +517,7 @@ public class MainScript : MonoBehaviour {
     }
 
 	public void nextLevel(){
-        if (adFree == 1)
-        {
-            intershowed = true;   
-        }
+       
         if (clevel % 9999 == 0&&!intershowed)
         {
             //inter.showAd();

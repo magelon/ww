@@ -4012,6 +4012,10 @@ PrefabInstance:
       propertyPath: xpText
       value: 
       objectReference: {fileID: 1405389959}
+    - target: {fileID: 3233388822890872199, guid: 95e065149732fdd49b8818e188b00315, type: 3}
+      propertyPath: jsonFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
     - target: {fileID: 3790291049710302455, guid: 95e065149732fdd49b8818e188b00315, type: 3}
       propertyPath: spinButton
       value: 

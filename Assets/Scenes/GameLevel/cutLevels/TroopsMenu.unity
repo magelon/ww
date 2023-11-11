@@ -473,6 +473,7 @@ RectTransform:
   - {fileID: 658082187}
   - {fileID: 1884661348}
   - {fileID: 1416398583}
+  - {fileID: 1956339682}
   - {fileID: 1978946612}
   - {fileID: 990915237}
   - {fileID: 603792349}
@@ -609,6 +610,14 @@ MonoBehaviour:
   expbar: {fileID: 1405389961}
   level: 0
   experienceRequired: 0
+  name: {fileID: 515008072}
+  health: {fileID: 150897011}
+  atk: {fileID: 741721833}
+  energy: {fileID: 812414739}
+  speed: {fileID: 1131938621}
+  rate: {fileID: 1062077319}
+  art: {fileID: 1694889649}
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
 --- !u!1 &104974751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,8 +4345,36 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 224000012943711917}
+    m_TransformParent: {fileID: 83342544}
     m_Modifications:
+    - target: {fileID: 2931708456900110011, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: art
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708457543309685, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708458109919388, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: name
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708458137076140, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: energy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708458470841384, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: rate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708458737799943, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: akt
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931708458798288919, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
+      propertyPath: m_Name
+      value: health
+      objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4392,15 +4429,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4408,7 +4445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8
+      value: -228
       objectReference: {fileID: 0}
     - target: {fileID: 3164990737614502619, guid: bc3b679c7b605464cb040febdcd8c94b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5381,6 +5418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutoPlayAnimations
       objectReference: {fileID: 0}
+    - target: {fileID: 3198672748093280295, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6446907550476881710, guid: 0f0f1aea035923243a7c7743fb211cd1, type: 3}
       propertyPath: a
       value: 
@@ -5812,6 +5853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7beb4900a3fc141bf0dc06a78ee2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   os: {fileID: 1052340518}
   levelButton: {fileID: 83342543}
   levelupBut: {fileID: 990915236}
@@ -14336,7 +14378,6 @@ RectTransform:
   - {fileID: 224000010348819397}
   - {fileID: 224000010069349303}
   - {fileID: 224000011865498579}
-  - {fileID: 1956339682}
   m_Father: {fileID: 1967147949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

@@ -23,7 +23,7 @@ public class GachClick : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         //PlayerPrefs.SetInt("coin", 10000);
         equiptedL = new List<string>();
-         itemB = new Queue<GameObject>();
+        itemB = new Queue<GameObject>();
         //removeItem = new GameObject();
 
         /*
@@ -86,7 +86,7 @@ public class GachClick : MonoBehaviour
                     equiptedL.Add(PlayerPrefs.GetString("currentEquip" + i));
                     //init view
                     buttonGroup[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/"
-                     + PlayerPrefs.GetString("currentEquip" + i));
+                    + PlayerPrefs.GetString("currentEquip" + i));
 
                     itemB.Enqueue(GameObject.Find(PlayerPrefs.GetString("currentEquip" + i)));
                 }

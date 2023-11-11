@@ -6,22 +6,16 @@ public class PanelAskTip : MonoBehaviour {
 	
 	// Use this for initialization
 
-
 	public Transform panel;
 		public GameObject panelNotEnough;
 		public GameObject panelDisplayTip;
 		public GameObject panelBuyCoin;
 	void Start () {
-				
-
-		
+					
 	}
 	
 	public void showMe(){
 				initView ();
-			
-
-
 				if (GameData.getInstance ().coin >= 20 ) {
 						
 						panelNotEnough.SetActive (false);
@@ -38,9 +32,9 @@ public class PanelAskTip : MonoBehaviour {
 				} else {
 
 						panelNotEnough.SetActive (true);
-//						GameObject panelNotEnough_ = panelNotEnough.transform.Find ("panel").gameObject;
+						//GameObject panelNotEnough_ = panelNotEnough.transform.Find ("panel").gameObject;
 						panelNotEnough.GetComponent<PanelNotEnough> ().showMe ();
-//						ATween.MoveTo (panelNotEnough_, ATween.Hash ("ignoretimescale",true,"islocal", true, "y", 40, "time", 1f, "easeType", "easeOutExpo", "oncomplete", "OnShowCompleted", "oncompletetarget", this.gameObject));
+						//ATween.MoveTo (panelNotEnough_, ATween.Hash ("ignoretimescale",true,"islocal", true, "y", 40, "time", 1f, "easeType", "easeOutExpo", "oncomplete", "OnShowCompleted", "oncompletetarget", this.gameObject));
 						gameObject.SetActive (false);
 
 				}
