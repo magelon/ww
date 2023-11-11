@@ -30,7 +30,7 @@ public class GameData  {
     //config how many level there are for level menu usage
 		public static int totalLevel = 18;//total levels
     //config for items
-        public static int totalItem = 20;
+        public static int totalItem = 19;
 
     public static int totalBanner = 2;
 
