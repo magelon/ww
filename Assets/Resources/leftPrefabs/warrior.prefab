@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8983416556221602874}
   - component: {fileID: 4678116030857110267}
   - component: {fileID: 1676439220767613524}
+  - component: {fileID: -1752365037089814876}
   m_Layer: 0
   m_Name: warrior
   m_TagString: creature
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ab1ba43c6f1d781469ddcf9d6b8f373e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -401,6 +402,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   loadedItems: []
+--- !u!114 &-1752365037089814876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983416556221602875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f167704460f43a94b80e7e2e8b5f0bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1095574359790052220
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 6773467585469824556}
   - component: {fileID: 1936332158417894283}
   - component: {fileID: -8174529715760579438}
+  - component: {fileID: 1582084203762742780}
   m_Layer: 0
   m_Name: swordman
   m_TagString: creature
@@ -113,7 +114,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0bd09dcdad056a24994125cf8f4d9d0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -316,6 +317,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   loadedItems: []
+--- !u!114 &1582084203762742780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773467585653134562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f167704460f43a94b80e7e2e8b5f0bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6071340512158658193
 PrefabInstance:
   m_ObjectHideFlags: 0

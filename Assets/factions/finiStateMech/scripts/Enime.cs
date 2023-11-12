@@ -34,6 +34,7 @@ public class Enime : MonoBehaviour
 
     private TankAI tank;
     private GameObject player;
+    private int storeHP;
 
     private Rigidbody2D rb2d;
 
@@ -47,33 +48,14 @@ public class Enime : MonoBehaviour
         GetComponent<Animator>().enabled = true;
         //health = 3;
         this.gameObject.layer = LayerMask.NameToLayer("Default");
-        if (gameObject.name.Substring(0, 4) == "base")
-        {
-            health += 7;
-        }
-        //Debug.Log(gameObject.name.Substring(4, 1));
-        else if (gameObject.name.Substring(4, 1) == "2")
-        {
-            health += 2;
-        }
-        else if (gameObject.name.Substring(4, 1) == "4"|| gameObject.name.Substring(0, 4) == "shie")
-        {
-            health += 10;
-        }
-        else if (gameObject.name.Substring(0, 5) == "Drago" || gameObject.name.Substring(4, 1) == "6")
-        {
-            health += 50;
-        } else if ((gameObject.name.Length>7&&gameObject.name.Substring(0,7)=="wizardK")|| gameObject.name.Substring(4, 1) == "9") {
-            health += 50;
-        }
-        else
-        {
-            health = 3;
-        }
+        
     }
 
     private void Start()
     {
+
+        storeHP=health;
+        Debug.Log(storeHP);
         if(f==null){
             f = Factions.white;
         }
@@ -97,8 +79,8 @@ public class Enime : MonoBehaviour
 
     private void changeLayer()
     {
-        this.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         GetComponent<Animator>().enabled = false;
+        health=storeHP;
     }
 
     private void Update()
@@ -152,7 +134,7 @@ public class Enime : MonoBehaviour
                 }
 
                 GameManager.getInstance().playSfx("died");
-                Invoke("changeLayer", 2f);
+                
                 }
                 //this will change by different level manuelly
                 if (f != Factions.yellow)
@@ -180,12 +162,18 @@ public class Enime : MonoBehaviour
 
         }
 
+        if(health>=1){
+            this.gameObject.layer = LayerMask.NameToLayer("Default");
+        }
+
         if (health <= 0)
         {
             alive = false;
-            //Debug.Log("died");
-            this.gameObject.layer = LayerMask.NameToLayer("dead");
            
+            Invoke("changeLayer", 2f);
+
+            this.gameObject.layer = LayerMask.NameToLayer("dead");
+            
             this.gameObject.GetComponent<TankAI>().StopRange();
             this.gameObject.GetComponent<TankAI>().StopFiring();
 

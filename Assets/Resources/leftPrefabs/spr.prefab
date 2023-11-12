@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8983416556221602874}
   - component: {fileID: 4678116030857110267}
   - component: {fileID: 7606709009986297830}
+  - component: {fileID: -229752960809474231}
   m_Layer: 0
   m_Name: spr
   m_TagString: creature
@@ -149,8 +150,8 @@ Transform:
   m_GameObject: {fileID: 8983416556221602875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0166, y: 0.213, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.0166, y: 0.2292, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8938421843611826595}
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1478627891, guid: 8b9cf03a9b78d854bb00cb35a4bbe087, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -401,6 +402,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   loadedItems: []
+--- !u!114 &-229752960809474231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983416556221602875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f167704460f43a94b80e7e2e8b5f0bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1095574359790052220
 PrefabInstance:
   m_ObjectHideFlags: 0

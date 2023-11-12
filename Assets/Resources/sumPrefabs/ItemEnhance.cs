@@ -22,7 +22,9 @@ public class ItemEnhance : MonoBehaviour
        level=PlayerPrefs.GetInt(name+"Level",1);
        Debug.Log(name);
        //ta.damage=(float)atk+level;
-       en.health=hp*level;
+       if(en.f== Factions.yellow){
+           en.health=hp*level;
+        }
     }
 
     public static string RemoveCloneSuffix(string input)

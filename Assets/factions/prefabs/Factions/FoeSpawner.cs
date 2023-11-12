@@ -15,6 +15,7 @@ public class FoeSpawner : MonoBehaviour
 
     public void spawn()
     {
+        yellow.layer = LayerMask.NameToLayer("Default");
         poolManager.instance.ReuseObject(yellow, new Vector3 (po.position.x,po.position.y,0), Quaternion.identity);
     }
 
