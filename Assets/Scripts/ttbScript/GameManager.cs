@@ -134,8 +134,6 @@ public class GameManager{
 												string clipname = (tas.clip.name);
 												if(clipname == musicName){
 														tas.Stop();
-
-
 														musicName = "";
 														if(sfxdic.ContainsKey(clipname)){
 																sfxdic[clipname] = 0;

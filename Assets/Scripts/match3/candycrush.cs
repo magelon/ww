@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //Tile need a collider box 2d enable to respone to raycast
 //tiles must great than 5 has glitch during only test 3 tiles
 //laterly fixed by double the pool size of bank objects
@@ -16,9 +17,11 @@ public class Tile
     }
 }
 
+
 public class candycrush : MonoBehaviour
 {
     public int score=0;
+    
     //public Text scoreT;
     //2 tiles for swaping
     GameObject tile1 = null;
@@ -91,6 +94,7 @@ public class candycrush : MonoBehaviour
         InvokeRepeating("CheckGrid", 0.5f,0.5f);
 
     }
+
     //initiallize function
     //break the order, randomize the tileBank
     void ShuffleList()
@@ -239,7 +243,7 @@ public class candycrush : MonoBehaviour
     //dispare animation
     IEnumerator DispareAnimation(GameObject tileObj,int duration,int c,int i,int r)
     {
-        GameManager.getInstance().playSfx("crunch");
+        GetComponent<AudioSource>().Play();
         //new a same type tile and make it smaller as dispare animation
         Vector2 tt = tileObj.transform.position;
         string type = ExtractPrefix(tileObj);
@@ -419,6 +423,7 @@ public class candycrush : MonoBehaviour
                                 GameObject tmp = tiles[c - i, columStartR].tileObj;
 
                                 tiles[c - i, columStartR].tileObj.SetActive(false);
+                               
                                 //play disapare animation
                                 //pass in c ,i,r
 
@@ -449,6 +454,7 @@ public class candycrush : MonoBehaviour
                                 GameObject tmp = tiles[rowStartC, r - i].tileObj;
 
                                 tiles[rowStartC, r - i].tileObj.SetActive(false);
+                                
                                 //play disapare animation
                                 //pass in c ,i,r
 
