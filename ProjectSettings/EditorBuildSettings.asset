@@ -8,85 +8,85 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/startScene.unity
     guid: 3fe0e01d61b5b0f478bda7666552fb23
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/DailyBonus.unity
     guid: f21c572a2e4c6f149bcf2cc10b163a4e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/GachaMenu.unity
     guid: 5fd3ad90bc070f240b934f0d3db75e19
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/Index.unity
     guid: 402b81d568c7b694b92021bc4d82178e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level.unity
     guid: 000511f7e867642e2851cfae6571b6d6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 1.unity
     guid: e7a5b383a5f936e4a924da90a276cf62
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 2.unity
     guid: 2a293ada7e64a6c4eaa14fb2b68a18fe
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 3.unity
     guid: beeffeae386583842b76b3217801bd2c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 4.unity
     guid: e12a37049ce501b4dbe25f7ce1d96a18
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 5.unity
     guid: 7a0e78f7efd3dad4e85ea3ff1d625945
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 6.unity
     guid: 3e37c18143180b84695f160910e5bd42
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 7.unity
     guid: 7d8d644c522bf2440bdd5ff479e8476f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 8.unity
     guid: 7b44bd611b84a4443870102e20ed5a99
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 9.unity
     guid: eccfab4540cb6954fbbb5353f5abb638
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 10.unity
     guid: 96abbe2c3faca1a49b78ff47973728d2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 11.unity
     guid: 9710ecaad20b91e4b849331b2a5c6a8e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 12.unity
     guid: d71c4d2867fe3574e85dcb32faf43a77
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 13.unity
     guid: df821537500871f44a82c61121010125
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 14.unity
     guid: 9710ec898cd4983439d89bff95b5b9b8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 15.unity
     guid: a0422bd9c3c64484fa263add6289d1d4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 16.unity
     guid: f388e14257a2e5341b8708240c981376
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 17.unity
     guid: 3d11d516612da794aae4d8845536a573
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 18.unity
     guid: 6ca6326efe0844642a049bd9478d2617
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/level999.unity
     guid: 19ae24e2744ff42fd97a9d6cc8df0f42
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/LevelMenu.unity
     guid: 790e05a65a9db8e448eeb11351588dd2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/Lobby.unity
     guid: 2b18f1b1baebb46a388a20e551289dc7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/MainMenu.unity
     guid: 8862579d30cfb3840b21e701464c9a96
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/TroopsMenu.unity
     guid: c0fc8262c89b9224d97b54c4fed54733
   - enabled: 1
