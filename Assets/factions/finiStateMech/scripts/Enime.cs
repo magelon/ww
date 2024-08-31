@@ -119,7 +119,7 @@ public class Enime : MonoBehaviour
                     poolManager.instance.ReuseObject(gem, this.gameObject.transform.position, Quaternion.identity);
                     int co=PlayerPrefs.GetInt("coin");
                     co++;
-                    Debug.Log(co);
+                    //Debug.Log(co);
                     PlayerPrefs.SetInt("coin",co);
                 }
                 
