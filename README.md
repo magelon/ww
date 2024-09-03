@@ -8,3 +8,4 @@ step1 draw anime
 3 substitute animations
 4 add single picture in to (Resources/sumPrefabs/itemImgs)
 5 finally add charactor data into data charactores json keep single img charactor prefabs the same name
+6 gamedata total item +1
