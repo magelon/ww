@@ -197,7 +197,7 @@ public class ShopMenu : MonoBehaviour {
         //container.transform.localScale = Vector3.one;
 
         int n0 = 0;
-        for (int i = perpage; i < GameData.totalItem; i += perpage)
+        for (int i = perpage; i < simplifiedItemList.Count; i += perpage)
         {
 
             GameObject tgroup = Instantiate(levelButton.transform.parent.gameObject, levelButton.transform.parent.parent) as GameObject;
@@ -209,7 +209,7 @@ public class ShopMenu : MonoBehaviour {
             //tgroup.transform.parent = levelButton.transform.parent.gameObject.transform.parent;
         }
 
-        for (int i = 0; i < GameData.totalItem; i++) {
+        for (int i = 0; i < simplifiedItemList.Count; i++) {
 						
 			GameObject tbtn = Instantiate (levelButton, Vector3.zero, Quaternion.identity) as GameObject;
 
@@ -314,10 +314,10 @@ public class ShopMenu : MonoBehaviour {
 
 				int tLastLevel = GameData.getInstance ().levelPassed;
 
-				if (tLastLevel < GameData.totalItem) {
+				if (tLastLevel < simplifiedItemList.Count) {
 						GameData.getInstance ().cLevel = tLastLevel;
 				} else {
-						GameData.getInstance().cLevel = GameData.totalItem;
+						GameData.getInstance().cLevel = simplifiedItemList.Count;
 				}
 		        if(GameData.getInstance().cLevel == 0)
         {
