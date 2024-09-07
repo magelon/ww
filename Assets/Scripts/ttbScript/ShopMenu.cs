@@ -22,10 +22,7 @@ public class ShopMenu : MonoBehaviour {
 
 		void Start () {
                  
-			GameManager.getInstance ().init();
-			GameData.getInstance ().resetData();
-				
-			Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
+			
 
 			if(jsonFile != null){
 
@@ -62,6 +59,10 @@ public class ShopMenu : MonoBehaviour {
             	Debug.LogError("No JSON file assigned.");
         	}
                 
+			GameManager.getInstance ().init();
+			GameData.getInstance ().resetData();
+				
+			Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
 				initView ();
 				mainContainer = GameObject.Find ("mainContainer");
 				groups = new List<GameObject>();
@@ -177,7 +178,7 @@ public class ShopMenu : MonoBehaviour {
 
         pageDots = new List<GameObject> ();
 
-				pages = Mathf.FloorToInt (GameData.totalItem / perpage);
+				pages = Mathf.FloorToInt (simplifiedItemList.Count / perpage);
                 //Debug.Log(pages);
 				for (int i = 0; i < pages; i++) {
 						GameObject tdot = Instantiate (dot, dot.transform.parent) as GameObject;

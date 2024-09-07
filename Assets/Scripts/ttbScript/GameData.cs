@@ -66,7 +66,6 @@ public class GameData  {
 
 		public bool cLvShowedTip = false;
 
-
 		public void resetData(){
 
 				islock = false;
