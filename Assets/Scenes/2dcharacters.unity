@@ -651,6 +651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mrider
       objectReference: {fileID: 0}
+    - target: {fileID: 2002544643608821267, guid: 3d42dc6f1114e9948baf32e61945c3a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8926426375198429313, guid: 3d42dc6f1114e9948baf32e61945c3a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.453
@@ -750,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8460507978952949380, guid: aef8856b510a6284ab6b1543e5fba36b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
