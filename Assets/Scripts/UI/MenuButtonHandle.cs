@@ -73,10 +73,26 @@ public class MenuButtonHandle : MonoBehaviour
     {
         loadingImg.SetActive(true);
         AsyncOperation operation = SceneManager.LoadSceneAsync(s);
+        operation.allowSceneActivation = false; // Prevent auto scene activation
+
+         float loadingTime = 0f;
+
+        // Loop until the operation is done or 2 seconds have passed
         while (!operation.isDone)
         {
+            // Increment the loading timer
+            loadingTime += Time.deltaTime;
+
+            // Calculate progress (0.9f is the threshold before the scene is activated)
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
             sl.value = progress;
+
+            // Ensure a minimum of 2 seconds before allowing scene activation
+            if (operation.progress >= 0.9f && loadingTime >= 2f)
+            {
+                operation.allowSceneActivation = true; // Activate the scene
+            }
+
             yield return null;
         }
     }
