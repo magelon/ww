@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/matchThree.unity
     guid: fbe4bcd6cd1a325459cdc55ed519594e
+  - enabled: 1
+    path: Assets/Scenes/GameLevel/cutLevels/Inventory.unity
+    guid: bdebde4e0d2670f41b688d6413dc24e3
   m_configObjects: {}

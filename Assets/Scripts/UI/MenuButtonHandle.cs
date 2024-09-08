@@ -33,6 +33,11 @@ public class MenuButtonHandle : MonoBehaviour
                 GameManager.getInstance().playSfx("click");
                 ChangeScene("LevelMenu");
                 break;
+            case "InventoryButton":
+                Time.timeScale = 1;
+                GameManager.getInstance().playSfx("click");
+                ChangeScene("Inventory");
+                break;    
             case "TroopsIndexButton":
                 Time.timeScale = 1;
                 GameManager.getInstance().playSfx("click");
