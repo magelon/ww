@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 8983416556221602874}
   - component: {fileID: 4678116030857110267}
   - component: {fileID: 4744397073268892172}
+  - component: {fileID: -180872379921772069}
+  - component: {fileID: 4284212641837762235}
   m_Layer: 0
   m_Name: yellow
   m_TagString: creature
@@ -414,6 +416,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   loadedItems: []
+--- !u!114 &-180872379921772069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983416556221602875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405663e3e0d6d574789157751442dd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 1389720291444541607, guid: 602348702b1e14d48b5f6f2f5dd16f99, type: 3}
+--- !u!114 &4284212641837762235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983416556221602875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5a87434d7f4f4499bc94e84dfad7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: []
 --- !u!1001 &1095574359790052220
 PrefabInstance:
   m_ObjectHideFlags: 0

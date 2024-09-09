@@ -11,7 +11,7 @@ public class InventoryUI : MonoBehaviour
 void Start(){
     //PlayerPrefs.DeleteAll();
     inventory.LoadInventory();
-    inventory.AddItem("banana");
+    //inventory.AddItem("banana");
     UpdateUI();
 }
 

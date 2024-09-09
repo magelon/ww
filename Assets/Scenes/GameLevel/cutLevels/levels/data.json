@@ -4,9 +4,9 @@
         "levelName": "level",
         "items": 
           {
-             "item1": "nero","wave1":10,
-             "item2": "schoolgirl","wave2":30,
-             "item3": "advanture","wave3":60
+             "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
         
       },
@@ -14,9 +14,9 @@
         "levelName": "level 1",
         "items": 
           {
-             "item1": "spr","wave1":5,
+             "item1": "c","wave1":5,
              "item2": "wolf","wave2":10,
-             "item3": "redhood","wave3":6
+             "item3": "yellow","wave3":6
           }
         
       },
@@ -26,7 +26,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "knight","wave2":5,
-            "item3": "b_witch","wave3":6
+            "item3": "wolf","wave3":6
           }
       }
       ,
@@ -36,7 +36,7 @@
           {
             "item1": "yellow","wave1":5,
             "item2": "yellow","wave2":6,
-            "item3": "spr","wave3":7
+            "item3": "horse","wave3":7
           }
       }
       ,
@@ -56,7 +56,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "shield","wave2":5,
-            "item3": "slim","wave3":6
+            "item3": "c","wave3":6
           }
       }
       ,
@@ -66,7 +66,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "soldier","wave2":5,
-            "item3": "slim","wave3":6
+            "item3": "c","wave3":6
           }
       },
       {
@@ -75,7 +75,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "swordman","wave2":5,
-            "item3": "schoolgirl","wave3":6
+            "item3": "c","wave3":6
           }
       },
       {
@@ -83,7 +83,7 @@
         "items": 
           {
             "item1": "yellow","wave1":4,
-            "item2": "warrior","wave2":5,
+            "item2": "c","wave2":5,
             "item3": "horse","wave3":6
           }
       },
@@ -93,7 +93,7 @@
           {
             "item1": "yellow","wave1":4,
             "item2": "knight","wave2":5,
-            "item3": "fknight","wave3":6
+            "item3": "c","wave3":6
           }
       },
       {

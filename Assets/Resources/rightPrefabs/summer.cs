@@ -37,7 +37,7 @@ public class summer : MonoBehaviour
             {
                 white = Resources.Load<GameObject>("rightPrefabs/" + objectName);
                 white.GetComponent<Enime>().f=Factions.yellow;
-                poolManager.instance.CreatePool(white, 15);
+                poolManager.instance.CreatePool(white, 25);
                 poolManager.instance.ReuseObject(white, 
                 new Vector3(spawnPoint.position.x, spawnPoint.position.y + 0.2f, 0), Quaternion.identity);
             }
@@ -45,7 +45,7 @@ public class summer : MonoBehaviour
             {
                 white = Resources.Load<GameObject>("rightPrefabs/" + objectName);
                 white.GetComponent<Enime>().f=Factions.yellow;
-                poolManager.instance.CreatePool(white, 15);
+                poolManager.instance.CreatePool(white, 25);
                 poolManager.instance.ReuseObject(white, 
                 new Vector3(transform.position.x, transform.position.y + 0.2f, 0), Quaternion.identity);
             }
