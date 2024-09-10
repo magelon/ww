@@ -7,6 +7,7 @@ public class CraftingSystem : MonoBehaviour
 {
     public List<Recipe> recipes;  // List of possible recipes
     public List<GameObject> go;
+    public GameObject sell;
     public GameObject result;
 
     private string[] stringArray = new string[2]; // Array to hold two strings
@@ -15,6 +16,8 @@ public class CraftingSystem : MonoBehaviour
     // Method to add a new string to the array
     public void AddString(string newString)
     {
+        Image imm=sell.GetComponent<Image>();
+        imm.sprite = Resources.Load<Sprite>("sumPrefabs/goodImgs/" + newString);
         // Add the new string to the current index
         stringArray[currentIndex] = newString;
         currentIndex++;
@@ -43,11 +46,11 @@ public class CraftingSystem : MonoBehaviour
     {
         // Define a few recipes
         Recipe recipe1 = new Recipe("apple", "banana", "apple");
-        //Recipe recipe2 = new Recipe(item2, item3, craftedItem2);
+        Recipe recipe2 = new Recipe("apple", "apple", "apple");
 
         // Add the recipes to the list
         recipes.Add(recipe1);
-        //recipes.Add(recipe2);
+        recipes.Add(recipe2);
 
         Debug.Log("Recipes list populated with " + recipes.Count + " recipes.");
     }

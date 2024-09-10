@@ -249,7 +249,11 @@ public class ShopMenu : MonoBehaviour {
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = false;
                 ttext.gameObject.transform.parent.Find("Image").
                 GetComponent<Image>().enabled = true;
+				ttext.gameObject.transform.parent.Find("Imagei").
+                GetComponent<Image>().enabled = true;
                 ttext.gameObject.transform.parent.Find("Image").
+                GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + simplifiedItemList[i].itemsName);
+				ttext.gameObject.transform.parent.Find("Imagei").
                 GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + simplifiedItemList[i].itemsName);
                 tbtn.GetComponentInChildren<Text>().text = "";
 				
