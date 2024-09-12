@@ -170,7 +170,7 @@ public class MainScript : MonoBehaviour {
 
 	
 				if (GameData.getInstance().cLevel < GameData.totalLevel) {
-						panelWin.transform.Find("panel").transform.Find ("btnTitle").gameObject.SetActive (false);
+						//panelWin.transform.Find("panel").transform.Find ("btnTitle").gameObject.SetActive (false);
 				} else {
 						panelWin.transform.Find("panel").transform.Find ("btnNext").gameObject.SetActive (false);
 				}
