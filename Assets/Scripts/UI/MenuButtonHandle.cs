@@ -84,11 +84,11 @@ public class MenuButtonHandle : MonoBehaviour
             loadingTime += Time.deltaTime;
 
             // Calculate progress (0.9f is the threshold before the scene is activated)
-            float progress = Mathf.Clamp01(operation.progress / 2f);
+            float progress = Mathf.Clamp01(operation.progress / 1f);
             sl.value = progress;
 
             // Ensure a minimum of 2 seconds before allowing scene activation
-            if (operation.progress >= 0.9f && loadingTime >= 2f)
+            if (operation.progress >= 0.9f && loadingTime >= 1f)
             {
                 operation.allowSceneActivation = true; // Activate the scene
             }
