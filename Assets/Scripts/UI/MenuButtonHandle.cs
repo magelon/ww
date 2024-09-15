@@ -16,7 +16,7 @@ public class MenuButtonHandle : MonoBehaviour
             case "HomeButton":
                 Time.timeScale = 1;
                 GameManager.getInstance().playSfx("click");
-                ChangeScene("MainMenu");
+                ChangeScene("MainMenuM");
                 break;
             case "BarracksButton":
                 Time.timeScale = 1;
