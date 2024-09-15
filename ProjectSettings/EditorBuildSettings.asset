@@ -84,7 +84,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameLevel/cutLevels/Lobby.unity
     guid: 2b18f1b1baebb46a388a20e551289dc7
   - enabled: 1
-    path: Assets/Scenes/GameLevel/cutLevels/MainMenu.unity
+    path: Assets/Scenes/GameLevel/cutLevels/MainMenuM.unity
     guid: 8862579d30cfb3840b21e701464c9a96
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/TroopsMenu.unity
@@ -92,6 +92,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/matchThree.unity
     guid: fbe4bcd6cd1a325459cdc55ed519594e
+  - enabled: 1
+    path: Assets/Scenes/GameLevel/cutLevels/MainMenu.unity
+    guid: ef1724939bf587c439787424d838dfe9
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/Inventory.unity
     guid: bdebde4e0d2670f41b688d6413dc24e3
