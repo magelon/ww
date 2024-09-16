@@ -41,7 +41,10 @@ public class MainScript : MonoBehaviour {
 
     private void Update(){
        
-	   	txtCoin.text = PlayerPrefs.GetInt("coin").ToString();
+	   if(txtCoin){
+			txtCoin.text = PlayerPrefs.GetInt("coin").ToString();
+	   }
+	   	
         if (GameData.getInstance(). energy < 1)
         {
            GameData.getInstance(). energy += 0.002f;
@@ -117,7 +120,10 @@ public class MainScript : MonoBehaviour {
 		/// Inits the game view.
 		/// </summary>
 		void initGameView(){
+			if(txtCoin){
 				txtCoin.text = GameData.getInstance ().coin.ToString();
+			}
+				
 				if (GameData.getInstance ().cLevel >= GameData.totalLevel) {
                  if (GameObject.Find("btnSkip"))
                  {
