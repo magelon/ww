@@ -10,6 +10,7 @@ public class Chase : NPCBase
         base.OnStateEnter(animator, stateInfo, layerIndex);
         NPC.GetComponent<TankAI>().StopFiring();
         NPC.GetComponent<TankAI>().StopRange();
+        NPC.GetComponent<TankAI>().StopHeal();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

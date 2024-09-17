@@ -255,6 +255,10 @@ public class Enime : MonoBehaviour
         health -= dam;
     }
 
+    public void healing(int dam) {
+        
+        health += dam;
+    }
     //damage by player
     public void damageByU(int dam)
     {

@@ -12,8 +12,10 @@ public class TankAI : MonoBehaviour
     public GameObject[] creatures;
     public LayerMask enemiLayer;
     public float damage;
+    public float heal;
     public int bulletForce;
     public float rangeFrequency;
+    public float healFrequency;
     public float meleeFrequency;
 
     private float distance;
@@ -149,6 +151,47 @@ public class TankAI : MonoBehaviour
         }
     }
 
+    void healing()
+    {
+        if (gameObject.name.Substring(0, 5) == "Drago" ||
+                    gameObject.name.Substring(4, 1) == "6")
+        {
+            GameManager.getInstance().playSfx("dragon");
+        }
+        Collider2D[] enimes = Physics2D.
+               OverlapCircleAll(atPos.position, atRange, enemiLayer);
+        if (Physics2D.OverlapCircle(atPos.position, atRange, enemiLayer))
+        {
+            //Camera.main.GetComponent<Animator>().SetTrigger("shake");
+            // Debug.Log(enimes[0].name);
+            for (int i = 0; i < enimes.Length; i++)
+            {
+                if (enimes[i].gameObject.GetComponent<Enime>())
+                {
+                    if (
+                enimes[i].gameObject.GetComponent<Enime>().f
+                    == this.gameObject.GetComponent<Enime>().f)
+                    {
+                        if (enimes[i].gameObject.GetComponent<Enime>())
+                        {
+                           
+                            if (enimes[i].gameObject.name.Substring(0, 5) != "Drago" && enimes[i].gameObject.name.Substring(4, 1) != "6")
+                            {
+                                GameManager.getInstance().playSfx("pounch");
+                            }
+                           
+                            enimes[i].gameObject.GetComponent<Enime>().healing((int)heal);
+                            enimes[i].gameObject.GetComponent<TankAI>().clostDistance = 9999;
+                            enimes[i].gameObject.GetComponent<TankAI>().GetClosest();
+                        }
+                    }
+                }
+            }
+           GetComponent<TankAI>().clostDistance = 9999;
+           GetComponent<TankAI>().GetClosest();
+        }
+    }
+
     public void StopRange()
     {
         CancelInvoke("Fire");
@@ -157,6 +200,16 @@ public class TankAI : MonoBehaviour
     public void StartRange()
     {
         InvokeRepeating("Fire", 0.5f, rangeFrequency);
+    }
+    
+    public void StopHeal()
+    {
+        CancelInvoke("healing");
+    }
+
+    public void StartHeal()
+    {
+        InvokeRepeating("healing", 0.5f, healFrequency);
     }
 
     public void StopFiring() {
