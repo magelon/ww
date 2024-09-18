@@ -7,14 +7,16 @@ using UnityEngine.SceneManagement;
 //init admob
 public class musicScript : MonoBehaviour {
 	
+	bool canRecycle = false;
+	List<AudioSource> asgroups;
+
 	void Start () {
 		DontDestroyOnLoad (gameObject);
 		asgroups = new List<AudioSource> ();
 		StartCoroutine("recycle");
     }
 
-    bool canRecycle = false;
-	List<AudioSource> asgroups;
+    
 	IEnumerator recycle(){
 		while (true) {
 			yield return new WaitForSeconds(.1f);

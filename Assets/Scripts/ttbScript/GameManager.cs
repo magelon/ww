@@ -36,17 +36,17 @@ public class GameManager{
 
 				AudioSource tmusic = null;
 
-				AudioClip clip = (AudioClip)Resources.Load ("sound\\"+str, typeof(AudioClip));//调用Resources方法加载AudioClip资源
+				//AudioClip clip = (AudioClip)Resources.Load ("sound\\"+str, typeof(AudioClip));//调用Resources方法加载AudioClip资源
 
-				Debug.Log (clip);
+				//Debug.Log (clip);
 				if (GameData.getInstance ().isSoundOn == 0) {
 						if (bgMusic)
 								bgMusic.Stop ();
-						tmusic = music.GetComponent<musicScript> ().PlayAudioClip (clip,true);
-						if (str.Substring (0, 2) == "bg") {
-								musicName = str;
-								bgMusic = tmusic;
-						}
+						//tmusic = music.GetComponent<musicScript> ().PlayAudioClip (clip,true);
+						//if (str.Substring (0, 2) == "bg") {
+								//musicName = str;
+								//bgMusic = tmusic;
+						//}
 				}
 		}
 
