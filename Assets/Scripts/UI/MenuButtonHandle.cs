@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MenuButtonHandle : MonoBehaviour
 {
     public GameObject loadingImg;
+    public GameObject buttonbar;
     public Slider sl;
 
 
@@ -71,6 +72,9 @@ public class MenuButtonHandle : MonoBehaviour
 
     IEnumerator LoadAsynchronously(string s)
     {
+        if(buttonbar){
+            buttonbar.SetActive(false);
+        }
         loadingImg.SetActive(true);
         AsyncOperation operation = SceneManager.LoadSceneAsync(s);
         operation.allowSceneActivation = false; // Prevent auto scene activation

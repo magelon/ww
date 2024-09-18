@@ -3955,7 +3955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728321720559, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00020507509
+      value: -0.000018347228
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728416639810, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_IsActive
@@ -5660,9 +5660,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1659933310}
     - target: {fileID: 4332091111115007915, guid: 236ee013a6b829e4fb62f67b19e25721, type: 3}
+      propertyPath: buttonbar
+      value: 
+      objectReference: {fileID: 1432216036}
+    - target: {fileID: 4332091111115007915, guid: 236ee013a6b829e4fb62f67b19e25721, type: 3}
       propertyPath: loadingImg
       value: 
       objectReference: {fileID: 1659933311}
+    - target: {fileID: 4459929317843498314, guid: 236ee013a6b829e4fb62f67b19e25721, type: 3}
+      propertyPath: m_Spacing.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4459929317843498314, guid: 236ee013a6b829e4fb62f67b19e25721, type: 3}
       propertyPath: m_Constraint
       value: 0

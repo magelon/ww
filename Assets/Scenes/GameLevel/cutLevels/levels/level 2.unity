@@ -16868,6 +16868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2575312800114652310, guid: 1b26ffd1b9111f145a9deccb55695e79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2669381900380769609, guid: 1b26ffd1b9111f145a9deccb55695e79, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -19362,8 +19366,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0
   clostDistance: 0
   atRange: 0.1
@@ -19584,8 +19590,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0
   clostDistance: 0
   atRange: 0.1
