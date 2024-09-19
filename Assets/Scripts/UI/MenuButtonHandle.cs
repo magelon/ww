@@ -49,6 +49,11 @@ public class MenuButtonHandle : MonoBehaviour
                 GameManager.getInstance().playSfx("click");
                 ChangeScene("Lobby");
                 break;
+            case "RestrauntButton":
+                Time.timeScale = 1;
+                GameManager.getInstance().playSfx("click");
+                ChangeScene("Restaruant");
+                break;    
             case "MoreGameButton":
                 GameManager.getInstance().playSfx("click");
                 if (Application.platform == RuntimePlatform.WP8Player)
