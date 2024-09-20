@@ -254,7 +254,7 @@ public class ShopMenu : MonoBehaviour {
                 ttext.gameObject.transform.parent.Find("Image").
                 GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + simplifiedItemList[i].itemsName);
 				ttext.gameObject.transform.parent.Find("Imagei").
-                GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/itemImgs/" + simplifiedItemList[i].itemsName);
+                GetComponent<Image>().sprite = Resources.Load<Sprite>("sumPrefabs/illistrate/" + simplifiedItemList[i].itemsName);
                 tbtn.GetComponentInChildren<Text>().text = "";
 				
             }
