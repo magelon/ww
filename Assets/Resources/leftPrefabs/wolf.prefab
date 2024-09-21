@@ -118,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a118bf5d62a5944c6b220153d9e9600a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b16c5e7ffd6a76b40b76196a7442d2d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,8 +170,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0.5
   clostDistance: 0
   atRange: 0.1
@@ -293,7 +295,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0017599016, y: 0.007898726}
+  m_Offset: {x: 0.0017599016, y: -0.00047060102}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -304,7 +306,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06093076, y: 0.14420255}
+  m_Size: {x: 0.06093076, y: 0.1609412}
   m_EdgeRadius: 0
 --- !u!114 &-7420852553989396941
 MonoBehaviour:
@@ -344,7 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405663e3e0d6d574789157751442dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  e: {fileID: 0}
   drop: {fileID: 7625709073817780972, guid: fdca466aadc9bf245adfa8e831624400, type: 3}
 --- !u!114 &-4197693125942382540
 MonoBehaviour:
@@ -451,11 +452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4719642961449696785, guid: 4decf5e1b63152248bbb3ea8d22c5f93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0126
       objectReference: {fileID: 0}
     - target: {fileID: 4719642961449696785, guid: 4decf5e1b63152248bbb3ea8d22c5f93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.063
+      value: -0.0756
       objectReference: {fileID: 0}
     - target: {fileID: 4719642961449696785, guid: 4decf5e1b63152248bbb3ea8d22c5f93, type: 3}
       propertyPath: m_LocalPosition.z
