@@ -72,7 +72,8 @@ public class MenuButtonHandle : MonoBehaviour
 
     private void ChangeScene(string s)
     {
-        SceneManager.LoadSceneAsync(s);
+        //if(SceneManager.GetActiveScene().name=="foodstand"){
+            SceneManager.LoadSceneAsync(s);
         //StartCoroutine(LoadAsynchronously(s));
     }
 
