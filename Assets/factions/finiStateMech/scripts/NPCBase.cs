@@ -10,14 +10,14 @@ public class NPCBase : StateMachineBehaviour
     public Transform pivot;
     public Factions fa;
 
-    public float speed;
+    public float Basespeed;
     
     //public float rotSpeed = 1.0f;
     public float accuracy;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NPC = animator.gameObject;
-        speed = NPC.GetComponent<Enime>().speed;
+        Basespeed = NPC.GetComponent<Enime>().speed;
         if(NPC.GetComponent<Enime>().f!=null){
             fa = NPC.GetComponent<Enime>().f;
         }

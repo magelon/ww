@@ -5,7 +5,7 @@ using System;
 
 public class Patrol : NPCBase
 {
-    public GameObject NPC;
+    //public GameObject NPC;
     public waypoints[] wayP;
     public bool reversed;
     //public Vector2[] sinWP;
@@ -21,7 +21,7 @@ public class Patrol : NPCBase
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        NPC = animator.gameObject;
+        //NPC = animator.gameObject;
         base.OnStateEnter(animator, stateInfo, layerIndex);
         //start patrol from 0 position
         currentWP = 0;
@@ -30,7 +30,7 @@ public class Patrol : NPCBase
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.speed = NPC.GetComponent<Enime>().speed;
+        //base.Basespeed = NPC.GetComponent<Enime>().speed;
         //base.fa=NPC.GetComponent<Enime>().f;
         NPC.GetComponent<TankAI>().GetClosest();
         //Debug.Log(Vector3.Distance(wayP[currentWP].transform.position,
@@ -57,7 +57,7 @@ public class Patrol : NPCBase
             {
                 NPC.GetComponent<TankAI>().Flip();
             }
-            NPC.transform.Translate(Vector2.right * Time.deltaTime * speed);
+            NPC.transform.Translate(Vector2.right * Time.deltaTime * Basespeed);
         }
         if (pivot.position.x >= wayP[currentWP].wp.x)
         {
@@ -65,7 +65,7 @@ public class Patrol : NPCBase
             {
                 NPC.GetComponent<TankAI>().Flip();
             }
-            NPC.transform.Translate(Vector2.left * Time.deltaTime * speed);
+            NPC.transform.Translate(Vector2.left * Time.deltaTime * Basespeed);
         }
         
     }

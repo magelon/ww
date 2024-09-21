@@ -30,7 +30,7 @@ public class Chase : NPCBase
                 {
                     NPC.GetComponent<TankAI>().Flip();
                 }
-                NPC.transform.Translate(Vector2.right * Time.deltaTime * speed);
+                NPC.transform.Translate(Vector2.right * Time.deltaTime * Basespeed);
             }
 
             if (pivot.position.x > opponent.GetComponent<TankAI>().pivot.position.x)
@@ -39,7 +39,7 @@ public class Chase : NPCBase
                 {
                     NPC.GetComponent<TankAI>().Flip();
                 }
-                NPC.transform.Translate(Vector2.left * Time.deltaTime * speed);
+                NPC.transform.Translate(Vector2.left * Time.deltaTime * Basespeed);
             }
         }
    

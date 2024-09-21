@@ -225,7 +225,7 @@ public class Enime : MonoBehaviour
             {
                 gameObject.AddComponent<Rigidbody2D>();
                 gameObject.AddComponent<BoxCollider2D>();
-                if (gameObject.name.Substring(0, 5) == "Drago" || 
+                if (gameObject.name.Substring(0, 5) == "Drago" ||
                     gameObject.name.Substring(4, 1) == "6"|| 
                     gameObject.name.Substring(4, 1) == "4"||
                     gameObject.name.Substring(0,4)=="shie")
