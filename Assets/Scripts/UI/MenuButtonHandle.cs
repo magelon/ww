@@ -72,7 +72,8 @@ public class MenuButtonHandle : MonoBehaviour
 
     private void ChangeScene(string s)
     {
-        StartCoroutine(LoadAsynchronously(s));
+        SceneManager.LoadSceneAsync(s);
+        //StartCoroutine(LoadAsynchronously(s));
     }
 
     IEnumerator LoadAsynchronously(string s)

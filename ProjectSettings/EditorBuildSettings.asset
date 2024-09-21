@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameLevel/cutLevels/levels/level.unity
     guid: 000511f7e867642e2851cfae6571b6d6
   - enabled: 1
-    path: Assets/Scenes/GameLevel/cutLevels/Restaruant.unity
-    guid: bba798d44a4db554fb75e1d8858815a5
-  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 1.unity
     guid: e7a5b383a5f936e4a924da90a276cf62
   - enabled: 1
