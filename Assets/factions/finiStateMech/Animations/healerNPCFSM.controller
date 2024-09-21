@@ -16,7 +16,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   pivot: {fileID: 0}
   fa: 0
-  speed: 2
+  Basespeed: 0
   accuracy: 3
 --- !u!91 &9100000
 AnimatorController:
@@ -68,7 +68,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   pivot: {fileID: 0}
   fa: 0
-  speed: 2
+  Basespeed: 0
   accuracy: 3
 --- !u!114 &114705696882232922
 MonoBehaviour:
@@ -86,9 +86,8 @@ MonoBehaviour:
   opponent: {fileID: 0}
   pivot: {fileID: 0}
   fa: 0
-  speed: 2
+  Basespeed: 0
   accuracy: 0.1
-  NPC: {fileID: 0}
   wayP:
   - {fileID: 11400000, guid: 01a000d45733ce347be69088dd44fa38, type: 2}
   - {fileID: 11400000, guid: 6d26441982424a243a15b4ffc85f9a88, type: 2}
@@ -266,7 +265,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dfcdf0ea07a98524d900ae6dafa9ebbe, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2a7fd8c649d0b8044b2c04a4dc59ed10, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -296,7 +295,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3803ae7a96aeb1b4abbbe36c5961bc88, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7e8adffaccf99374eb6d1411fffbc32e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -324,7 +323,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3803ae7a96aeb1b4abbbe36c5961bc88, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7e8adffaccf99374eb6d1411fffbc32e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -350,7 +349,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ca551d8ec9c51f94288c8b794171ba5e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9d6e8744b37acdd40a64b28da488979c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
