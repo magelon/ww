@@ -52,7 +52,7 @@ public class MenuButtonHandle : MonoBehaviour
             case "RestrauntButton":
                 Time.timeScale = 1;
                 GameManager.getInstance().playSfx("click");
-                ChangeScene("Restaruant");
+                ChangeScene("foodstand");
                 break;    
             case "MoreGameButton":
                 GameManager.getInstance().playSfx("click");

@@ -1,6 +1,16 @@
 {
     "levels": [
       {
+        "levelName": "foodstand",
+        "items": 
+          {
+             "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
+          }
+        
+      },
+      {
         "levelName": "level",
         "items": 
           {

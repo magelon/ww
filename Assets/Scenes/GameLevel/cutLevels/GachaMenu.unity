@@ -3382,7 +3382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902988663512114526, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_Name
-      value: RestaurantButton
+      value: RestrauntButton
       objectReference: {fileID: 0}
     - target: {fileID: 6878898844824659512, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_AnchorMax.y
