@@ -19,6 +19,16 @@
            "art":"lon"
         }
       
+    },
+    {
+      "foodName": "chicken",
+      "foodsdetail": 
+        {
+           "price": 3,
+           "rate":3,
+           "art":"lon"
+        }
+      
     }
     
   ]

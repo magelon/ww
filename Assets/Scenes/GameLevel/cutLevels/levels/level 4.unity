@@ -19362,8 +19362,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0
   clostDistance: 0
   atRange: 0.1
@@ -19584,8 +19586,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0
   clostDistance: 0
   atRange: 0.1

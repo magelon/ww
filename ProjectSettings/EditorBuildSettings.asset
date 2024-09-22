@@ -26,9 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 2.unity
     guid: f6f6ddd0d4f84d74d8fd8296b23f9c9f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 3.unity
-    guid: beeffeae386583842b76b3217801bd2c
+    guid: da09fee757bb16046a6bd39e822941b9
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 4.unity
     guid: 96cdc74ffd5be8546b6831c4dfb66883
