@@ -24,9 +24,9 @@
         "levelName": "level 1",
         "items": 
           {
-             "item1": "c","wave1":5,
-             "item2": "wolf","wave2":10,
-             "item3": "yellow","wave3":6
+             "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
         
       },
@@ -34,9 +34,9 @@
         "levelName": "level 2",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "knight","wave2":5,
-            "item3": "wolf","wave3":6
+            "item1": "goblin","wave1":10,
+             "item2": "goblin","wave2":30,
+             "item3": "goblin","wave3":60
           }
       }
       ,
@@ -44,9 +44,9 @@
         "levelName": "level 3",
         "items": 
           {
-            "item1": "yellow","wave1":5,
-            "item2": "yellow","wave2":6,
-            "item3": "horse","wave3":7
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       }
       ,
@@ -54,9 +54,9 @@
         "levelName": "level 4",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "RangerFoe","wave2":5,
-            "item3": "yellow","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       }
       ,
@@ -64,9 +64,9 @@
         "levelName": "level 5",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "shield","wave2":5,
-            "item3": "c","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       }
       ,
@@ -74,63 +74,63 @@
         "levelName": "level 6",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "soldier","wave2":5,
-            "item3": "c","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 7",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "swordman","wave2":5,
-            "item3": "c","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 8",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "c","wave2":5,
-            "item3": "horse","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 9",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "knight","wave2":5,
-            "item3": "c","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 10",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "yellow","wave2":5,
-            "item3": "wizardKing","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 11",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "yellow","wave2":5,
-            "item3": "Dragon","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {
         "levelName": "level 12",
         "items": 
           {
-            "item1": "yellow","wave1":4,
-            "item2": "soldier","wave2":5,
-            "item3": "wizardKing","wave3":6
+            "item1": "c","wave1":10,
+             "item2": "c","wave2":30,
+             "item3": "c","wave3":60
           }
       },
       {

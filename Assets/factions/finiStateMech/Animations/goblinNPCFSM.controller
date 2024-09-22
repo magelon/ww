@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WolfNPCFSM
+  m_Name: goblinNPCFSM
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: distance
@@ -265,7 +265,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b11ca31e82397464492244cad2335ab2, type: 2}
+  m_Motion: {fileID: 7400000, guid: d207b26757133d34fa66b88ad86d71aa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -295,7 +295,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: eb3b6a92634b9384f8c48707ab70a59d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 68ec20de5e7e23d4597102f878110c87, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -323,7 +323,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: eb3b6a92634b9384f8c48707ab70a59d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 68ec20de5e7e23d4597102f878110c87, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -349,7 +349,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 82223d5fe328f7f4898e5a24cab6691a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3588f17366b193b4eaeb3b31a2b8c860, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -366,7 +366,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102769929780405916}
-    m_Position: {x: 228, y: 108, z: 0}
+    m_Position: {x: 230, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102261019373761590}
     m_Position: {x: 144, y: 276, z: 0}

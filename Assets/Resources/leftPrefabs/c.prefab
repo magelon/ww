@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 19900733370418296}
   - component: {fileID: 5913766383907961666}
   - component: {fileID: 2347888482806629324}
+  - component: {fileID: 34434362028873521}
   m_Layer: 0
   m_Name: c
   m_TagString: creature
@@ -408,8 +409,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9e5b7b80c190eaa4db7af736c79a8937, type: 3}
   loadedItems: []
+--- !u!114 &34434362028873521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126353624765928562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405663e3e0d6d574789157751442dd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 1389720291444541607, guid: 602348702b1e14d48b5f6f2f5dd16f99, type: 3}
 --- !u!1 &4625194375072751557
 GameObject:
   m_ObjectHideFlags: 0

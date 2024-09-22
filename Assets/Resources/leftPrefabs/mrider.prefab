@@ -137,8 +137,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 1
   clostDistance: 0
   atRange: 0.1
@@ -285,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9e5b7b80c190eaa4db7af736c79a8937, type: 3}
   loadedItems: []
 --- !u!114 &8684708997968554947
 MonoBehaviour:
