@@ -1,0 +1,26 @@
+{
+  "foods": [
+    {
+      "foodName": "apple",
+      "foodsdetail": 
+        {
+           "price": 1,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "foodName": "banana",
+      "foodsdetail": 
+        {
+           "price": 1,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    }
+    
+  ]
+}
+

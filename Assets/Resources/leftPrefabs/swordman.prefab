@@ -167,8 +167,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 2
+  heal: 0
   bulletForce: 0
   rangeFrequency: 0
+  healFrequency: 0
   meleeFrequency: 0.5
   clostDistance: 0
   atRange: 0.1
@@ -235,7 +237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6773467585653134562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccfd5ad64eaad41518456fbde81b62f9, type: 3}
   m_Name: 

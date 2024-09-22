@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3088021114952868432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -0.065, z: 0}
+  m_LocalPosition: {x: 0.0039, y: -0.0807, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: eba602c0016c24443956a47faa6d48e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af13b313595cce8438d1cd4cd3842f33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12604db147ad44b3bf21d5531d3d276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2726998577009670677, guid: 18328720deb413146b0f6e09bcb37e89, type: 3}
+  bullet: {fileID: 2726998577009670677, guid: 7341b7682cc9d29428b1e9e2dc139aa4, type: 3}
   turret: {fileID: 6773467585274240442}
   face: 1
   creatures: []
@@ -252,8 +252,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  heal: 0
   bulletForce: 50
   rangeFrequency: 2
+  healFrequency: 0
   meleeFrequency: 0
   clostDistance: 0
   atRange: 0.1
@@ -375,7 +377,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0017599016, y: 0.007898726}
+  m_Offset: {x: 0.0017599016, y: -0.0014451221}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -386,7 +388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06093076, y: 0.14420255}
+  m_Size: {x: 0.06093076, y: 0.16289024}
   m_EdgeRadius: 0
 --- !u!114 &6553933790772325397
 MonoBehaviour:
