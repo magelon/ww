@@ -39,7 +39,8 @@ public class Enime : MonoBehaviour
     private Rigidbody2D rb2d;
 
     public Factions f;
-
+    public GameObject damageNumberPrefab;
+    [SerializeField] private Canvas canvas;
     //on enable dont have enough time to up date a lot of component add in update function
     private void OnEnable()
     {
@@ -53,7 +54,6 @@ public class Enime : MonoBehaviour
 
     private void Start()
     {
-
         storeHP=health;
         Debug.Log(storeHP);
         if(f==null){
@@ -250,6 +250,12 @@ public class Enime : MonoBehaviour
 
     //damage by other creatures
     public void damage(int dam) {
+        if(damageNumberPrefab!=null){
+            GameObject damageNumber = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            DamageNumber dnScript = damageNumber.GetComponent<DamageNumber>();
+            dnScript.SetValue(dam);
+        }
+        
         dazedTime = startDazed;
         knockUp(3);
         health -= dam;

@@ -232,6 +232,7 @@ public class TankAI : MonoBehaviour
     }
     private void Update()
     {
+        
         // anim.SetFloat("distance", Vector2.Distance(transform.position, player.transform.position));
         if (re)
         {
