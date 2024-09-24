@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "itemsName": "knight",
+      "itemsName": "sabar",
       "attributes": 
         {
            "hp": 30,
@@ -16,7 +16,7 @@
       
     },
     {
-      "itemsName": "healer",
+      "itemsName": "abaaba",
       "attributes": 
         {
            "hp": 60,
@@ -25,13 +25,13 @@
            "speed": 0.1,
            "energy":0.3,
            "force":30,
-           "rate":3,
+           "rate":5,
            "art":"lon"
         }
       
     },
     {
-      "itemsName": "wolf",
+      "itemsName": "cocogoat",
       "attributes": 
         {
            "hp": 30,
@@ -46,7 +46,7 @@
       
     },
     {
-      "itemsName": "swordman",
+      "itemsName": "keiqin",
       "attributes": 
         {
            "hp": 30,
@@ -61,7 +61,7 @@
       
     },
     {
-      "itemsName": "support",
+      "itemsName": "lina",
       "attributes": 
         {
            "hp": 30,
@@ -76,22 +76,7 @@
       
     },
     {
-      "itemsName": "RangerFoe",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "Rocket",
+      "itemsName": "elf",
       "attributes": 
         {
            "hp": 30,

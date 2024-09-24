@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: -6963388185484848930}
   - component: {fileID: -2066574850882856368}
   m_Layer: 0
-  m_Name: RangerFoe
+  m_Name: lina
   m_TagString: creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

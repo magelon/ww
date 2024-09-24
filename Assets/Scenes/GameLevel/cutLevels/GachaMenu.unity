@@ -1312,7 +1312,6 @@ GameObject:
   - component: {fileID: 558134278}
   - component: {fileID: 558134277}
   - component: {fileID: 558134276}
-  - component: {fileID: 558134275}
   m_Layer: 5
   m_Name: SpinButtonx10
   m_TagString: Untagged
@@ -1340,27 +1339,6 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -700}
   m_SizeDelta: {x: 37.2, y: 51.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &558134275
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558134273}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9df7ed832c6a4d49932d04a1dcad7f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &558134276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,14 +1408,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95993704, g: 0.9622642, b: 0.031772893, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82ff7addab5b4f7449ab3b97d47fd558, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0de60c1ae1bed1647a70381dc395a501, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1525,7 +1503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "recruit \nbutton"
+  m_Text: summon
 --- !u!222 &588542581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1754,7 +1732,6 @@ GameObject:
   - component: {fileID: 797085187}
   - component: {fileID: 797085186}
   - component: {fileID: 797085185}
-  - component: {fileID: 797085184}
   m_Layer: 5
   m_Name: SpinButton
   m_TagString: Untagged
@@ -1782,27 +1759,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: -700}
   m_SizeDelta: {x: 36.3, y: 50.75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &797085184
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797085182}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9df7ed832c6a4d49932d04a1dcad7f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &797085185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,7 +1835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82ff7addab5b4f7449ab3b97d47fd558, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 298ab06014479ec46afa130d39e73ac9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3285,9 +3241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'recruit X 10
-
-    button'
+  m_Text: summon X 10
 --- !u!222 &1984729437
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3352,6 +3306,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191445387127571660, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a640600c6ffd8404d99d035ef420ece3, type: 3}
     - target: {fileID: 2762659249351539503, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3376,6 +3334,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3651356466595171410, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba202bdf646f23042a0b4b7d116e424b, type: 3}
     - target: {fileID: 3767262093768842118, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_Name
       value: buttommenugroup

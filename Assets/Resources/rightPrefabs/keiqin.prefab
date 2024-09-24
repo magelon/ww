@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: -8174529715760579438}
   - component: {fileID: 1582084203762742780}
   m_Layer: 0
-  m_Name: swordman
+  m_Name: keiqin
   m_TagString: creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

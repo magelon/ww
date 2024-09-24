@@ -168,7 +168,7 @@ public class PanelAskSkip : MonoBehaviour {
                     //gacha animation
                     if (gachaButton)
                     {
-                        gachaButton.GetComponent<Animator>().SetTrigger("spin");
+                        //gachaButton.GetComponent<Animator>().SetTrigger("spin");
                         GameManager.getInstance().playSfx("win");
                         //get result from it
                         Invoke("dispalySpinResult", 1f);

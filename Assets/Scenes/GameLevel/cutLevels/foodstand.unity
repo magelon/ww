@@ -11395,6 +11395,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4613364354034110211, guid: 1a84d0ddf3422f8499d54f5c09ac20ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a640600c6ffd8404d99d035ef420ece3, type: 3}
     - target: {fileID: 4990910503552035416, guid: 1a84d0ddf3422f8499d54f5c09ac20ac, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11451,6 +11455,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7836365381298309021, guid: 1a84d0ddf3422f8499d54f5c09ac20ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba202bdf646f23042a0b4b7d116e424b, type: 3}
     - target: {fileID: 8663388998670282976, guid: 1a84d0ddf3422f8499d54f5c09ac20ac, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12124,6 +12132,7 @@ MonoBehaviour:
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
   damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!1 &6613098009726349944
 GameObject:
@@ -12232,6 +12241,7 @@ MonoBehaviour:
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3
   damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!95 &6773467585756443684
 Animator:

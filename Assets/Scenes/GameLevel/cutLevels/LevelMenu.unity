@@ -2246,6 +2246,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191445387127571660, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a640600c6ffd8404d99d035ef420ece3, type: 3}
     - target: {fileID: 2762659249351539503, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2270,6 +2274,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3651356466595171410, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba202bdf646f23042a0b4b7d116e424b, type: 3}
     - target: {fileID: 3767262093768842118, guid: 509e31f27d6f37b4e8b77c3b1162c829, type: 3}
       propertyPath: m_Name
       value: buttommenugroup
