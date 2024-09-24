@@ -4,7 +4,7 @@ using TMPro;
 public class DamageNumber : MonoBehaviour
 {
     public float duration = 1f;
-    public float floatSpeed = 1f;
+    public float floatSpeed = 0.3f;
     public Vector3 offset = new Vector3(0, 1, 0);
     [SerializeField] private TextMeshProUGUI text; 
 

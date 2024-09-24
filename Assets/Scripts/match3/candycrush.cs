@@ -73,7 +73,7 @@ public class candycrush : MonoBehaviour
         {
             for (int c = 0; c < cols; c++)
             {
-                Vector2 tilePos = new Vector2(c, r);
+                Vector2 tilePos = new Vector2(c*0.1f, r*0.1f);
                 for (int n = 0; n < tileBank.Count; n++)
                 {
                     GameObject o = tileBank[n];
@@ -82,6 +82,7 @@ public class candycrush : MonoBehaviour
                         o.transform.position =
                             new Vector2(tilePos.x,
                             tilePos.y);
+                             o.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Scale down the tile size by a factor of 10
                         o.SetActive(true);
                         tiles[c, r] = new Tile(o, o.name);
                         n = tileBank.Count + 1;
@@ -205,8 +206,8 @@ public class candycrush : MonoBehaviour
         Vector2 t2t = tile2.transform.position;
         GameObject fake2 = (GameObject)Instantiate(Resources.Load("match3prafabs/"+t2),t2t,Quaternion.identity);
         
-        Vector2 initialPos1 = fake1.transform.position;
-        Vector2 initialPos2 = fake2.transform.position;
+        Vector2 initialPos1 = fake1.transform.position*0.1f;
+        Vector2 initialPos2 = fake2.transform.position*0.1f;
 
         float percent = 0;
         while (percent < 1)
@@ -564,13 +565,14 @@ public class candycrush : MonoBehaviour
     {
         //new fake tile for animation
         //position of real tile
-        Vector2 tp = tiles[c, r].tileObj.transform.position;
+        Vector2 tp = tiles[c, r].tileObj.transform.position*0.1f;
         //get tiles type from extractprefix
         string tn = ExtractPrefix(tiles[c, r].tileObj);
         //instantiate fake tile by name
         GameObject fakeT =(GameObject) Instantiate(Resources.Load("match3prafabs/"+tn), tp, Quaternion.identity);
+        fakeT.transform.localScale=new Vector3(0.1f,0.1f,0.1f);
         //target position is one unit down 
-        Vector2 target = new Vector2(tp.x, tp.y - 1);
+        Vector2 target = new Vector2(tp.x, tp.y - 0.1f);
 
         float percent = 0;
         while (percent < 1)
