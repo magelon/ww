@@ -7822,7 +7822,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.09, y: 0, z: -1}
+  m_LocalPosition: {x: 1.09, y: 0.21, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19414,6 +19414,8 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
+  damageNumberPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &5760821605867929294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4026021780447064282, guid: 8d1afcf6c57b4584997ea8964361e813, type: 3}
@@ -19531,6 +19533,8 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3
+  damageNumberPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!95 &6773467585756443684
 Animator:
   serializedVersion: 5
