@@ -40,6 +40,7 @@ public class Enime : MonoBehaviour
 
     public Factions f;
     public GameObject damageNumberPrefab;
+    public GameObject healNumberPrefab;
     [SerializeField] private Canvas canvas;
     //on enable dont have enough time to up date a lot of component add in update function
     private void OnEnable()
@@ -263,6 +264,11 @@ public class Enime : MonoBehaviour
 
     public void healing(int dam) {
         
+        if(healNumberPrefab!=null){
+            GameObject healNumber = Instantiate(healNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            HealNumber dnScript = healNumber.GetComponent<HealNumber>();
+            dnScript.SetValue(dam);
+        }
         health += dam;
     }
     //damage by player

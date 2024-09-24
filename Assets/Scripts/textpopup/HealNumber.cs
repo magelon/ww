@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class DamageNumber : MonoBehaviour
+public class HealNumber : MonoBehaviour
 {
     public float duration = 1f;
     public float floatSpeed = 0.3f;
@@ -23,7 +23,7 @@ public class DamageNumber : MonoBehaviour
          if (text != null)
         {
             // Update the text to display the damage value
-            text.text ="-"+damage.ToString();
+            text.text ="+"+damage.ToString();
         }
         else
         {

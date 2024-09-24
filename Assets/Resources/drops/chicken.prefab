@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 0.01
-  finalSpeed: 0.05
+  finalSpeed: 1

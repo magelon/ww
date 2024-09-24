@@ -29,6 +29,26 @@
            "art":"lon"
         }
       
+    },
+    {
+      "foodName": "egg",
+      "foodsdetail": 
+        {
+           "price": 2,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "foodName": "slime",
+      "foodsdetail": 
+        {
+           "price": 1,
+           "rate":3,
+           "art":"lon"
+        }
+      
     }
     
   ]
