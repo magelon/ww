@@ -7492,7 +7492,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 7583c3e5201abac489dfc2ddad04c3e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75ca95b8f406d3646a1da0e688efd746, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7512,8 +7512,8 @@ Transform:
   m_GameObject: {fileID: 446349865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.04, y: 0.527, z: 1}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.675, y: 0.104, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 494992308}
@@ -19414,6 +19414,9 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
+  damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &5760821605867929294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4026021780447064282, guid: 8d1afcf6c57b4584997ea8964361e813, type: 3}
@@ -19531,6 +19534,9 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3
+  damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!95 &6773467585756443684
 Animator:
   serializedVersion: 5
