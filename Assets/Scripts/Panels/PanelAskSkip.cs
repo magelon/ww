@@ -19,12 +19,68 @@ public class PanelAskSkip : MonoBehaviour {
         public GameObject gachaButtonX;
         public GameObject GachaGroup;
         public bool x;
+        
+        public GameObject spritePrefab; // Assign your Image prefab in the Inspector
+        private GameObject instantiatedSprite;
+        private SpriteRenderer spriteRenderer;
+        public float fadeDuration = 2f;
    
-	public void showMe(){
-				initView ();
+        private void spawngodness()
+        {
+        // Instantiate the sprite object
+        instantiatedSprite = Instantiate(spritePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+
+        // Get the SpriteRenderer component
+        spriteRenderer = instantiatedSprite.GetComponent<SpriteRenderer>();
+        
+        if (spriteRenderer != null)
+        {
+            // Set initial alpha to 0 (fully transparent)
+            //Color color = spriteRenderer.color;
+            //color.a = 1;
+            //spriteRenderer.color = color;
+            
+            // Start the fade-in process
+            //StartCoroutine(FadeInAndDestroyRoutine());
+        }
+        else
+        {
+            Debug.LogError("No SpriteRenderer component found on the prefab.");
+        }
+        }
+
+        IEnumerator FadeInAndDestroyRoutine()
+        {
+        float elapsedTime = 0f;
+
+        // Fade in over the duration
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            // Calculate new alpha
+            float newAlpha = Mathf.Clamp01(elapsedTime / fadeDuration);
+            Color color = spriteRenderer.color;
+            color.a = newAlpha;
+            spriteRenderer.color = color;
+
+            yield return null; // Wait for the next frame
+        }
+
+        // Ensure the alpha is set to 1 (fully visible) at the end of the fade-in
+        Color finalColor = spriteRenderer.color;
+        finalColor.a = 0f;
+        spriteRenderer.color = finalColor;
+
+        // Destroy the sprite after fade-in
+        Destroy(instantiatedSprite);
+        }
+
+	    public void showMe(){
+			initView ();
 
 				if (GameData.getInstance ().coin >= 60) {
-
+                        
 						panelNotEnough.SetActive (false);
 						ATween.MoveTo (panel.gameObject, ATween.Hash ("ignoretimescale",true,"islocal", true, "y", 40, "time", 1f, "easeType", "easeOutExpo", "oncomplete", "OnShowCompleted", "oncompletetarget", this.gameObject));
 
@@ -52,12 +108,8 @@ public class PanelAskSkip : MonoBehaviour {
 
         if (GameData.getInstance().coin >= 1200)
         {
-
-            panelNotEnough.SetActive(false);
-            ATween.MoveTo(panel.gameObject, ATween.Hash("ignoretimescale", true, "islocal", true, "y", 40, "time", 1f, "easeType", "easeOutExpo", "oncomplete", "OnShowCompleted", "oncompletetarget", this.gameObject));
-
-            //disable some UI;
-
+            panelNotEnough.SetActive (false);
+			ATween.MoveTo (panel.gameObject, ATween.Hash ("ignoretimescale",true,"islocal", true, "y", 40, "time", 1f, "easeType", "easeOutExpo", "oncomplete", "OnShowCompleted", "oncompletetarget", this.gameObject));
         }
         else
         {
@@ -76,10 +128,10 @@ public class PanelAskSkip : MonoBehaviour {
         GameData.getInstance().lockGame(true);
     }
 
-
     void dispalySpinResult()
     {
         panelDisplayTip.SetActive(true);
+        
         panelDisplayTip.GetComponent<PanelDisplayTip>().showMe();
         //disable spin button
         //GachaGroup.SetActive(false);
@@ -87,6 +139,7 @@ public class PanelAskSkip : MonoBehaviour {
 
     void dispalySpinResultX()
     {
+        
         panelDisplayTip.SetActive(true);
         panelDisplayTip.GetComponent<PanelDisplayTip>().showMeX();
         //disable spin button
@@ -113,13 +166,10 @@ public class PanelAskSkip : MonoBehaviour {
                         //gacha animation
                         if (gachaButtonX)
                         {
-                            if(gachaButtonX.GetComponent<Animator>()){
-                            gachaButtonX.GetComponent<Animator>().SetTrigger("spin");
-                            }
-                            
+                            spawngodness();
                             //GameManager.getInstance().playSfx("win");
                             //get result from it
-                            Invoke("dispalySpinResultX", 1f);
+                            Invoke("dispalySpinResultX", 2f);
                         }
 
                     }
@@ -168,10 +218,11 @@ public class PanelAskSkip : MonoBehaviour {
                     //gacha animation
                     if (gachaButton)
                     {
-                        //gachaButton.GetComponent<Animator>().SetTrigger("spin");
+                        spawngodness();
+                        //add gacha animation here
                         //GameManager.getInstance().playSfx("win");
                         //get result from it
-                        Invoke("dispalySpinResult", 1f);
+                        Invoke("dispalySpinResult", 2f);
                     }
 
                 }

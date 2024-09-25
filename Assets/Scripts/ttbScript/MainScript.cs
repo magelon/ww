@@ -24,6 +24,8 @@ public class MainScript : MonoBehaviour {
     public PanelDisplayTip pdt;
 	public StaminaSystem ss;
 
+	
+
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
         //PlayerPrefs.DeleteAll();
@@ -441,13 +443,13 @@ public class MainScript : MonoBehaviour {
 						GameObject.Find ("PanelAskSkip").GetComponent<PanelAskSkip>().showMe();
 						break;
                 case "SpinButton":
-                 
                 panelAskSkip.SetActive(true);
                 panelAskSkip.GetComponent<PanelAskSkip>().x = false;
                 panelAskSkip.GetComponent<PanelAskSkip>().showMe();
                 pdt.dispalyX = 0;
                 break;
                 case "SpinButtonx10":
+				
                 panelAskSkip.SetActive(true);
                 panelAskSkip.GetComponent<PanelAskSkip>().x = true;
                 panelAskSkip.GetComponent<PanelAskSkip>().showMeX();
@@ -455,8 +457,6 @@ public class MainScript : MonoBehaviour {
                 break;
             }
 		}
-
-
 		/// <summary>
 		/// Loads the main scene.
 		/// </summary>
