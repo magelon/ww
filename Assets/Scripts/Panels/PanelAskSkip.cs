@@ -117,7 +117,7 @@ public class PanelAskSkip : MonoBehaviour {
                             gachaButtonX.GetComponent<Animator>().SetTrigger("spin");
                             }
                             
-                            GameManager.getInstance().playSfx("win");
+                            //GameManager.getInstance().playSfx("win");
                             //get result from it
                             Invoke("dispalySpinResultX", 1f);
                         }
@@ -169,7 +169,7 @@ public class PanelAskSkip : MonoBehaviour {
                     if (gachaButton)
                     {
                         //gachaButton.GetComponent<Animator>().SetTrigger("spin");
-                        GameManager.getInstance().playSfx("win");
+                        //GameManager.getInstance().playSfx("win");
                         //get result from it
                         Invoke("dispalySpinResult", 1f);
                     }
