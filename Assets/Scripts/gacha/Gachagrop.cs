@@ -70,6 +70,7 @@ public class Gachagrop : MonoBehaviour
                 }
             }
         }
+        im.sprite=Resources.Load<Sprite>("sumPrefabs/illistrate/"+equiptedL[0]);
     }
 
     // Function to be called when the button is clicked
