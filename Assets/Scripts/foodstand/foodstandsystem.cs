@@ -110,6 +110,10 @@ public class foodstandsystem : MonoBehaviour
                 if (soldFood != null)
                 {
                     Debug.Log("Food sold: " + soldFood.foodName + ", Price: " + soldFood.foodsdetail.price);
+                    int co=PlayerPrefs.GetInt("coin");
+                    co+=soldFood.foodsdetail.price;
+                    //Debug.Log(co);
+                    PlayerPrefs.SetInt("coin",co);
                     imageComponent.sprite=null;
                     indicesToRemove.Add(i);
                 }
