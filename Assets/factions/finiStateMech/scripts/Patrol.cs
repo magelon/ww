@@ -24,7 +24,12 @@ public class Patrol : NPCBase
         //NPC = animator.gameObject;
         base.OnStateEnter(animator, stateInfo, layerIndex);
         //start patrol from 0 position
-        currentWP = 0;
+        if(NPC.GetComponent<Enime>().f==Factions.yellow){
+            currentWP=1;
+        }else{
+            currentWP = 0;
+        }
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

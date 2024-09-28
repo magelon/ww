@@ -8016,6 +8016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0628878a9eb10ff4d878af578ccf69d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0

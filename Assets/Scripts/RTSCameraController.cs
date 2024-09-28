@@ -17,10 +17,22 @@ public class RTSCameraController : MonoBehaviour
     private Vector3 touchStartPos;
     private Vector3 previousTouchPos;
 
+    public Animator animator;
+
     private void Start()
     {
         mainCamera = Camera.main;
         defaultPosition = transform.position;
+        if(animator){
+            Invoke("DisableAnimatorComponent", 5f);
+        }
+        
+    }
+
+    void DisableAnimatorComponent()
+    {
+        // Disable the Animator component
+        animator.enabled = false;
     }
 
     private void Update()

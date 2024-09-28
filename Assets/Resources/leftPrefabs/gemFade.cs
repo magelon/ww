@@ -13,7 +13,7 @@ public class gemFade : MonoBehaviour
     void Start()
     { 
         // Calculate the target position at the top-left corner of the screen in 2D space.
-        targetPosition = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0));
+        targetPosition = Camera.main.ViewportToWorldPoint(new Vector3(0, 2, 0));
 
         // Initialize the current speed to the initial speed.
         currentSpeed = initialSpeed;

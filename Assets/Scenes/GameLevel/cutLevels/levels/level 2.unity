@@ -7747,6 +7747,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7840,6 +7841,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0628878a9eb10ff4d878af578ccf69d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 519420034}
+--- !u!95 &519420034
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ac31e72c7087574ea9bd0383a1a6c08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &553612968
 GameObject:
   m_ObjectHideFlags: 0
@@ -11799,6 +11822,67 @@ Transform:
   - {fileID: 1461417413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1948666140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383429482050160369, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1321330721543440402, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 1582116512522779996, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
+      propertyPath: m_Name
+      value: minimapCamera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98b161a69514f1c4b82dee482b6a2cc5, type: 3}
 --- !u!1 &1961371510
 GameObject:
   m_ObjectHideFlags: 0
@@ -13356,6 +13440,8 @@ MonoBehaviour:
   gachaButtonX: {fileID: 0}
   GachaGroup: {fileID: 0}
   x: 0
+  spritePrefab: {fileID: 0}
+  fadeDuration: 2
 --- !u!114 &60053476072246375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19415,6 +19501,7 @@ MonoBehaviour:
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
   damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!114 &5760821605867929294 stripped
 MonoBehaviour:
@@ -19534,6 +19621,7 @@ MonoBehaviour:
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3
   damageNumberPrefab: {fileID: 0}
+  healNumberPrefab: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!95 &6773467585756443684
 Animator:
@@ -19995,3 +20083,4 @@ SceneRoots:
   - {fileID: 76414429}
   - {fileID: 982336894}
   - {fileID: 47714607}
+  - {fileID: 1948666140}
