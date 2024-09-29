@@ -8052,7 +8052,7 @@ MonoBehaviour:
   foodsData:
     foods: []
   inv: {fileID: 519420034}
-  invui: {fileID: 0}
+  invui: {fileID: 1604496120}
 --- !u!82 &519420036
 AudioSource:
   m_ObjectHideFlags: 0

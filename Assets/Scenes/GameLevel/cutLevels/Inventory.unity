@@ -5009,6 +5009,7 @@ MonoBehaviour:
   - {fileID: 394423554}
   result: {fileID: 56281210}
   inv: {fileID: 1468772237}
+  invui: {fileID: 167471709}
 --- !u!82 &1468772239
 AudioSource:
   m_ObjectHideFlags: 0

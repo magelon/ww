@@ -10,6 +10,7 @@ public class CraftingSystem : MonoBehaviour
     //public GameObject sell;
     public GameObject result;
     public Inventory inv;
+    public InventoryUI invui;
 
     private string[] stringArray = new string[2]; // Array to hold two strings
     private int currentIndex = 0; // Tracks which index to add a new string to
@@ -85,11 +86,7 @@ public class CraftingSystem : MonoBehaviour
 
     public void OnCraftButtonClick(){
         //check item in result slot
-        //add items to prefab
-        //remove items in prefab
-        //remove button images
         if(stringArray[1]!=null){
-            inv.LoadInventory();
             inv.AddItem(result.GetComponent<Image>().sprite.name);
              for (int i = 0; i < stringArray.Length; i++)
             {
@@ -99,7 +96,7 @@ public class CraftingSystem : MonoBehaviour
             result.GetComponent<Image>().sprite=null; 
         }
         inv.LoadInventory();
-
+        invui.UpdateUI();
     }
 
     // Craft function that takes two items

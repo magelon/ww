@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(string name)
     {
+        LoadInventory();
         // Check if the item already exists and can be stacked
         foreach (InventorySlot slot in slots)
         {
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
+
         Ittem newItem = new Ittem
         {
             itemName = name,
@@ -31,6 +33,8 @@ public class Inventory : MonoBehaviour
         };
 
         slots.Add(newSlot);
+        SaveInventory();
+        LoadInventory();
         
     }
 
@@ -75,7 +79,7 @@ public class Inventory : MonoBehaviour
         {
             
             string itemNamee = PlayerPrefs.GetString("Item_" + i + "_Name");
-            Debug.Log("add "+ itemNamee);
+            //Debug.Log("add "+ itemNamee);
             int amountt = PlayerPrefs.GetInt("Item_" + i + "_Amount");
             Ittem newItem = new Ittem
                     {
