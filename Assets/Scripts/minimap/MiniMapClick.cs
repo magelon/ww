@@ -10,7 +10,7 @@ public class MiniMapClick : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData) {
         Vector2 localCursor;
-        if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(minimapRectTransform, eventData.position, eventData.pressEventCamera, out localCursor)) {
+        if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(minimapRectTransform, eventData.position, eventData.pressEventCamera, out localCursor)&&mainCamera!=null) {
             return;
         }
 

@@ -76,9 +76,9 @@ public class SpawnInstansi : MonoBehaviour
         else
         {
             Debug.LogError("JSON data file is missing or not assigned.");
-        }
-
-        
+        } 
     }
+
+   
 
 }

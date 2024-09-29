@@ -372,7 +372,7 @@ public class MainScript : MonoBehaviour {
 						break;
 				case "btnContinue":
 						if(GameData.getInstance().cLevel < GameData.totalLevel-1){
-								GameData.getInstance().cLevel++;
+						GameData.getInstance().cLevel++;
 						}SceneManager.LoadScene("level " + (GameData.getInstance().cLevel + 1));
 						GameManager.getInstance ().playSfx ("click");
 						break;
@@ -380,36 +380,27 @@ public class MainScript : MonoBehaviour {
 						GameData.getInstance().maing.BroadcastMessage("action");
 						break;
 				case "btnPauseClose":
-
 						Time.timeScale = 1;
 						break;
 				case "btnHelp":
 						if(GameData.getInstance().isWin || GameData.getInstance().isFail)return;
-
-
 						break;
 				case "btnTitle":
-
 						GameManager.getInstance ().playSfx ("click");
 						GameData.isInGame = false;
 						break;
 				case "btnPause":
 						Time.timeScale = 0;
 						if(GameData.getInstance().isWin || GameData.getInstance().isFail)return;
-
-
 						break;
 				case "btnTip":
 						if (GameData.getInstance ().isWin || GameData.getInstance ().isFail)
 								return;
-						
 						if (GameData.getInstance ().isLock)
 								return;
-						
 						panelAskTip.SetActive (true);
 						panelAskTip.GetComponent<PanelAskTip> ().showMe ();
 						GameManager.getInstance ().playSfx ("click");
-					
 						break;
 				case "btnSkip":
 						if (GameData.getInstance ().isWin || GameData.getInstance ().isFail)
@@ -420,13 +411,10 @@ public class MainScript : MonoBehaviour {
 						panelAskSkip.SetActive (true);
 						panelAskSkip.GetComponent<PanelAskSkip> ().showMe ();
 						break;
-
                 case "btnMoneyBuy":
 						if(GameData.getInstance().isWin || GameData.getInstance().isFail)return;
-
 						GameData.getInstance().lockGame(true);
 						GameManager.getInstance().playSfx("click");
-			
 						GameObject.Find ("PanelAskSkip").GetComponent<PanelAskSkip>().showMe();
 						panelDisplayTip.showMe();
 						break;
@@ -443,18 +431,17 @@ public class MainScript : MonoBehaviour {
 						GameObject.Find ("PanelAskSkip").GetComponent<PanelAskSkip>().showMe();
 						break;
                 case "SpinButton":
-                panelAskSkip.SetActive(true);
-                panelAskSkip.GetComponent<PanelAskSkip>().x = false;
-                panelAskSkip.GetComponent<PanelAskSkip>().showMe();
-                pdt.dispalyX = 0;
-                break;
+                		panelAskSkip.SetActive(true);
+                		panelAskSkip.GetComponent<PanelAskSkip>().x = false;
+                		panelAskSkip.GetComponent<PanelAskSkip>().showMe();
+                		pdt.dispalyX = 0;
+                		break;
                 case "SpinButtonx10":
-				
-                panelAskSkip.SetActive(true);
-                panelAskSkip.GetComponent<PanelAskSkip>().x = true;
-                panelAskSkip.GetComponent<PanelAskSkip>().showMeX();
-                pdt.dispalyX = 10;
-                break;
+                		panelAskSkip.SetActive(true);
+                		panelAskSkip.GetComponent<PanelAskSkip>().x = true;
+                		panelAskSkip.GetComponent<PanelAskSkip>().showMeX();
+                		pdt.dispalyX = 10;
+                		break;
             }
 		}
 		/// <summary>
@@ -498,7 +485,7 @@ public class MainScript : MonoBehaviour {
 						fadeIn ("LevelMenu");
 						break;
 				case "btnTitle":
-						fadeIn ("MainMenu");
+						fadeIn ("MainMenuM");
 						break;
 				case "btnRetry":
 						Debug.Log("retry");

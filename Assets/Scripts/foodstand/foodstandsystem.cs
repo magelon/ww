@@ -34,6 +34,8 @@ public class foodstandsystem : MonoBehaviour
     public InventoryUI invui;
 
     private List<string> stringList = new List<string>(); 
+    public GameObject healNumberPrefab;
+    [SerializeField] private Canvas canvas;
 
      void Start()
     { 
@@ -114,6 +116,9 @@ public class foodstandsystem : MonoBehaviour
                     Debug.Log("Food sold: " + soldFood.foodName + ", Price: " + soldFood.foodsdetail.price);
                     int co=PlayerPrefs.GetInt("coin");
                     co+=soldFood.foodsdetail.price;
+                    GameObject healNumber = Instantiate(healNumberPrefab, canvas.transform.position, Quaternion.identity, canvas.transform);
+                    HealNumber dnScript = healNumber.GetComponent<HealNumber>();
+                    dnScript.SetValue(soldFood.foodsdetail.price);
                     //Debug.Log(co);
                     PlayerPrefs.SetInt("coin",co);
                     inv.RemoveItem(soldFood.foodName);
