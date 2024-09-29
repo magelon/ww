@@ -8051,6 +8051,8 @@ MonoBehaviour:
   - {fileID: 525886124}
   foodsData:
     foods: []
+  inv: {fileID: 519420034}
+  invui: {fileID: 0}
 --- !u!82 &519420036
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10908,6 +10910,10 @@ PrefabInstance:
       value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 4427077118313832616, guid: 72deed2c5c95e1e4fbfafe353a3adbfa, type: 3}
+      propertyPath: invui
+      value: 
+      objectReference: {fileID: 1604496120}
+    - target: {fileID: 4427077118313832616, guid: 72deed2c5c95e1e4fbfafe353a3adbfa, type: 3}
       propertyPath: objectToHide1
       value: 
       objectReference: {fileID: 1653126339}
@@ -11237,6 +11243,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8964671752075750900, guid: 72deed2c5c95e1e4fbfafe353a3adbfa, type: 3}
   m_PrefabInstance: {fileID: 1604496118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1604496120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 75490679874116074, guid: 72deed2c5c95e1e4fbfafe353a3adbfa, type: 3}
+  m_PrefabInstance: {fileID: 1604496118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1f9e24608ef1a4996896f4e4e61de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1620491526
 GameObject:
   m_ObjectHideFlags: 0

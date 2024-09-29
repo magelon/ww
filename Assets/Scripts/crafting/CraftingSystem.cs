@@ -9,6 +9,7 @@ public class CraftingSystem : MonoBehaviour
     public List<GameObject> go;
     //public GameObject sell;
     public GameObject result;
+    public Inventory inv;
 
     private string[] stringArray = new string[2]; // Array to hold two strings
     private int currentIndex = 0; // Tracks which index to add a new string to
@@ -33,17 +34,21 @@ public class CraftingSystem : MonoBehaviour
 
     public void PrintAllElements()
     {
-        Debug.Log("Array elements:");
+        //Debug.Log("Array elements:");
         for (int i = 0; i < stringArray.Length; i++)
         {
             Image im=go[i].GetComponent<Image>();
             im.sprite = Resources.Load<Sprite>("sumPrefabs/goodImgs/" + stringArray[i]);
             Debug.Log("Element " + i + ": " + stringArray[i]);
         }
+        if(stringArray[1]!=null){
+            CraftPreview();
+        }
     }
 
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         // Define a few recipes
         Recipe recipe1 = new Recipe("apple", "banana", "apple");
         Recipe recipe2 = new Recipe("apple", "apple", "apple");
@@ -72,10 +77,29 @@ public class CraftingSystem : MonoBehaviour
         }
     }
 
-    public void OnCraftButtonClick(){
-        if(stringArray!=null){
+    public void CraftPreview(){
+            if(stringArray!=null){
             Craft(stringArray[0],stringArray[1]);
         }
+    }
+
+    public void OnCraftButtonClick(){
+        //check item in result slot
+        //add items to prefab
+        //remove items in prefab
+        //remove button images
+        if(stringArray[1]!=null){
+            inv.LoadInventory();
+            inv.AddItem(result.GetComponent<Image>().sprite.name);
+             for (int i = 0; i < stringArray.Length; i++)
+            {
+                inv.RemoveItem(stringArray[i]);
+                go[i].GetComponent<Image>().sprite=null;
+            }
+            result.GetComponent<Image>().sprite=null; 
+        }
+        inv.LoadInventory();
+
     }
 
     // Craft function that takes two items

@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
             {
                 slot.amount += 1;
                 SaveInventory();
+                LoadInventory();
                 return;
             }
         }
@@ -30,8 +31,6 @@ public class Inventory : MonoBehaviour
         };
 
         slots.Add(newSlot);
-        SaveInventory();
-
         
     }
 
@@ -47,9 +46,11 @@ public class Inventory : MonoBehaviour
                     slots.Remove(slot);
                 }
                 SaveInventory();
+                LoadInventory();
                 return;
             }
         }
+        
         Debug.Log("Item not found in inventory!");
     }
 
@@ -68,7 +69,7 @@ public class Inventory : MonoBehaviour
     {
         int itemCount = PlayerPrefs.GetInt("Item_Count", 0);
         
-        //slots.Clear();
+        slots.Clear();
 
         for (int i = 0; i < itemCount; i++)
         {

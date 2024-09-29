@@ -30,6 +30,8 @@ public class foodstandsystem : MonoBehaviour
     public TextAsset jsonDataFile;
     public List<GameObject> go;
     public FoodsData foodsData;
+    public Inventory inv;
+    public InventoryUI invui;
 
     private List<string> stringList = new List<string>(); 
 
@@ -114,6 +116,10 @@ public class foodstandsystem : MonoBehaviour
                     co+=soldFood.foodsdetail.price;
                     //Debug.Log(co);
                     PlayerPrefs.SetInt("coin",co);
+                    inv.RemoveItem(soldFood.foodName);
+                    if(invui){
+                        invui.UpdateUI();
+                    }
                     imageComponent.sprite=null;
                     indicesToRemove.Add(i);
                 }

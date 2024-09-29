@@ -16,7 +16,7 @@ void Start(){
     UpdateUI();
 }
 
-    void UpdateUI()
+  public void UpdateUI()
     {
         foreach (Transform child in slotParent)
         {
@@ -38,8 +38,4 @@ void Start(){
         }
     }
 
-    void Update()
-    {
-        //UpdateUI();
-    }
 }

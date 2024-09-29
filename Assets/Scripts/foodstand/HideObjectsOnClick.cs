@@ -7,6 +7,7 @@ public class HideObjectsOnClick : MonoBehaviour
     public GameObject objectToHide2; // The second GameObject to hide (can be the button itself or another object)
 
     private Button button;
+    public InventoryUI invui;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class HideObjectsOnClick : MonoBehaviour
         if (objectToHide1 != null)
         {
             objectToHide1.SetActive(!objectToHide1.activeSelf);
+            invui.UpdateUI();
         }
 
         if (objectToHide2 != null)
