@@ -6,6 +6,6 @@ using System;
 [Serializable]
 public class Dialog 
 {
-    public string lines;
     public string who;
+    public string lines;
 }
