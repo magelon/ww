@@ -6059,6 +6059,7 @@ MonoBehaviour:
   timebetweenWave: 8
   illstrate: {fileID: 0}
   fadeDuration: 2
+  foespawnchick: {fileID: 0}
 --- !u!4 &119880884
 Transform:
   m_ObjectHideFlags: 0
@@ -8169,7 +8170,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 80a951f82249c5649a9cb3201663ecf6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3f210a9248e3a8c498e2b91a50dcbbab, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8309,6 +8310,7 @@ MonoBehaviour:
   timebetweenWave: 5
   illstrate: {fileID: 0}
   fadeDuration: 2
+  foespawnchick: {fileID: 0}
 --- !u!224 &580163168 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2343825438693894843, guid: 72deed2c5c95e1e4fbfafe353a3adbfa, type: 3}

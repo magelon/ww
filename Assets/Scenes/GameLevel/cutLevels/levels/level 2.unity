@@ -7783,6 +7783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494992308}
+  - component: {fileID: 494992309}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -7814,6 +7815,102 @@ Transform:
   - {fileID: 762995969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &494992309
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494992307}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 74043717788034d4fb3a30a73913517d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14705,38 +14802,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dias:
-  - lines: Hi there!
-    who: ??
-  - lines: I am your friend fo.
-    who: Fo
-  - lines: Let me tell you
-    who: Fo
-  - lines: How to play this game.
-    who: Fo
-  - lines: Can you see 2 towers?
-    who: Fo
-  - lines: your goal is to destroy
-    who: Fo
-  - lines: the tower on the left
-    who: Fo
-  - lines: and protect the right one
-    who: Fo
-  - lines: there are some buttons
-    who: Fo
-  - lines: on the right bottom
-    who: Fo
-  - lines: you can only use them
-    who: Fo
-  - lines: on cool down
-    who: Fo
-  - lines: there is an energy bar
-    who: Fo
-  - lines: summon fos will consume
-    who: Fo
-  - lines: energy,now try to win!
-    who: Fo
-  text: {fileID: 1961371512}
-  characters: []
+  - who: ??
+    lines: Hi there!
+  - who: Fo
+    lines: I am your friend fo.
+  - who: Fo
+    lines: Let me tell you
+  - who: Fo
+    lines: How to play this game.
+  - who: Fo
+    lines: Can you see 2 towers?
+  - who: Fo
+    lines: your goal is to destroy
+  - who: Fo
+    lines: the tower on the left
+  - who: Fo
+    lines: and protect the right one
+  - who: Fo
+    lines: there are some buttons
+  - who: Fo
+    lines: on the right bottom
+  - who: Fo
+    lines: you can only use them
+  - who: Fo
+    lines: on cool down
+  - who: Fo
+    lines: there is an energy bar
+  - who: Fo
+    lines: summon fos will consume
+  - who: Fo
+    lines: energy,now try to win!
+  text: {fileID: 0}
+  image: {fileID: 0}
+  dialogFilePath: Assets/Dialogs/chapter1.txt
 --- !u!1 &91151402042512017
 GameObject:
   m_ObjectHideFlags: 0
