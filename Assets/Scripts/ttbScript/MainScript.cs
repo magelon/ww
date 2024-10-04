@@ -34,7 +34,23 @@ public class MainScript : MonoBehaviour {
         GameData.getInstance().energy = 0.4f;
 
 		initData ();
-		initView ();	
+		initView ();
+
+		Transform dialogTransform = transform.Find("dialog");
+
+		if(clevel<PlayerPrefs.GetInt("levelPassed")){
+			Debug.Log("this level passed! pass dialog");
+			
+			}else{
+				if (dialogTransform != null)
+				{
+				// Get the GameObject of the child
+    			GameObject dialog = dialogTransform.gameObject;
+    			// Disable the dialog GameObject
+    			dialog.SetActive(true);
+				}
+				Debug.Log("level not passed yet.");
+			}
         //rv = GetComponent<rewardVideo>();
         // inter = GetComponent<InterstitialAdScript>();
         StartCoroutine("waitAsecond");

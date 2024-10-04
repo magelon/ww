@@ -23,6 +23,7 @@ public class followSliderHP : MonoBehaviour
         fullHP = e.health;
         sliderRectTransform = slider.GetComponent<RectTransform>();
         canvasRectTransform = slider.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        
     }
 
     void Update()
@@ -30,6 +31,7 @@ public class followSliderHP : MonoBehaviour
         sl.value = e.health / fullHP;
         Vector3 screenPos = mainCamera.WorldToScreenPoint(target.position);
 
+        screenPos.y += 50f; 
         // If the target is behind the camera, hide the slider
         if (screenPos.z < 0)
         {
