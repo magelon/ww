@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;  // For TextMeshPro
-using System.IO;  // For file handling
 
 public class DisplayDialogs : MonoBehaviour
 {
@@ -15,13 +14,20 @@ public class DisplayDialogs : MonoBehaviour
     public TMP_Text text;  // TextMeshPro component
     public Image image;
 
-    // Path to the dialogue file
-    public string dialogFilePath = "Assets/Dialogs/chapter1.txt";
+    // Reference to the dialogue file (TextAsset)
+    public TextAsset dialogFile;
 
     void Start()
     {
-        // Load dialogues from file
-        LoadDialogFromFile(dialogFilePath);
+        // Load dialogues from the TextAsset
+        if (dialogFile != null)
+        {
+            LoadDialogFromTextAsset(dialogFile);
+        }
+        else
+        {
+            Debug.LogError("No dialogue file assigned!");
+        }
 
         // Start with the first dialog
         index = 0;
@@ -69,49 +75,66 @@ public class DisplayDialogs : MonoBehaviour
 
     private void DisplayCurrentDialog()
     {
-        // Update the TextMeshPro UI with the current dialog
-        text.text = dias[index].who + ": " + dias[index].lines;
+         if (dias != null && index >= 0 && index < dias.Length)
+        {
+        if (dias[index] != null)
+        {
+            text.text = dias[index].who + ": " + dias[index].lines;
+        }
+        else
+        {
+            Debug.LogError("Dialog entry is null at index " + index);
+        }
+        }
+        else
+        {
+            Debug.LogError("Dialog array is null or index out of bounds");
+        }
     }
 
     private void HighlightCharacter(string characterName)
     {
-            Sprite itemSprite = Resources.Load<Sprite>("sumPrefabs/illistrate/" + characterName);
-            if (itemSprite != null)
-            {
-               image.sprite = itemSprite;
-                // Modify the alpha value of the image color
-                Color col = image.color;
-                col.a = 1f;  // Set alpha to 1 (fully opaque)
-                image.color = col;  // Assign the modified color back to the image
-            }
+        Sprite itemSprite = Resources.Load<Sprite>("sumPrefabs/illistrate/" + characterName);
+        if (itemSprite != null)
+        {
+            image.sprite = itemSprite;
+            // Modify the alpha value of the image color
+            Color col = image.color;
+            col.a = 1f;  // Set alpha to 1 (fully opaque)
+            image.color = col;  // Assign the modified color back to the image
+        }
     }
 
-    // Method to load dialogues from a file
-    private void LoadDialogFromFile(string path)
+    // Method to load dialogues from a TextAsset
+    private void LoadDialogFromTextAsset(TextAsset textAsset)
     {
-        if (File.Exists(path))
+        if (textAsset == null)
         {
-            string[] lines = File.ReadAllLines(path);
-            dias = new Dialog[lines.Length];
+        Debug.LogError("TextAsset is null");
+        return;
+        }
 
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string[] parts = lines[i].Split(':');
-                if (parts.Length == 2)
-                {
-                    dias[i] = new Dialog();
-                    dias[i].who = parts[0].Trim(); // Character name
-                    dias[i].lines = parts[1].Trim(); // Dialogue text
-                }
-                else
-                {
-                    Debug.LogWarning("Incorrect dialogue format on line " + (i + 1));
-                }
-            }
+        string[] lines = textAsset.text.Split(new[] { '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries);
+        dias = new Dialog[lines.Length];
+
+        for (int i = 0; i < lines.Length; i++)
+        {
+        string[] parts = lines[i].Split(':');
+        if (parts.Length == 2)
+        {
+            dias[i] = new Dialog();
+            dias[i].who = parts[0].Trim(); // Character name
+            dias[i].lines = parts[1].Trim(); // Dialogue text
         }
         else
         {
-            Debug.LogError("Dialogue file not found at: " + path);
+            Debug.LogWarning("Incorrect dialogue format on line " + (i + 1));
+        }
+        }
+
+        if (dias.Length == 0)
+        {
+        Debug.LogError("No dialogs loaded from the text asset");
         }
     }
 }

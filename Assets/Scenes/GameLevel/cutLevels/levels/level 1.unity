@@ -14843,7 +14843,7 @@ MonoBehaviour:
     lines: energy,now try to win!
   text: {fileID: 0}
   image: {fileID: 0}
-  dialogFilePath: Assets/Dialogs/chapter1.txt
+  dialogFile: {fileID: 0}
 --- !u!1 &91151402042512017
 GameObject:
   m_ObjectHideFlags: 0
@@ -19080,6 +19080,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278589817606967417, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: dialogFile
+      value: 
+      objectReference: {fileID: 4900000, guid: cb45bb6bce212dc4c9dcf711cbf16893, type: 3}
     - target: {fileID: 7199660586399298811, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_Name
       value: dialog
