@@ -16,7 +16,7 @@
       
     },
     {
-      "itemsName": "pixie",
+      "itemsName": "goblin",
       "attributes": 
         {
            "hp": 30,
@@ -25,6 +25,21 @@
            "speed": 0.1,
            "energy":0.3,
            "force":30,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
+      "itemsName": "golem",
+      "attributes": 
+        {
+           "hp": 50,
+           "atk": 1,
+           "mess": 1,
+           "speed": 0.1,
+           "energy":0.3,
+           "force":50,
            "rate":3,
            "art":"lon"
         }

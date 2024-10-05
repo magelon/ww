@@ -64,9 +64,9 @@
         "levelName": "level 5",
         "items": 
           {
-            "item1": "c","wave1":10,
-             "item2": "c","wave2":30,
-             "item3": "c","wave3":60
+            "item1": "golem","wave1":10,
+             "item2": "golem","wave2":30,
+             "item3": "golem","wave3":60
           }
       }
       ,

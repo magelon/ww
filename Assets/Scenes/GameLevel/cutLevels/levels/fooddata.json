@@ -11,6 +11,16 @@
       
     },
     {
+      "foodName": "sugar",
+      "foodsdetail": 
+        {
+           "price": 10,
+           "rate":3,
+           "art":"lon"
+        }
+      
+    },
+    {
       "foodName": "banana",
       "foodsdetail": 
         {
