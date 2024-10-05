@@ -253,6 +253,13 @@ public class Enime : MonoBehaviour
     public void damage(int dam) {
         if(damageNumberPrefab!=null){
             GameObject damageNumber = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            if(f == Factions.yellow){
+                damageNumber.transform.eulerAngles = new Vector3(
+                damageNumber.transform.eulerAngles.x,  // Keep current X rotation
+                180,                                  // Set Y rotation to 180 degrees
+                damageNumber.transform.eulerAngles.z   // Keep current Z rotation
+                );
+            }
             DamageNumber dnScript = damageNumber.GetComponent<DamageNumber>();
             dnScript.SetValue(dam);
         }
@@ -266,6 +273,13 @@ public class Enime : MonoBehaviour
         
         if(healNumberPrefab!=null){
             GameObject healNumber = Instantiate(healNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            if(f == Factions.yellow){
+                healNumber.transform.eulerAngles = new Vector3(
+                healNumber.transform.eulerAngles.x,  // Keep current X rotation
+                180,                                  // Set Y rotation to 180 degrees
+                healNumber.transform.eulerAngles.z   // Keep current Z rotation
+                );
+            }
             HealNumber dnScript = healNumber.GetComponent<HealNumber>();
             dnScript.SetValue(dam);
         }

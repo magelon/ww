@@ -11257,6 +11257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: birds
       objectReference: {fileID: 0}
+    - target: {fileID: 1500379811982828472, guid: fe605e8822cd3ac49a645f71a36eebe8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1500379811982828473, guid: fe605e8822cd3ac49a645f71a36eebe8, type: 3}
       propertyPath: speed
       value: 0.1
@@ -17312,7 +17316,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &169895317066744561
 RectTransform:

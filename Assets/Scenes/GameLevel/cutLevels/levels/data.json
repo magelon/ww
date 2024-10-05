@@ -54,9 +54,9 @@
         "levelName": "level 4",
         "items": 
           {
-            "item1": "c","wave1":10,
-             "item2": "c","wave2":30,
-             "item3": "c","wave3":60
+            "item1": "pixie","wave1":10,
+             "item2": "pixie","wave2":30,
+             "item3": "pixie","wave3":60
           }
       }
       ,

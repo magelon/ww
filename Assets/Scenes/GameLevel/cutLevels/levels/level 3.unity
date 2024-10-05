@@ -7571,7 +7571,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 7583c3e5201abac489dfc2ddad04c3e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75ca95b8f406d3646a1da0e688efd746, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7591,8 +7591,8 @@ Transform:
   m_GameObject: {fileID: 446349865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.24, y: 0.75, z: 1}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0.18, y: 0.01, z: 1}
+  m_LocalScale: {x: 0.6545136, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 494992308}
@@ -11160,6 +11160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: birds
       objectReference: {fileID: 0}
+    - target: {fileID: 1500379811982828472, guid: fe605e8822cd3ac49a645f71a36eebe8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1500379811982828473, guid: fe605e8822cd3ac49a645f71a36eebe8, type: 3}
       propertyPath: speed
       value: 0.1
@@ -14705,38 +14709,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dias:
-  - lines: Hi there!
-    who: ??
-  - lines: I am your friend fo.
-    who: Fo
-  - lines: Let me tell you
-    who: Fo
-  - lines: How to play this game.
-    who: Fo
-  - lines: Can you see 2 towers?
-    who: Fo
-  - lines: your goal is to destroy
-    who: Fo
-  - lines: the tower on the left
-    who: Fo
-  - lines: and protect the right one
-    who: Fo
-  - lines: there are some buttons
-    who: Fo
-  - lines: on the right bottom
-    who: Fo
-  - lines: you can only use them
-    who: Fo
-  - lines: on cool down
-    who: Fo
-  - lines: there is an energy bar
-    who: Fo
-  - lines: summon fos will consume
-    who: Fo
-  - lines: energy,now try to win!
-    who: Fo
-  text: {fileID: 1961371512}
-  characters: []
+  - who: ??
+    lines: Hi there!
+  - who: Fo
+    lines: I am your friend fo.
+  - who: Fo
+    lines: Let me tell you
+  - who: Fo
+    lines: How to play this game.
+  - who: Fo
+    lines: Can you see 2 towers?
+  - who: Fo
+    lines: your goal is to destroy
+  - who: Fo
+    lines: the tower on the left
+  - who: Fo
+    lines: and protect the right one
+  - who: Fo
+    lines: there are some buttons
+  - who: Fo
+    lines: on the right bottom
+  - who: Fo
+    lines: you can only use them
+  - who: Fo
+    lines: on cool down
+  - who: Fo
+    lines: there is an energy bar
+  - who: Fo
+    lines: summon fos will consume
+  - who: Fo
+    lines: energy,now try to win!
+  text: {fileID: 0}
+  image: {fileID: 0}
+  dialogFilePath: Assets/Dialogs/chapter1.txt
 --- !u!1 &91151402042512017
 GameObject:
   m_ObjectHideFlags: 0
