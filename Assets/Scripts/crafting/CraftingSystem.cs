@@ -51,8 +51,11 @@ public class CraftingSystem : MonoBehaviour
     {
         //PlayerPrefs.DeleteAll();
         // Define a few recipes
-        Recipe recipe1 = new Recipe("apple", "banana", "apple");
-        Recipe recipe2 = new Recipe("apple", "apple", "apple");
+        Recipe recipe1 = new Recipe("slime", "banana", "fruity_stretch");
+        Recipe recipe2 = new Recipe("apple", "slime", "fruity_stretch");
+        Recipe recipe3 = new Recipe("chicken", "dust", "savory_puff");
+        Recipe recipe4 = new Recipe("banana", "egg", "golden_squeeze");
+        Recipe recipe5 = new Recipe("slime", "sugar", "sweet_flow");
 
         // Add the recipes to the list
         recipes.Add(recipe1);

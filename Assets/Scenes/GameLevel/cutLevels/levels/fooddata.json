@@ -79,6 +79,15 @@
            "art":"lon"
         }
       
+    },
+    {
+      "foodName": "fruity_stretch",
+      "foodsdetail": 
+        {
+           "price": 50,
+           "rate":3,
+           "art":"lon"
+        }
     }
     
   ]
