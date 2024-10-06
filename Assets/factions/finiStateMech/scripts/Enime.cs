@@ -42,6 +42,8 @@ public class Enime : MonoBehaviour
     public GameObject damageNumberPrefab;
     public GameObject healNumberPrefab;
     [SerializeField] private Canvas canvas;
+
+    
     //on enable dont have enough time to up date a lot of component add in update function
     private void OnEnable()
     {
@@ -72,6 +74,7 @@ public class Enime : MonoBehaviour
         if(gem){
             poolManager.instance.CreatePool(gem, 20);
         }
+       
         poolManager.instance.CreatePool(gostFlip, 10);
         poolManager.instance.CreatePool(gainText, 10);
 
