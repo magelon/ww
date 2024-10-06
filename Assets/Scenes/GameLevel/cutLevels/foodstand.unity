@@ -12517,6 +12517,7 @@ MonoBehaviour:
   atRange: 0.1
   atPos: {fileID: 8938421843245464539}
   pivot: {fileID: 153265900}
+  slash: {fileID: 0}
 --- !u!114 &4752136799227592383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12736,6 +12737,7 @@ MonoBehaviour:
   atRange: 0.1
   atPos: {fileID: 6773467586169159032}
   pivot: {fileID: 1386417304}
+  slash: {fileID: 0}
 --- !u!61 &6773467585756443694
 BoxCollider2D:
   m_ObjectHideFlags: 0
