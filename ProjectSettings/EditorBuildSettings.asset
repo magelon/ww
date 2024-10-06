@@ -53,27 +53,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 11.unity
     guid: 7f4c7d1e2239b244684704166d3cb5c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 12.unity
-    guid: 2894fd71d2ff59d4caea957840f5df0d
-  - enabled: 0
+    guid: 844e745c8151cca4fb80c9c60e0358af
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 13.unity
-    guid: 5abf6bc6a47ac934a9c27df17215edbf
-  - enabled: 0
+    guid: dae81829770fbcf48a0224359c051bba
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 14.unity
-    guid: 6c9c18de1e3de2c4fb42f8889a2958e9
-  - enabled: 0
+    guid: b4780be02749d2e49af169c8893b0ba9
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 15.unity
-    guid: ccb574ef41059f943b31ffd26c0fd4fa
-  - enabled: 0
+    guid: a82ec8bae9671d24cbc232db44195b2b
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 16.unity
-    guid: 6a1c360f1562d3f40aac4bdcd26e7e4d
-  - enabled: 0
+    guid: d3ed69afbdcec1f41b9b68875314a70b
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 17.unity
-    guid: 54f01250890c4b946accd553f0e3813b
-  - enabled: 0
+    guid: 3b978d9331b01ad4eaa694938489fbdd
+  - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/levels/level 18.unity
-    guid: bfbae5b1d455c154db1bde9ab2585599
+    guid: 57c126e41875f6e47a59d124df318fe4
   - enabled: 1
     path: Assets/Scenes/GameLevel/cutLevels/level999.unity
     guid: 19ae24e2744ff42fd97a9d6cc8df0f42

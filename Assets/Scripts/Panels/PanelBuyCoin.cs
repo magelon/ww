@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Purchasing;
 // using SmartLocalization;
 using UnityEngine.UI;
-public class PanelBuyCoin : MonoBehaviour {
+public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 
 		// Use this for initialization
 		GameObject scrollpanel;
@@ -11,16 +12,109 @@ public class PanelBuyCoin : MonoBehaviour {
 		public GameObject panelBuyAlert;
         public GameObject spinButton;
 		GameObject panel;
+ 		private static IStoreController storeController;
+    	private static IExtensionProvider storeExtensionProvider;
+
+    	public string productId = "com.lon.ww.coins300";
+		public string productId2 = "com.lon.ww.coins600";
+		public string productId3 = "com.lon.ww.coins1000";
+		public string productId4 = "com.lon.ww.coins1500";
+		public string productId5 = "com.lon.ww.coins2200";
+
+
 		void Start () {
-
 				lang = "en";
-
+				 if (storeController == null)
+        	{
+            	InitializePurchasing();
+        	}
 		}
 
-		// Update is called once per frame
-		void Update () {
+    	public void InitializePurchasing()
+    	{
+        if (IsInitialized()) return;
 
+        var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
+
+        // Add products you want to offer
+        builder.AddProduct(productId, ProductType.Consumable);
+		builder.AddProduct(productId2, ProductType.Consumable);
+		builder.AddProduct(productId3, ProductType.Consumable);
+		builder.AddProduct(productId4, ProductType.Consumable);
+		builder.AddProduct(productId5, ProductType.Consumable);
+
+        UnityPurchasing.Initialize(this, builder);
+    	}
+
+    	private bool IsInitialized() => storeController != null && storeExtensionProvider != null;
+
+    	public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+    	{
+        storeController = controller;
+        storeExtensionProvider = extensions;
+    	}
+
+    	public void OnInitializeFailed(InitializationFailureReason error)
+        {
+            Debug.Log(error);
+        }
+
+    	public void OnInitializeFailed(InitializationFailureReason error, string? message = null)
+    	{
+        var errorMessage = $"Purchasing failed to initialize. Reason: {error}.";
+
+        if (message != null)
+        {
+            errorMessage += $" More details: {message}";
+        }
+
+        Debug.Log(errorMessage);
+    	}
+
+    	public void BuyProduct(string id)
+    	{
+        if (IsInitialized())
+        {
+            Product product = storeController.products.WithID(id);
+
+            if (product != null && product.availableToPurchase)
+            {
+                storeController.InitiatePurchase(product);
+            }
+        }
+    	}
+
+     	public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
+    	{
+        Debug.Log($"Purchase Failed: {failureReason}");
+    	}
+
+    	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
+    	{
+    	Debug.Log("Purchase successful!");
+		Product purchasedProduct = args.purchasedProduct;
+		switch(purchasedProduct.definition.id){
+			case "com.lon.ww.coins300":
+			grantCoins(300);
+			break;
+			case "com.lon.ww.coins600":
+			grantCoins(600);
+			break;
+			case "com.lon.ww.coins1000":
+			grantCoins(1000);
+			break;
+			case "com.lon.ww.coins1500":
+			grantCoins(1500);
+			break;
+			case "com.lon.ww.coins2200":
+			grantCoins(2200);
+			break;
+			default:
+            Debug.Log($"Unknown product purchased: {purchasedProduct.definition.id}");
+            break;
 		}
+        return PurchaseProcessingResult.Complete;
+    	}
 
 		public void showMe(){
 				panel = transform.Find ("panel").gameObject;	
@@ -36,10 +130,10 @@ public class PanelBuyCoin : MonoBehaviour {
 				panel.transform.Find ("title").GetComponent<Text> ().text = Localization.Instance.GetString ("titleShop");
 				panel.transform.Find ("btnClose").GetComponentInChildren<Text> ().text = Localization.Instance.GetString ("btnClose");
 
-				for (int i = 0; i<4; i++) {
+				for (int i = 1; i<6; i++) {
 						GameObject trow = GameObject.Find ("row" + i);
-						trow.transform.Find("lbDetail").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i+1)+"tip");
-						trow.transform.Find("lbPrice").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i+1));
+						trow.transform.Find("lbDetail").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i)+"tip");
+						trow.transform.Find("lbPrice").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i));
 				}
 		}
 
@@ -57,6 +151,28 @@ public class PanelBuyCoin : MonoBehaviour {
 
 						int tindex = int.Parse(g.transform.parent.name.Substring(3,1));
 						print(tindex);
+						string tindexst=tindex.ToString();
+						switch (tindexst){
+							case "1":
+							BuyProduct(productId);
+							break;
+							case "2":
+							BuyProduct(productId2);
+							
+							break;
+							case "3":
+							BuyProduct(productId3);
+							
+							break;
+							case "4":
+							BuyProduct(productId4);
+							
+							break;
+							case "5":
+							BuyProduct(productId5);
+							
+							break;
+						}
                 //add coin and dispaly
                 //GameData.getInstance().coin += 60;
                 //PlayerPrefs.SetInt("coin", GameData.getInstance().coin);
@@ -71,6 +187,13 @@ public class PanelBuyCoin : MonoBehaviour {
 				}
 		}
 
+		private void grantCoins(int amount)
+		{
+    	// Add the coins to the user's account
+    	PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin", 0) + amount);
+		GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
+    	Debug.Log($"Granted {amount} coins. Total coins: {PlayerPrefs.GetInt("coin")}");
+		}
 
 		void OnHideCompleted(string str){
 				switch (str) {

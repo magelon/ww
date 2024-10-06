@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 //using Umeng;
-
+using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 //using TMPro;
 
 public class MainScript : MonoBehaviour {
 
+	public string environment = "production";
     //private rewardVideo rv;//rewardVideo rv;
     private GameObject inter;// InterstitialAdScript inter;
     private bool intershowed;
@@ -29,7 +32,8 @@ public class MainScript : MonoBehaviour {
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
         //PlayerPrefs.DeleteAll();
-		
+		InitializeUnityServicesAsync();
+
         //gameWin();
         GameData.getInstance().energy = 0.4f;
 
@@ -55,6 +59,19 @@ public class MainScript : MonoBehaviour {
         // inter = GetComponent<InterstitialAdScript>();
         StartCoroutine("waitAsecond");
 
+		}
+
+		private async Task InitializeUnityServicesAsync() {
+    	try {
+        var options = new InitializationOptions()
+            .SetEnvironmentName(environment);
+
+        await UnityServices.InitializeAsync(options); // Await the initialization here
+        Debug.Log("Unity Services Initialized successfully.");
+    	}
+    	catch (Exception exception) {
+        Debug.LogError($"Error initializing Unity Services: {exception}");
+    	}
 		}
 
     private void Update(){
