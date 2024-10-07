@@ -566,7 +566,7 @@ public class MainScript : MonoBehaviour {
 		/// camera fade out
 		/// </summary>
 		public Image mask;
-	void fadeOut(){
+		void fadeOut(){
 				mask.gameObject.SetActive (true);
 				mask.color = Color.black;
 				ATween.ValueTo (mask.gameObject, ATween.Hash ("ignoretimescale",true,"from", 1, "to", 0, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeOutOver","oncompletetarget",this.gameObject));

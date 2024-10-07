@@ -191,6 +191,7 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 		{
     	// Add the coins to the user's account
     	PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin", 0) + amount);
+		GameData.getInstance().coin = PlayerPrefs.GetInt ("coin");
 		GameData.getInstance().main.txtCoin.text = GameData.getInstance().coin.ToString();
     	Debug.Log($"Granted {amount} coins. Total coins: {PlayerPrefs.GetInt("coin")}");
 		}
