@@ -32,7 +32,7 @@ public class GameData  {
     //config for items
         public static int totalItem = 2;
 
-    public static int totalBanner = 1;
+    public static int totalBanner = 2;
 
     public List<int> lvStar = new List<int>(260);
 

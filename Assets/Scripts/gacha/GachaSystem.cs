@@ -35,13 +35,16 @@ public class GachaSystem : MonoBehaviour
     private int resultCounter = 0;
 
     public TextAsset jsonFile;
+    public TextAsset jsonFile2;
     private List<Item2> loadedItems;
     private List<Item2> simplifiedItemListRate3;
     private List<Item2> simplifiedItemListRate5;
+    public GachaMenu gachamenu;
 
     public string GetGachaResult()
     {
-        if(jsonFile != null){
+        if(gachamenu.page==0){
+            if(jsonFile != null){
 
             string jsonText = jsonFile.text;
             ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
@@ -77,6 +80,45 @@ public class GachaSystem : MonoBehaviour
         {
             Debug.LogError("No JSON file assigned.");
         }
+        }else{
+            if(jsonFile2 != null){
+
+            string jsonText = jsonFile2.text;
+            ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
+            loadedItems = itemsData.items;
+           
+            simplifiedItemListRate3 = new List<Item2>();
+            simplifiedItemListRate5 = new List<Item2>();
+            //Extract only itemsName and rate
+            foreach (Item2 item in loadedItems)
+            {
+                Item2 item2gacha = new Item2
+                {
+                    itemsName = item.itemsName,
+                    attributes = new Attributes2
+                    {
+                        rate = item.attributes.rate
+                    }
+                };
+
+                 if (item2gacha.attributes.rate == 3)
+                {
+                    simplifiedItemListRate3.Add(item2gacha);
+                }
+                else if (item2gacha.attributes.rate == 5)
+                {
+                    simplifiedItemListRate5.Add(item2gacha);
+                }
+                
+            }
+
+        }
+        else
+        {
+            Debug.LogError("No JSON file assigned.");
+        }
+        }
+        
         
         double randomNumber = random.NextDouble(); // Generate a random number between 0 and 1
         resultCounter = PlayerPrefs.GetInt("ResultCounter", 0);

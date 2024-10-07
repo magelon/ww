@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &104974752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -450,11 +450,11 @@ RectTransform:
   - {fileID: 1544361351}
   m_Father: {fileID: 109598797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
-  m_SizeDelta: {x: 322, y: 62}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &104974753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &109598797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1533,7 +1533,7 @@ RectTransform:
   m_GameObject: {fileID: 785521473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 306947953}
@@ -1541,7 +1541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
   m_SizeDelta: {x: 62, y: 44}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &785521475
@@ -2293,7 +2293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1416398583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ RectTransform:
   m_GameObject: {fileID: 1544361350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15266697, y: 0.15266697, z: 0.15266697}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1943357039}
@@ -3566,7 +3566,7 @@ RectTransform:
   m_GameObject: {fileID: 2083178062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 111469908}
@@ -3574,7 +3574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: 0}
+  m_AnchoredPosition: {x: -150, y: 0}
   m_SizeDelta: {x: 62, y: 44}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2083178064
@@ -5280,6 +5280,14 @@ PrefabInstance:
       propertyPath: jsonFile
       value: 
       objectReference: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+    - target: {fileID: 3233388822890872199, guid: 95e065149732fdd49b8818e188b00315, type: 3}
+      propertyPath: gachamenu
+      value: 
+      objectReference: {fileID: 1967147953}
+    - target: {fileID: 3233388822890872199, guid: 95e065149732fdd49b8818e188b00315, type: 3}
+      propertyPath: jsonFile2
+      value: 
+      objectReference: {fileID: 4900000, guid: a5a62a9b80832a94d83429ccfe221e79, type: 3}
     - target: {fileID: 3790291049710302455, guid: 95e065149732fdd49b8818e188b00315, type: 3}
       propertyPath: spinButton
       value: 

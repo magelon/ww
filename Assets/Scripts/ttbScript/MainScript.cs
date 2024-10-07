@@ -27,8 +27,6 @@ public class MainScript : MonoBehaviour {
     public PanelDisplayTip pdt;
 	public StaminaSystem ss;
 
-	
-
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
         //PlayerPrefs.DeleteAll();
@@ -157,8 +155,7 @@ public class MainScript : MonoBehaviour {
 		void initGameView(){
 			if(txtCoin){
 				txtCoin.text = GameData.getInstance ().coin.ToString();
-			}
-				
+			}	
 				if (GameData.getInstance ().cLevel >= GameData.totalLevel) {
                  if (GameObject.Find("btnSkip"))
                  {

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GachaMenu : MonoBehaviour {
 
 		// Use this for initialization
-
+		
 		GameObject listItemg;
 		GameObject mainContainer;
 		List<GameObject> groups;
@@ -18,12 +18,10 @@ public class GachaMenu : MonoBehaviour {
         public OrderShow os;
 
 		void Start () {
-                 
+                
 				GameManager.getInstance ().init();
 				GameData.getInstance ().resetData();
-
 				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
-                
 				initView ();
 				mainContainer = GameObject.Find ("mainContainer");
 				groups = new List<GameObject>();
@@ -55,6 +53,7 @@ public class GachaMenu : MonoBehaviour {
 		/// </summary>
 		/// <param name="force">Force.</param>
 		public void swipePage(float force){
+				/*
 				if (Mathf.Abs(force) < 1f) {//user not do a quick swipe
 						if (groups [page].transform.position.x < Screen.width / 4) {
 								if (page >= 0 && page < pages) {
@@ -116,11 +115,10 @@ public class GachaMenu : MonoBehaviour {
 								returnPage ();
 						}
 				}
-
 				//not allow level buttons active while moving the menu
 				StopCoroutine ("swiped");
 				StartCoroutine ("swiped");
-
+				*/
 		}
 
 		//lock the game while page is auto moving.Unlock when finished
@@ -147,11 +145,8 @@ public class GachaMenu : MonoBehaviour {
 
     //init all item datas 
 		void initView(){
-       
         float gap = transform.Find("bg").GetComponent<RectTransform>().rect.width;
-
         pageDots = new List<GameObject> ();
-
 				pages = Mathf.FloorToInt (GameData.totalBanner / perpage);
                 Debug.Log(pages);
 				for (int i = 0; i < pages; i++) {
@@ -160,10 +155,8 @@ public class GachaMenu : MonoBehaviour {
 						pageDots.Add (tdot);
 						tdot.name = "dot_" + i;
 				}
-
 				setpageDot ();
 				fadeOut ();
-
 				gContainer = new List<GameObject>();
 				gContainer.Add (levelButton.transform.parent.gameObject);
 						levelButton.GetComponent<RectTransform> ().localScale = Vector3.one;
@@ -173,20 +166,15 @@ public class GachaMenu : MonoBehaviour {
         int n0 = 0;
         for (int i = perpage; i < GameData.totalBanner; i += perpage)
         {
-
             GameObject tgroup = Instantiate(levelButton.transform.parent.gameObject, levelButton.transform.parent.parent) as GameObject;
-
             tgroup.transform.localPosition = new Vector3(gap * (n0 + 1), 0, 0);
-          
             gContainer.Add(tgroup);
             n0++;
             //tgroup.transform.parent = levelButton.transform.parent.gameObject.transform.parent;
         }
 
-
         for (int i = 0; i < GameData.totalBanner; i++) {
 						GameObject tbtn = Instantiate (levelButton, Vector3.zero, Quaternion.identity) as GameObject;
-
 						int tContainerNo = Mathf.FloorToInt (i / perpage);
                         tbtn.transform.SetParent(gContainer[tContainerNo].transform);
 						//tbtn.transform.parent = gContainer[tContainerNo].transform;
@@ -222,11 +210,7 @@ public class GachaMenu : MonoBehaviour {
 				int tdotIndex = int.Parse(tdot.transform.parent.name.Substring (4, tdot.transform.parent.name.Length - 4));
 				page = tdotIndex;
 				canmove = false;
-
-
 				ATween.MoveTo(gContainer[0].transform.parent.gameObject, ATween.Hash("ignoretimescale",true,"islocal", true,"x", -gContainer[page].transform.localPosition.x, "time",.3f,"easeType", "easeOutExpo", "oncomplete", "dotclicked","oncompletetarget",this.gameObject));
-
-
 		}	
 
 		/// <summary>
@@ -311,6 +295,7 @@ public class GachaMenu : MonoBehaviour {
 						ATween.MoveTo(gContainer[0].transform.parent.gameObject, ATween.Hash( "ignoretimescale",true,"islocal", true,"x", -gContainer[page].transform.localPosition.x, "time",.3f,"easeType", "easeOutExpo", "oncomplete", "dotclicked","oncompletetarget",this.gameObject));
 
             GameManager.getInstance().playSfx("push");
+			print("page "+page);
         }
 		}
 		/// <summary>
@@ -329,6 +314,7 @@ public class GachaMenu : MonoBehaviour {
 
             GameManager.getInstance().playSfx("push");
             }
+			print("page "+page);
 		}
 
 

@@ -10,7 +10,6 @@ public class loadUnitsUI : MonoBehaviour
     public List<string> equiptedL;
     public Queue<GameObject> itemButton;
 
-
     public static loadUnitsUI instance;
     public static loadUnitsUI getInstance()
     {
@@ -21,10 +20,8 @@ public class loadUnitsUI : MonoBehaviour
         return instance;
     }
 
-   
     void Start()
     {
-
         equiptedL = new List<string>();
         
         itemButton = new Queue<GameObject>();
