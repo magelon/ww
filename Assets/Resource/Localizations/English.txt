@@ -35,15 +35,15 @@ levelScore = Exp :
 
 titleShop = Coin Store
 price1tip = Get 300 Coin
-price2tip = Get 600 Coin
-price3tip = Get 1000 Coin
-price4tip = Get 1500 Coin
-price5tip = Get 2200 Coin
+price2tip = Get 1600 Coin
+price3tip = Get 3500 Coin
+price4tip = Get 15000 Coin
+
 price1 = $0.99
-price2 = $1.99
-price3 = $2.99
-price4 = $3.99
-price5 = $4.99
+price2 = $4.99
+price3 = $9.99
+price4 = $99.99
+
 
 
 askTipTitle = Do you wanna show a tip?

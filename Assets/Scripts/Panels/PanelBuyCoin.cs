@@ -19,8 +19,6 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 		public string productId2 = "com.lon.ww.coins600";
 		public string productId3 = "com.lon.ww.coins1000";
 		public string productId4 = "com.lon.ww.coins1500";
-		public string productId5 = "com.lon.ww.coins2200";
-
 
 		void Start () {
 				lang = "en";
@@ -41,7 +39,6 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 		builder.AddProduct(productId2, ProductType.Consumable);
 		builder.AddProduct(productId3, ProductType.Consumable);
 		builder.AddProduct(productId4, ProductType.Consumable);
-		builder.AddProduct(productId5, ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
     	}
@@ -98,16 +95,13 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 			grantCoins(300);
 			break;
 			case "com.lon.ww.coins600":
-			grantCoins(600);
+			grantCoins(1600);
 			break;
 			case "com.lon.ww.coins1000":
-			grantCoins(1000);
+			grantCoins(3500);
 			break;
 			case "com.lon.ww.coins1500":
-			grantCoins(1500);
-			break;
-			case "com.lon.ww.coins2200":
-			grantCoins(2200);
+			grantCoins(15000);
 			break;
 			default:
             Debug.Log($"Unknown product purchased: {purchasedProduct.definition.id}");
@@ -130,7 +124,7 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 				panel.transform.Find ("title").GetComponent<Text> ().text = Localization.Instance.GetString ("titleShop");
 				panel.transform.Find ("btnClose").GetComponentInChildren<Text> ().text = Localization.Instance.GetString ("btnClose");
 
-				for (int i = 1; i<6; i++) {
+				for (int i = 1; i<5; i++) {
 						GameObject trow = GameObject.Find ("row" + i);
 						trow.transform.Find("lbDetail").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i)+"tip");
 						trow.transform.Find("lbPrice").GetComponent<Text>().text = Localization.Instance.GetString("price"+(i));
@@ -166,12 +160,8 @@ public class PanelBuyCoin : MonoBehaviour, IStoreListener {
 							break;
 							case "4":
 							BuyProduct(productId4);
-							
 							break;
-							case "5":
-							BuyProduct(productId5);
 							
-							break;
 						}
                 //add coin and dispaly
                 //GameData.getInstance().coin += 60;
