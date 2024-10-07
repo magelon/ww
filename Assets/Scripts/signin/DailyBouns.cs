@@ -22,10 +22,7 @@ public class DailyBouns : MonoBehaviour
         date = DateTime.Now.ToString().Substring(0, 9);
         Debug.Log(date);
 
-        if (PlayerPrefs.GetInt(date) == 2)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        
 
         if (!PlayerPrefs.HasKey(date))
         {
