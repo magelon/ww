@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;  // For TextMeshPro
+using UnityEngine.SceneManagement;
 
 public class DisplayDialogs : MonoBehaviour
 {
@@ -64,6 +65,12 @@ public class DisplayDialogs : MonoBehaviour
             if (index >= dias.Length)
             {
                 this.gameObject.SetActive(false);
+                 // Check if the current scene is "startScene"
+                if (SceneManager.GetActiveScene().name == "startScene")
+                {
+                // Load the "dailyBonus" scene
+                SceneManager.LoadScene("dailyBonus");
+                }
             }
             else
             {
