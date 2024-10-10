@@ -3,7 +3,7 @@ using UnityEngine;
 public class RTSCameraController : MonoBehaviour
 {
     private float panSpeed = 0.01f;
-    private float zoomSpeed = 0.01f;
+    private float zoomSpeed = 0.003f;
     private float minZoom = 0.3f;
     private float maxZoom = 1f;
     private float minX = -1.4f;
