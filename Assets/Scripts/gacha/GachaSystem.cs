@@ -42,13 +42,6 @@ public class GachaSystem : MonoBehaviour
     private List<Item2> simplifiedItemListRate5;
     public GachaMenu gachamenu;
 
-    string filePath;
-
-    void Start(){
-        string folderPath = Path.Combine(Application.dataPath, "gacha");
-        filePath = Path.Combine(folderPath, "GachaResults.txt");
-    }
-
     public string GetGachaResult()
     {
         if(gachamenu.page==0){
@@ -181,8 +174,13 @@ public class GachaSystem : MonoBehaviour
         // Format the result with date and time for better tracking
         string formattedResult = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + result;
 
+        #if UNITY_EDITOR
         string folderPath = Path.Combine(Application.dataPath, "gacha");
-        filePath = Path.Combine(folderPath, "GachaResults.txt");
+        #else
+        string folderPath = Path.Combine(Application.persistentDataPath, "gacha");
+        #endif
+
+        string filePath=Path.Combine(folderPath,"GachaResults.txt");
         // Append the result to the text file
         File.AppendAllText(filePath, formattedResult + "\n");
 

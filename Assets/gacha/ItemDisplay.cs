@@ -4,55 +4,80 @@ using System.IO;
 
 public class ItemDisplay : MonoBehaviour
 {
-    public string jsonFilePath = "Assets/Resources/items.json"; // Public variable to specify full path to JSON file
-    public TextMeshProUGUI textDisplay; // Reference to the TextMeshProUGUI component
+    public string jsonFilePath;
+    public TextMeshProUGUI textDisplay;
 
     void Start()
     {
-        // Read the JSON data from the file
+        #if UNITY_EDITOR
+            jsonFilePath = Path.Combine(Application.dataPath, "Scenes/GameLevel/cutLevels/levels/dataCharactors.json");
+        #else
+            jsonFilePath = Path.Combine(Application.streamingAssetsPath, "Scenes/GameLevel/cutLevels/levels/dataCharactors.json");
+        #endif
+
         string jsonData = ReadJsonFile(jsonFilePath);
 
-        // Parse the JSON data
-        ItemList itemList = JsonUtility.FromJson<ItemList>(jsonData);
-
-        // Display item names and rates in the TextMeshProUGUI
-        DisplayItems(itemList);
-    }
-
-    // Function to read the JSON file
-    private string ReadJsonFile(string filePath)
-    {
-        // Read the file content
-        if (File.Exists(filePath))
+        if (!string.IsNullOrEmpty(jsonData))
         {
-            return File.ReadAllText(filePath);
+            ItemList itemList = JsonUtility.FromJson<ItemList>(jsonData);
+            DisplayItems(itemList);
         }
         else
         {
-            Debug.LogError($"JSON file not found at path: {filePath}");
-            return "{}"; // Return empty JSON object if file not found
+            Debug.LogError("JSON data is empty or null.");
         }
+    }
+
+    private string ReadJsonFile(string filePath)
+    {
+        string jsonData = "{}";
+        
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(filePath);
+            request.SendWebRequest();
+
+            while (!request.isDone) { }
+
+            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                jsonData = request.downloadHandler.text;
+            }
+            else
+            {
+                Debug.LogError($"Failed to load JSON file at path: {filePath}. Error: {request.error}");
+            }
+        }
+        else
+        {
+            if (File.Exists(filePath))
+            {
+                jsonData = File.ReadAllText(filePath);
+            }
+            else
+            {
+                Debug.LogError($"JSON file not found at path: {filePath}");
+            }
+        }
+
+        return jsonData;
     }
 
     void DisplayItems(ItemList itemList)
     {
-        string displayText = ""; // String to accumulate display text
+        string displayText = "";
 
         foreach (Item item in itemList.items)
         {
-            // Append item name and rate to the display text
             displayText += $"Character Name: {item.itemsName}, Rate: {item.attributes.rate}\n";
         }
 
-        // Set the accumulated text to the TextMeshProUGUI component
         textDisplay.text = displayText;
     }
 }
 
-
-
 [System.Serializable]
 public class ItemList
 {
-    public Item[] items; // Array of items
+    public Item[] items;
 }
