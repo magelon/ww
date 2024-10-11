@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using System.IO;
 
 [System.Serializable]
 public class Attributes2
@@ -40,6 +41,13 @@ public class GachaSystem : MonoBehaviour
     private List<Item2> simplifiedItemListRate3;
     private List<Item2> simplifiedItemListRate5;
     public GachaMenu gachamenu;
+
+    string filePath;
+
+    void Start(){
+        string folderPath = Path.Combine(Application.dataPath, "gacha");
+        filePath = Path.Combine(folderPath, "GachaResults.txt");
+    }
 
     public string GetGachaResult()
     {
@@ -146,7 +154,7 @@ public class GachaSystem : MonoBehaviour
 
             // Print the result to the console
             Debug.Log("Random Item from Rate 5: " + randomItem.itemsName);
-
+            SaveGachaResult(randomItem.itemsName);
             return randomItem.itemsName;
         }
         else
@@ -163,8 +171,22 @@ public class GachaSystem : MonoBehaviour
 
             // Print the result to the console
             Debug.Log("Random Item from Rate 3: " + randomItem2.itemsName);
-
+            SaveGachaResult(randomItem2.itemsName);
             return randomItem2.itemsName;
         }
+    }
+
+    void SaveGachaResult(string result)
+    {
+        // Format the result with date and time for better tracking
+        string formattedResult = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + result;
+
+        string folderPath = Path.Combine(Application.dataPath, "gacha");
+        filePath = Path.Combine(folderPath, "GachaResults.txt");
+        // Append the result to the text file
+        File.AppendAllText(filePath, formattedResult + "\n");
+
+        // Log the result for debugging
+        Debug.Log("Saved Gacha Result: " + formattedResult);
     }
 }
