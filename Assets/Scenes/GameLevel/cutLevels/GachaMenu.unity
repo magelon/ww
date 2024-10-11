@@ -2911,7 +2911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2476c2dd8b03c4fb856cb975691cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFilePath: Assets/Scenes/GameLevel/cutLevels/levels/dataCharactors.json
+  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
   textDisplay: {fileID: 2046528895}
 --- !u!1 &848455635
 GameObject:
@@ -8063,7 +8063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728321720559, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00013111076
+      value: 25.582909
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728416639810, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_IsActive

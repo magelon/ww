@@ -1,73 +1,31 @@
 using UnityEngine;
 using TMPro;
 using System.IO;
+using System.Collections.Generic;
 
 public class ItemDisplay : MonoBehaviour
 {
-    public string jsonFilePath;
+    public TextAsset jsonFile;
     public TextMeshProUGUI textDisplay;
-
+    private List<Item2> loadedItems;
+    
     void Start()
     {
-        #if UNITY_EDITOR
-            jsonFilePath = Path.Combine(Application.dataPath, "Scenes/GameLevel/cutLevels/levels/dataCharactors.json");
-        #else
-            jsonFilePath = Path.Combine(Application.streamingAssetsPath, "Scenes/GameLevel/cutLevels/levels/dataCharactors.json");
-        #endif
+        if(jsonFile != null){
 
-        string jsonData = ReadJsonFile(jsonFilePath);
-
-        if (!string.IsNullOrEmpty(jsonData))
-        {
-            ItemList itemList = JsonUtility.FromJson<ItemList>(jsonData);
-            DisplayItems(itemList);
-        }
-        else
-        {
-            Debug.LogError("JSON data is empty or null.");
+            string jsonText = jsonFile.text;
+            ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
+            loadedItems = itemsData.items;
+            DisplayItems();
         }
     }
 
-    private string ReadJsonFile(string filePath)
-    {
-        string jsonData = "{}";
-        
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(filePath);
-            request.SendWebRequest();
-
-            while (!request.isDone) { }
-
-            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
-            {
-                jsonData = request.downloadHandler.text;
-            }
-            else
-            {
-                Debug.LogError($"Failed to load JSON file at path: {filePath}. Error: {request.error}");
-            }
-        }
-        else
-        {
-            if (File.Exists(filePath))
-            {
-                jsonData = File.ReadAllText(filePath);
-            }
-            else
-            {
-                Debug.LogError($"JSON file not found at path: {filePath}");
-            }
-        }
-
-        return jsonData;
-    }
-
-    void DisplayItems(ItemList itemList)
+ 
+    void DisplayItems()
     {
         string displayText = "";
 
-        foreach (Item item in itemList.items)
+        foreach (Item2 item in loadedItems)
         {
             displayText += $"Character Name: {item.itemsName}, Rate: {item.attributes.rate}\n";
         }
@@ -76,8 +34,4 @@ public class ItemDisplay : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class ItemList
-{
-    public Item[] items;
-}
+

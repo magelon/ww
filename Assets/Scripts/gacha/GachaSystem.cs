@@ -125,20 +125,10 @@ public class GachaSystem : MonoBehaviour
         resultCounter = PlayerPrefs.GetInt("ResultCounter", 0);
         Debug.Log(resultCounter);
 
-        if (randomNumber < 0.000014 || resultCounter >= 60)
+        if (randomNumber < 0.000014 || resultCounter%60 == 0)
         {
-            // 0.0014 (0.14%) chance for 6, 7, 8 and 9 or when resultCounter reaches 100
-            if (resultCounter >= 60)
-            {
-                resultCounter = 0; // Reset the counter after 100 results
-                PlayerPrefs.SetInt("ResultCounter", resultCounter);
-            }
-            else
-            {
                 resultCounter++;
                 PlayerPrefs.SetInt("ResultCounter", resultCounter);
-            }
-
             // Get a random index within the range of the list
             int randomIndex = random.Next(0, simplifiedItemListRate5.Count);
 
@@ -171,20 +161,17 @@ public class GachaSystem : MonoBehaviour
 
     void SaveGachaResult(string result)
     {
-        // Format the result with date and time for better tracking
-        string formattedResult = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + result;
+    // Format the result with date and time for better tracking
+    string formattedResult = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + result;
 
-        #if UNITY_EDITOR
-        string folderPath = Path.Combine(Application.dataPath, "gacha");
-        #else
-        string folderPath = Path.Combine(Application.persistentDataPath, "gacha");
-        #endif
+    // Use resultCounter as the key to store the result in PlayerPrefs
+    string key = "GachaResult_" + resultCounter;
+    PlayerPrefs.SetString(key, formattedResult);
 
-        string filePath=Path.Combine(folderPath,"GachaResults.txt");
-        // Append the result to the text file
-        File.AppendAllText(filePath, formattedResult + "\n");
+    // Save the result in PlayerPrefs
+    PlayerPrefs.Save();
 
-        // Log the result for debugging
-        Debug.Log("Saved Gacha Result: " + formattedResult);
+    // Log the result for debugging
+    Debug.Log("Saved Gacha Result: " + formattedResult + " with key: " + key);
     }
 }
