@@ -21,14 +21,18 @@ public class ItemLevelSystem : MonoBehaviour
 	public Text speed;
 	public Text rate;
 	public Text art;
+    public Text element;
 
     public TextAsset jsonFile;
     private List<Item2> loadedItems;
 	private List<Item2> simplifiedItemList;
+    private int chp;
+    private int catk;
 
     void Start()
     {
         itemName = gameObject.name;
+        LoadData();
         if(jsonFile != null){
         string jsonText = jsonFile.text;
         ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
@@ -49,6 +53,7 @@ public class ItemLevelSystem : MonoBehaviour
 				speed.text="speed: ???";
 				rate.text="rate: ???";
 				art.text="art: ???";
+                element.text="element: ???";
                
             }
             else
@@ -56,16 +61,19 @@ public class ItemLevelSystem : MonoBehaviour
                 Item2 item = loadedItems.Find(i => i.itemsName == itemName);
 
 				name.text="name: "+item.itemsName;
-				health.text="hp: "+item.attributes.hp.ToString();
-				atk.text="attack: "+item.attributes.atk.ToString();
+				health.text="hp: "+(item.attributes.hp*level).ToString();
+                chp=item.attributes.hp;
+				atk.text="attack: "+(item.attributes.atk*level).ToString();
+                catk=item.attributes.atk;
 				energy.text="cost: "+item.attributes.energy.ToString();
 				speed.text="speed: "+item.attributes.speed.ToString();
 				rate.text="rate: "+item.attributes.rate.ToString();
 				art.text="art: "+item.attributes.art;
+                element.text="element: "+item.attributes.element;
 				
             }
 
-        LoadData();
+        
     }
 
     public void LevelUp()
@@ -84,6 +92,7 @@ public class ItemLevelSystem : MonoBehaviour
             Debug.Log("Not enough experience to level up " + itemName);
         }
         UpdateItemLevelText();
+        UpdateItemHPText(level);
     }
     else
     {
@@ -104,6 +113,20 @@ public class ItemLevelSystem : MonoBehaviour
     else
     {
         itemLevelText.text = "Item not found";
+    }
+    }
+
+    public void UpdateItemHPText(int lv)
+    {
+
+    if (itemName != null)
+    {
+        health.text = "HP: " + lv*chp;
+        atk.text = "ATK: "+lv*catk;
+    }
+    else
+    {
+        health.text = "Item not found";
     }
     }
 

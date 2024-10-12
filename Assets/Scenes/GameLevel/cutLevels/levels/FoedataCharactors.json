@@ -11,21 +11,7 @@
            "energy":0.3,
            "force":30,
            "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "goblin",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
+           "element":"grass",
            "art":"lon"
         }
       
@@ -41,6 +27,7 @@
            "energy":0.3,
            "force":50,
            "rate":3,
+           "element":"rock",
            "art":"lon"
         }
       
@@ -56,6 +43,7 @@
            "energy":0.3,
            "force":30,
            "rate":3,
+           "element":"water",
            "art":"lon"
         }
       
@@ -71,221 +59,11 @@
            "energy":0.3,
            "force":30,
            "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "healer",
-      "attributes": 
-        {
-           "hp": 60,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "mrider",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "yellowmagic",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "yellow",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "wolf",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "wizardKing",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "Dragon",
-      "attributes": 
-        {
-           "hp": 60,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.05,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "horse",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "swordman",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "knight",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "soldier",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "RangerFoe",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "shield",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "Rocket",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
+           "element":"grass",
            "art":"lon"
         }
       
     }
-    
   ]
 }
 

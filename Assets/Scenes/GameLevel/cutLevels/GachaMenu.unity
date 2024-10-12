@@ -8065,7 +8065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728321720559, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000004066524
+      value: 0.00016306307
       objectReference: {fileID: 0}
     - target: {fileID: 2653045728416639810, guid: 9bc1c793c62a9af45ac42649fca749fc, type: 3}
       propertyPath: m_IsActive
@@ -8699,7 +8699,7 @@ PrefabInstance:
     - target: {fileID: 6590958364840976338, guid: 95e065149732fdd49b8818e188b00315, type: 3}
       propertyPath: spritePrefab
       value: 
-      objectReference: {fileID: 3285395182092554987, guid: 30c5f16ce7bd5b048bea2c2fa0171c56, type: 3}
+      objectReference: {fileID: 980581499049755948, guid: fdceb82be595e8f46bb893ff439deb7d, type: 3}
     - target: {fileID: 6590958364840976338, guid: 95e065149732fdd49b8818e188b00315, type: 3}
       propertyPath: spriteRenderer
       value: 

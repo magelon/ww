@@ -40,6 +40,7 @@ public class ShopMenu : MonoBehaviour {
                     	itemsName = item.itemsName,
                     	attributes = new Attributes2
                     	{
+							element=item.attributes.element,
 							rate = item.attributes.rate,
 							hp = item.attributes.hp,
 							atk = item.attributes.atk,

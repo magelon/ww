@@ -11,6 +11,7 @@
            "energy":0.3,
            "force":30,
            "rate":3,
+           "element":"light",
            "art":"lon"
         }
       
@@ -26,6 +27,7 @@
            "energy":0.3,
            "force":30,
            "rate":5,
+           "element":"water",
            "art":"lon"
         }
       
@@ -41,6 +43,7 @@
            "energy":0.3,
            "force":30,
            "rate":3,
+           "element":"electric",
            "art":"lon"
         }
       
@@ -56,6 +59,7 @@
            "energy":0.3,
            "force":30,
            "rate":3,
+           "element":"fire",
            "art":"lon"
         }
       

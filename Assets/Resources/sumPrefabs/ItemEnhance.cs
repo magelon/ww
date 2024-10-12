@@ -24,6 +24,7 @@ public class ItemEnhance : MonoBehaviour
        //ta.damage=(float)atk+level;
        if(en.f== Factions.yellow){
            en.health=hp*level;
+           ta.damage=atk*level;
         }
     }
 

@@ -10,7 +10,7 @@ public class Enime : MonoBehaviour
     public float speed;
     public float dazedTime;
     public float startDazed;
-    public float knockBackForce = 20f;
+    public float knockBackForce;
     public float dieForce = 500f;
 
     public float slowDownFactor = 0.05f;
@@ -268,7 +268,7 @@ public class Enime : MonoBehaviour
         }
         
         dazedTime = startDazed;
-        knockUp(3);
+        knockUp((float)dam*10);
         health -= dam;
     }
 

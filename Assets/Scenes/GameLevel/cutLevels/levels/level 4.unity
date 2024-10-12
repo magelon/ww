@@ -11454,19 +11454,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 169895324588474255}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.663956
+      objectReference: {fileID: 0}
+    - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.663956
+      objectReference: {fileID: 0}
+    - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.663956
+      objectReference: {fileID: 0}
+    - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -359.9175
+      value: -118.8869
       objectReference: {fileID: 0}
     - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -640.01575
+      value: 264.04187
       objectReference: {fileID: 0}
     - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.016513932
+      value: -0.027478458
       objectReference: {fileID: 0}
     - target: {fileID: 55816740775227053, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11496,10 +11508,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2221383486465294176, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2278589817606967417, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: dialogFile
       value: 
       objectReference: {fileID: 4900000, guid: b689ce69251413e48af00c39284c19a9, type: 3}
+    - target: {fileID: 4168925298450794732, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.89411765
+      objectReference: {fileID: 0}
     - target: {fileID: 7199660586399298811, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_Name
       value: dialog
@@ -14067,6 +14087,7 @@ MonoBehaviour:
   energySlider: {fileID: 854657897}
   pdt: {fileID: 0}
   ss: {fileID: 5760821605867929294}
+  dialogTransform: {fileID: 1743441936}
   panelDisplayTip: {fileID: 0}
   panelAskTip: {fileID: 91151402415241751}
   panelAskSkip: {fileID: 91151403130514735}
@@ -17947,7 +17968,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1743441936}
   - {fileID: 169895317733516291}
   - {fileID: 169895318427480901}
   - {fileID: 169895317871393221}
@@ -20362,6 +20382,7 @@ SceneRoots:
   - {fileID: 494992308}
   - {fileID: 385884003}
   - {fileID: 121348525}
+  - {fileID: 1743441935}
   - {fileID: 169895324588474255}
   - {fileID: 6773467585756443688}
   - {fileID: 9120832592586160086}

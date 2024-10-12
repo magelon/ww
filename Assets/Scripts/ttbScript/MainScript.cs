@@ -26,6 +26,7 @@ public class MainScript : MonoBehaviour {
     public Slider energySlider;
     public PanelDisplayTip pdt;
 	public StaminaSystem ss;
+	public Transform dialogTransform;
 
     void Start () {
         //energy = Mathf.Lerp(0, 1, 5f);
@@ -38,7 +39,7 @@ public class MainScript : MonoBehaviour {
 		initData ();
 		initView ();
 
-		Transform dialogTransform = transform.Find("dialog");
+		//Transform dialogTransform = transform.Find("dialog");
 
 		if(clevel<PlayerPrefs.GetInt("levelPassed")){
 			Debug.Log("this level passed! pass dialog");

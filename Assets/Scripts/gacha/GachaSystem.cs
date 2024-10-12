@@ -14,6 +14,7 @@ public class Attributes2
     public float energy;
     public int force;
     public int rate;
+    public string element;
     public string art;
 }
 
@@ -73,9 +74,7 @@ public class GachaSystem : MonoBehaviour
                 {
                     simplifiedItemListRate5.Add(item2gacha);
                 }
-                
             }
-
         }
         else
         {
@@ -83,11 +82,9 @@ public class GachaSystem : MonoBehaviour
         }
         }else{
             if(jsonFile2 != null){
-
             string jsonText = jsonFile2.text;
             ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
             loadedItems = itemsData.items;
-           
             simplifiedItemListRate3 = new List<Item2>();
             simplifiedItemListRate5 = new List<Item2>();
             //Extract only itemsName and rate
@@ -101,7 +98,6 @@ public class GachaSystem : MonoBehaviour
                         rate = item.attributes.rate
                     }
                 };
-
                  if (item2gacha.attributes.rate == 3)
                 {
                     simplifiedItemListRate3.Add(item2gacha);
@@ -110,9 +106,7 @@ public class GachaSystem : MonoBehaviour
                 {
                     simplifiedItemListRate5.Add(item2gacha);
                 }
-                
             }
-
         }
         else
         {
@@ -120,15 +114,14 @@ public class GachaSystem : MonoBehaviour
         }
         }
         
-        
         double randomNumber = random.NextDouble(); // Generate a random number between 0 and 1
         resultCounter = PlayerPrefs.GetInt("ResultCounter", 0);
         Debug.Log(resultCounter);
 
         if((randomNumber < 0.000014 || (resultCounter % 60 == 0 && resultCounter != 0)))
         {
-                resultCounter++;
-                PlayerPrefs.SetInt("ResultCounter", resultCounter);
+            resultCounter++;
+            PlayerPrefs.SetInt("ResultCounter", resultCounter);
             // Get a random index within the range of the list
             int randomIndex = random.Next(0, simplifiedItemListRate5.Count);
 
