@@ -125,7 +125,7 @@ public class GachaSystem : MonoBehaviour
         resultCounter = PlayerPrefs.GetInt("ResultCounter", 0);
         Debug.Log(resultCounter);
 
-        if (randomNumber < 0.000014 || resultCounter%60 == 0)
+        if((randomNumber < 0.000014 || (resultCounter % 60 == 0 && resultCounter != 0)))
         {
                 resultCounter++;
                 PlayerPrefs.SetInt("ResultCounter", resultCounter);

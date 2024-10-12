@@ -25,7 +25,7 @@
            "speed": 0.1,
            "energy":0.3,
            "force":30,
-           "rate":3,
+           "rate":5,
            "art":"lon"
         }
       

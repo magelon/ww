@@ -6,18 +6,37 @@ using System.Collections.Generic;
 public class ItemDisplay : MonoBehaviour
 {
     public TextAsset jsonFile;
+    public TextAsset jsonFile2;
     public TextMeshProUGUI textDisplay;
     private List<Item2> loadedItems;
-    
-    void Start()
-    {
-        if(jsonFile != null){
+    public GachaMenu gm;
 
-            string jsonText = jsonFile.text;
-            ItemsData2 itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
-            loadedItems = itemsData.items;
+    private string jsonText2;
+    private string jsonText;
+    private ItemsData2 itemsData2;
+    private ItemsData2 itemsData;
+
+    void Start(){
+        if(jsonFile2 != null){
+             jsonText2 = jsonFile2.text;
+             itemsData2 = JsonUtility.FromJson<ItemsData2>(jsonText2);
+            }
+        if(jsonFile != null){
+             jsonText = jsonFile.text;
+             itemsData = JsonUtility.FromJson<ItemsData2>(jsonText);
+        }   
+    }
+
+    void Update()
+    {  
+        if(gm.page!=0){ 
+            loadedItems = itemsData2.items;
             DisplayItems();
         }
+        else{
+            loadedItems = itemsData.items;
+            DisplayItems();
+            }
     }
 
  
