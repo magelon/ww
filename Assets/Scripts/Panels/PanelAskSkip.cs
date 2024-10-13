@@ -31,10 +31,10 @@ public class PanelAskSkip : MonoBehaviour {
         instantiatedSprite = Instantiate(spritePrefab, new Vector3(0, 0, 0), Quaternion.identity);
 
         // Get the SpriteRenderer component
-        spriteRenderer = instantiatedSprite.GetComponent<SpriteRenderer>();
+        //spriteRenderer = instantiatedSprite.GetComponent<SpriteRenderer>();
         
-        if (spriteRenderer != null)
-        {
+        //if (spriteRenderer != null)
+        //{
             // Set initial alpha to 0 (fully transparent)
             //Color color = spriteRenderer.color;
             //color.a = 1;
@@ -42,11 +42,11 @@ public class PanelAskSkip : MonoBehaviour {
             
             // Start the fade-in process
             //StartCoroutine(FadeInAndDestroyRoutine());
-        }
-        else
-        {
-            Debug.LogError("No SpriteRenderer component found on the prefab.");
-        }
+        //}
+        //else
+        //{
+           // Debug.LogError("No SpriteRenderer component found on the prefab.");
+        //}
         }
 
         IEnumerator FadeInAndDestroyRoutine()

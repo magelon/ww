@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12604db147ad44b3bf21d5531d3d276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2726998577009670677, guid: 85a2fc8f330947a4fae573b06f5037e7, type: 3}
+  bullet: {fileID: 7034619963895421797, guid: 5128b8b8d893f5044a3d8ff68f5570dd, type: 3}
   turret: {fileID: 6773467585274240442}
   face: 1
   creatures: []
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0746d1bfc5d99044b8ce46742f659d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
   loadedItems: []
 --- !u!114 &-2066574850882856368
 MonoBehaviour:

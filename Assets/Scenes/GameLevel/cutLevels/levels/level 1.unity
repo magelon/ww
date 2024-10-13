@@ -8925,7 +8925,7 @@ MonoBehaviour:
   startTime: 0
   text: {fileID: 1180208623}
   energyCost: 0
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
   loadedItems: []
   spriteRenderer: {fileID: 0}
   illstrate: {fileID: 208698225}
@@ -9909,7 +9909,7 @@ MonoBehaviour:
   startTime: 0
   text: {fileID: 411186832}
   energyCost: 0
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
   loadedItems: []
   spriteRenderer: {fileID: 0}
   illstrate: {fileID: 208698225}
@@ -11181,7 +11181,7 @@ MonoBehaviour:
   startTime: 0
   text: {fileID: 1259840973}
   energyCost: 0
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
   loadedItems: []
   spriteRenderer: {fileID: 0}
   illstrate: {fileID: 208698225}
@@ -19210,7 +19210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7590201869222855651, guid: f6ab609d451161d478a633639f29ccb7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

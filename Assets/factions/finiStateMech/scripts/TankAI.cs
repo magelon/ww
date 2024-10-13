@@ -91,6 +91,7 @@ public class TankAI : MonoBehaviour
             GameManager.getInstance().playSfx("gun");
         }
         GameObject b= poolManager.instance.ReuseObject(bullet, turret.transform.position, turret.transform.rotation);
+        b.GetComponent<bullet>().damage=damage;
        
         if (face)
         {

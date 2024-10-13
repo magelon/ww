@@ -6,14 +6,14 @@ Golem: "Who dares enter my domain?"
 Sabar: "That would be us. Prepare yourselves!"
 Keiqin: "Great, another friendly welcome. Lina, got any spells for turning rocks into pebbles?"
 Lina: "I’ll do my best. Just keep it distracted."
-Keiqin dashed forward, drawing the golem’s attention. He swung his sword, but it barely left a scratch on the golem's sturdy exterior.
+Keiqin: dashed forward, drawing the golem’s attention. He swung his sword, but it barely left a scratch on the golem's sturdy exterior.
 Golem: "Foolish mortals. You cannot harm me!"
 Lina: "Sabar, we need to find its weak point!
 Sabar: "Agreed. Keiqin, try to find any cracks in its armor. Lina, keep those spells coming!"
 Keiqin: "It’s like hitting a mountain! Sabar, any ideas?"
-Sabar examined the golem carefully, noticing a faint glow emanating from its chest.
+Sabar: examined the golem carefully, noticing a faint glow emanating from its chest.
 Sabar: "Its chest! That’s where its core is. Aim for that!"
-Lina focused her magic on the glowing spot, channeling all her energy into a powerful blast.
+Lina: focused her magic on the glowing spot, channeling all her energy into a powerful blast.
 Lina: "Take this, you overgrown boulder!"
 Sabar: "Well done, team. Another victory for the books."
 Keiqin: "And I didn’t even get squashed! Let’s see if there’s any treasure hidden in this cave."

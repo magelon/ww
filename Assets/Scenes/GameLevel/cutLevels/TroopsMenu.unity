@@ -775,7 +775,7 @@ MonoBehaviour:
   rate: {fileID: 2931708457851860598}
   art: {fileID: 2931708458365816057}
   element: {fileID: 519904960}
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
 --- !u!1 &104974751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,7 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7beb4900a3fc141bf0dc06a78ee2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: 7a466e6a8dca5f64b99efd6b77799189, type: 3}
+  jsonFile: {fileID: 4900000, guid: 9af4fc383b90b154e8502df4d8ba1c4a, type: 3}
   os: {fileID: 1052340518}
   levelButton: {fileID: 83342543}
   levelupBut: {fileID: 990915236}
@@ -10979,6 +10979,7 @@ MonoBehaviour:
   energySlider: {fileID: 0}
   pdt: {fileID: 0}
   ss: {fileID: 0}
+  dialogTransform: {fileID: 0}
   panelDisplayTip: {fileID: 0}
   panelAskTip: {fileID: 1000011321318197}
   panelAskSkip: {fileID: 1000010832825357}
