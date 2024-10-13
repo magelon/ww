@@ -13,6 +13,7 @@ public class Attributes
     public float energy;
     public int force;
     public int rate;
+    public string element;
 }
 
 [System.Serializable]

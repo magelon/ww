@@ -12,6 +12,7 @@ public class TankAI : MonoBehaviour
     public GameObject[] creatures;
     public LayerMask enemiLayer;
     public float damage;
+    public string element;
     public float heal;
     public int bulletForce;
     public float rangeFrequency;
@@ -92,6 +93,7 @@ public class TankAI : MonoBehaviour
         }
         GameObject b= poolManager.instance.ReuseObject(bullet, turret.transform.position, turret.transform.rotation);
         b.GetComponent<bullet>().damage=damage;
+        b.GetComponent<bullet>().element=element;
        
         if (face)
         {
@@ -145,7 +147,7 @@ public class TankAI : MonoBehaviour
                                 GameManager.getInstance().playSfx("pounch");
                             }
                            
-                            enimes[i].gameObject.GetComponent<Enime>().damage((int)damage);
+                            enimes[i].gameObject.GetComponent<Enime>().damage((int)damage,element);
                             enimes[i].gameObject.GetComponent<TankAI>().clostDistance = 9999;
                             enimes[i].gameObject.GetComponent<TankAI>().GetClosest();
                         }

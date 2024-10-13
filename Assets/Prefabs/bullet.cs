@@ -6,6 +6,7 @@ public class bullet : MonoBehaviour
 {
     public Factions f;
     public float damage;
+    public string element;
     public LayerMask foeLayer;
 
     private void OnEnable()
@@ -31,7 +32,7 @@ public class bullet : MonoBehaviour
                             {
                                 GameManager.getInstance().playSfx("pounch");
                             }
-                            enimes[i].gameObject.GetComponent<Enime>().damage((int)damage);
+                            enimes[i].gameObject.GetComponent<Enime>().damage((int)damage,element);
                             enimes[i].gameObject.GetComponent<TankAI>().clostDistance = 9999;
                             enimes[i].gameObject.GetComponent<TankAI>().GetClosest();
                             this.gameObject.SetActive(false);

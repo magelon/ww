@@ -60,6 +60,8 @@ public class ItemAttributeLoader : MonoBehaviour
     {
         en=GetComponent<Enime>();
         ta=GetComponent<TankAI>();
+        ta.element=attributes.element;
+        en.Eelement=attributes.element;
         ta.heal=attributes.atk;
         ta.damage=attributes.atk;
         en.health=attributes.hp;

@@ -151,6 +151,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 1
   bulletForce: 0
   rangeFrequency: 0
@@ -180,6 +181,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 0
@@ -505,6 +507,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4816344679861428714}
     m_Modifications:
+    - target: {fileID: 1803813485201566937, guid: 28f1631bcc5278d4b8b8ca9c4f7a3d42, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803813485201566937, guid: 28f1631bcc5278d4b8b8ca9c4f7a3d42, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803813485201566937, guid: 28f1631bcc5278d4b8b8ca9c4f7a3d42, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2957076073907980417, guid: 28f1631bcc5278d4b8b8ca9c4f7a3d42, type: 3}
       propertyPath: e
       value: 

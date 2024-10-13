@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public enum Element{
+    fire,
+    water,
+    rock,
+    light,
+    electric,
+    ice,
+    grass,
+    dark
+}
+
 public class Enime : MonoBehaviour
 {
     public int health;
@@ -12,6 +23,7 @@ public class Enime : MonoBehaviour
     public float startDazed;
     public float knockBackForce;
     public float dieForce = 500f;
+    public string Eelement;
 
     public float slowDownFactor = 0.05f;
     public float slowDownLength = 2f;
@@ -43,7 +55,8 @@ public class Enime : MonoBehaviour
     public GameObject healNumberPrefab;
     [SerializeField] private Canvas canvas;
 
-    
+    private Dictionary<Element, Dictionary<Element, float>> elementCounterTable;
+
     //on enable dont have enough time to up date a lot of component add in update function
     private void OnEnable()
     {
@@ -57,6 +70,7 @@ public class Enime : MonoBehaviour
 
     private void Start()
     {
+        InitializeCounterTable();
         storeHP=health;
         Debug.Log(storeHP);
         if(f==null){
@@ -79,6 +93,63 @@ public class Enime : MonoBehaviour
         poolManager.instance.CreatePool(gainText, 10);
 
         foeSpawner = GameObject.Find("foeSpawnManager");
+    }
+
+    void InitializeCounterTable()
+    {
+        elementCounterTable = new Dictionary<Element, Dictionary<Element, float>>();
+
+        // Fire counters
+        elementCounterTable[Element.fire] = new Dictionary<Element, float>
+        {
+            { Element.grass, 2f }, // Fire is weak against water
+            { Element.water, .5f }
+        };
+
+        // Water counters
+        elementCounterTable[Element.water] = new Dictionary<Element, float>
+        {
+            { Element.fire, 2f },  // Water is strong against fire
+            { Element.grass, .5f }
+        };
+
+         // Water counters
+        elementCounterTable[Element.rock] = new Dictionary<Element, float>
+        {
+            { Element.light, 2f },  // Water is strong against fire
+            { Element.water, .5f }
+        };
+
+         // Water counters
+        elementCounterTable[Element.light] = new Dictionary<Element, float>
+        {
+            { Element.dark, 2f },  // Water is strong against fire
+        };
+
+         // Water counters
+        elementCounterTable[Element.electric] = new Dictionary<Element, float>
+        {
+            { Element.ice, 2f },  // Water is strong against fire
+            { Element.water, .5f }
+        };
+
+         // Water counters
+        elementCounterTable[Element.grass] = new Dictionary<Element, float>
+        {
+            { Element.water, 2f },  // Water is strong against fire
+            { Element.fire, .5f }
+        };
+
+    }
+
+    public float GetElementEffectiveness(Element attacker, Element defender)
+    {
+        if (elementCounterTable.ContainsKey(attacker) &&
+            elementCounterTable[attacker].ContainsKey(defender))
+        {
+            return elementCounterTable[attacker][defender];
+        }
+        return 1.0f; // Default neutral effectiveness
     }
 
     private void changeLayer()
@@ -252,8 +323,26 @@ public class Enime : MonoBehaviour
         }
     }
 
+    public Element ConvertStringToElement(string elementString)
+    {
+    Element elementEnum;
+    if (Enum.TryParse(elementString, true, out elementEnum))
+    {
+        // Successfully converted string to enum
+        return elementEnum;
+    }
+    else
+    {
+        Debug.LogWarning("Invalid element: " + elementString);
+        // Return a default value or handle the error as needed
+        return Element.fire; // Example: default to Fire
+    }
+    }
     //damage by other creatures
-    public void damage(int dam) {
+    public void damage(int dam,string element) {
+
+        dam=(int)(dam*GetElementEffectiveness(ConvertStringToElement(element),ConvertStringToElement(Eelement)));
+
         if(damageNumberPrefab!=null){
             GameObject damageNumber = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
             if(f == Factions.yellow){
@@ -381,3 +470,4 @@ public class Enime : MonoBehaviour
     }
 
 }
+
