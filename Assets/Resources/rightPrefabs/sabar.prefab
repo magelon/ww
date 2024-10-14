@@ -253,6 +253,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 3
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
@@ -262,7 +263,7 @@ MonoBehaviour:
   atRange: 0.1
   atPos: {fileID: 6773467585274240442}
   pivot: {fileID: 4409796292586615984}
-  slash: {fileID: 2645642439624402596, guid: b993ae8948422b245be379e6cc6b6f89, type: 3}
+  slash: {fileID: 1594257412022170537, guid: 66ab7b6ac1e49a146b82a34aca56dfed, type: 3}
 --- !u!114 &6773467585653134561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +283,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 0

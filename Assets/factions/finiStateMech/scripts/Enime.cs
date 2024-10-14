@@ -353,7 +353,7 @@ public class Enime : MonoBehaviour
                 );
             }
             DamageNumber dnScript = damageNumber.GetComponent<DamageNumber>();
-            dnScript.SetValue(dam);
+            dnScript.SetValue(dam,element);
         }
         
         dazedTime = startDazed;

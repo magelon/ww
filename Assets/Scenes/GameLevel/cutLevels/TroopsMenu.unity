@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: background
       objectReference: {fileID: 0}
+    - target: {fileID: 2453695518787666418, guid: 2e99b53d48bf88b4cac21cda8dfd2152, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2916503028126918959, guid: 2e99b53d48bf88b4cac21cda8dfd2152, type: 3}
       propertyPath: m_IsActive
       value: 0
