@@ -148,6 +148,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  floatSpeed: 1
+  floatSpeed: 0.5
+  fallSpeed: 0.3
+  popUpDuration: 0.8
   offset: {x: 0, y: 1, z: 0}
+  randomRange: 0.1
+  sizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.016666412
+      value: 0.009433746
+      inSlope: 0.0027295277
+      outSlope: 0.0027295277
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9937744
+      value: 0.012191772
+      inSlope: 0.0027295277
+      outSlope: 0.0027295277
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   text: {fileID: 3468545870494248916}

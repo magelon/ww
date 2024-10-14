@@ -3,19 +3,53 @@ using TMPro;
 
 public class DamageNumber : MonoBehaviour
 {
-    public float duration = 1f;
-    public float floatSpeed = 0.3f;
-    public Vector3 offset = new Vector3(0, 1, 0);
-    [SerializeField] private TextMeshProUGUI text; 
+    public float duration = 3f;
+    public float floatSpeed = 0.03f;
+    public float fallSpeed = 0.5f; // speed at which the number falls
+    public float popUpDuration = 1.5f; // how long the number pops up before falling
+    public Vector3 offset = new Vector3(0,(float)0.1, 0);
+    public float randomRange = 0.05f; // range for random popping
+    public AnimationCurve sizeCurve; // use an animation curve to control size based on time
+    [SerializeField] private TextMeshProUGUI text;
+    
+    private float elapsedTime = 0f;
+    private Vector3 randomOffset;
 
     void Start()
     {
         Destroy(gameObject, duration);
+        randomOffset = new Vector3(
+            Random.Range(-randomRange, randomRange),
+            Random.Range(-randomRange, randomRange),
+            0
+        );
     }
 
     void Update()
     {
-        transform.position += offset * floatSpeed * Time.deltaTime;
+         elapsedTime += Time.deltaTime;
+
+        // Movement logic: Pop up first, then fall down
+        if (elapsedTime < popUpDuration)
+        {
+            // Pop-up phase
+            transform.position += (offset + randomOffset) * floatSpeed * Time.deltaTime;
+        }
+        else
+        {
+            // Falling phase
+            transform.position -= Vector3.up * fallSpeed * Time.deltaTime;
+        }
+
+        // Apply shrinking effect over time using the animation curve
+        float normalizedTime = elapsedTime / duration;
+        float scale = sizeCurve.Evaluate(normalizedTime); // assuming curve goes from 1 to 0
+        transform.localScale = new Vector3(scale, scale, scale);
+
+        // Optional: Fade the color (alpha) over time for a fade-out effect
+        Color currentColor = text.color;
+        currentColor.a = Mathf.Lerp(1f, 0f, normalizedTime);
+        text.color = currentColor;
     }
 
     public void SetValue(int damage,string element)
