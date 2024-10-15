@@ -30,7 +30,7 @@ public class bullet : MonoBehaviour
                         {
                             if (enimes[i].gameObject.name.Substring(0, 5) != "Drago" && enimes[i].gameObject.name.Substring(4, 1) != "6")
                             {
-                                GameManager.getInstance().playSfx("pounch");
+                                //GameManager.getInstance().playSfx("pounch");
                             }
                             enimes[i].gameObject.GetComponent<Enime>().damage((int)damage,element);
                             enimes[i].gameObject.GetComponent<TankAI>().clostDistance = 9999;

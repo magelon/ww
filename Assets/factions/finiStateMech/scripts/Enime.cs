@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 
 public enum Element{
+    normal,
     fire,
     water,
     rock,
@@ -47,6 +48,7 @@ public class Enime : MonoBehaviour
     private TankAI tank;
     private GameObject player;
     private int storeHP;
+    private Color storeCol;
 
     private Rigidbody2D rb2d;
 
@@ -71,6 +73,14 @@ public class Enime : MonoBehaviour
     private void Start()
     {
         InitializeCounterTable();
+        // Get the SpriteRenderer component attached to this GameObject
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+        Debug.LogWarning("No SpriteRenderer found on this GameObject.");
+        return;
+        }
+        storeCol=spriteRenderer.color;
         storeHP=health;
         Debug.Log(storeHP);
         if(f==null){
@@ -156,6 +166,7 @@ public class Enime : MonoBehaviour
     {
         GetComponent<Animator>().enabled = false;
         health=storeHP;
+        GetComponent<SpriteRenderer>().color = storeCol;
     }
 
     private void Update()
@@ -208,7 +219,7 @@ public class Enime : MonoBehaviour
                     poolManager.instance.ReuseObject(gost, this.gameObject.transform.position, Quaternion.identity);
                 }
 
-                GameManager.getInstance().playSfx("died");
+                //GameManager.getInstance().playSfx("died");
                 
                 }
                 //this will change by different level manuelly
@@ -340,6 +351,53 @@ public class Enime : MonoBehaviour
     }
     //damage by other creatures
     public void damage(int dam,string element) {
+
+        // Get the SpriteRenderer component attached to this GameObject
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        // Set the color based on the element
+        Color newColor;
+        // Check if the SpriteRenderer is available
+        if (spriteRenderer == null)
+        {
+        Debug.LogWarning("No SpriteRenderer found on this GameObject.");
+        return;
+        }
+
+        newColor= spriteRenderer.color;
+
+        switch (element.ToLower())
+        {
+        case "fire":
+            newColor = Color.red; // Fire could be represented by red
+            break;
+        case "water":
+            newColor = Color.blue; // Water could be represented by blue
+            break;
+        case "grass":
+            newColor = Color.green; // Earth could be represented by green
+            break;
+        case "electric":
+            newColor = new Color(0.5f, 0f, 0.5f);// Lightning could be represented by yellow
+            break;
+        case "ice":
+            newColor = Color.cyan; // Wind could be represented by cyan
+            break;
+        case "rock":
+            newColor = new Color(0.545f, 0.271f, 0.075f);
+            break;
+        case "light":
+            newColor = Color.yellow;
+            break;
+        case "dark":
+            newColor = Color.black;
+            break;          
+        default:
+            //newColor = Color.white; // Default to white if no element is matched
+            break;
+        }
+
+        // Apply the new color to the sprite
+        spriteRenderer.color = newColor;
 
         dam=(int)(dam*GetElementEffectiveness(ConvertStringToElement(element),ConvertStringToElement(Eelement)));
 
