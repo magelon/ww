@@ -364,6 +364,7 @@ public class Enime : MonoBehaviour
         }
 
         newColor= spriteRenderer.color;
+        Color currentColor = spriteRenderer.color;
 
         switch (element.ToLower())
         {
@@ -399,6 +400,20 @@ public class Enime : MonoBehaviour
         // Apply the new color to the sprite
         spriteRenderer.color = newColor;
 
+        string currentElement = ConvertColorToElement(currentColor);
+        string reactionResult = CheckElementReaction(currentElement, element);
+
+        if (!string.IsNullOrEmpty(reactionResult))
+        {
+        // Reaction occurred, apply extra damage
+        dam += ApplyReactionDamage(reactionResult,dam);
+        
+        // Log the reaction
+        Debug.Log($"Element reaction: {currentElement} + {element} = {reactionResult}. Extra damage applied!");
+
+        spriteRenderer.color= storeCol;
+        }
+
         dam=(int)(dam*GetElementEffectiveness(ConvertStringToElement(element),ConvertStringToElement(Eelement)));
 
         if(damageNumberPrefab!=null){
@@ -417,6 +432,72 @@ public class Enime : MonoBehaviour
         dazedTime = startDazed;
         knockUp((float)dam*10);
         health -= dam;
+    }
+
+    string ConvertColorToElement(Color color)
+    {
+    if (color == Color.red) return "fire";
+    if (color == Color.blue) return "water";
+    if (color == Color.green) return "grass";
+    if (color == new Color(1f, 1f, 0f)) return "electric";
+    if (color == Color.cyan) return "ice";
+    if (color == new Color(0.545f, 0.271f, 0.075f)) return "rock";
+    if (color == Color.yellow) return "light";
+    if (color == Color.black) return "dark";
+    return "none"; // Default if no match
+    }
+
+    string CheckElementReaction(string element1, string element2)
+    {
+    if ((element1 == "fire" && element2 == "water") || (element1 == "water" && element2 == "fire"))
+    {
+        return "steam";
+    }
+    if ((element1 == "electric" && element2 == "water") || (element1 == "water" && element2 == "electric"))
+    {
+        return "conductivity";
+    }
+    if ((element1 == "fire" && element2 == "grass") || (element1 == "grass" && element2 == "fire"))
+    {
+        return "burn";
+    }
+    if ((element1 == "electric" && element2 == "fire") || (element1 == "fire" && element2 == "electric"))
+    {
+        return "overload";
+    }
+    // Add more element reactions as needed
+    return null; // No reaction by default
+    }
+
+    int ApplyReactionDamage(string reaction,int dam)
+    {
+        switch (reaction.ToLower())
+        {
+        case "steam":
+            return dam*2; // Add extra damage for steam reaction
+        case "conductivity":
+            return dam*2; // Add extra damage for conductivity reaction
+        case "burn":
+            return dam*2; // Add extra damage for burn reaction
+        case "overload":
+            return dam*2; // Add extra damage for burn reaction    
+        default:
+            return 0;
+        }
+
+        if(damageNumberPrefab!=null){
+            GameObject damageNumber = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            if(f == Factions.yellow){
+                damageNumber.transform.eulerAngles = new Vector3(
+                damageNumber.transform.eulerAngles.x,  // Keep current X rotation
+                180,                                  // Set Y rotation to 180 degrees
+                damageNumber.transform.eulerAngles.z   // Keep current Z rotation
+                );
+            }
+            DamageNumber dnScript = damageNumber.GetComponent<DamageNumber>();
+            dnScript.SetValue(dam*2,reaction);
+        }
+
     }
 
     public void healing(int dam) {

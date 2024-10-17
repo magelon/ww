@@ -83,7 +83,19 @@ public class DamageNumber : MonoBehaviour
                 break;
             case "electric":
                 textColor = new Color(0.5f, 0f, 0.5f); // Set to cyan for "wind"
-                break;                  
+                break;
+            case "steam":
+                textColor = new Color(1f, 0.5f, 0.75f); // reaction
+                break;
+            case "conductivity":
+                textColor = new Color(0f, 1f, 0.5f); // reaction
+                break;
+            case "burn":
+                textColor = new Color(1f, 0.5f, 0f); // reaction
+                break;
+            case "overload":
+                textColor = new Color(1f, 0.4f, 0.2f); // reaction
+                break;                                  
             default:
                 textColor = Color.white; // Default color if no match
                 break;
