@@ -6651,7 +6651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12245,7 +12245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -19691,6 +19691,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
@@ -19804,6 +19805,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 1
@@ -19924,6 +19926,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 1
@@ -19994,6 +19997,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0

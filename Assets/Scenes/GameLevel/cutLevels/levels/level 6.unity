@@ -6631,7 +6631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12042,7 +12042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13884,6 +13884,7 @@ MonoBehaviour:
   energySlider: {fileID: 854657897}
   pdt: {fileID: 0}
   ss: {fileID: 5760821605867929294}
+  dialogTransform: {fileID: 0}
   panelDisplayTip: {fileID: 0}
   panelAskTip: {fileID: 91151402415241751}
   panelAskSkip: {fileID: 91151403130514735}
@@ -19487,6 +19488,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
@@ -19600,6 +19602,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 1
@@ -19720,6 +19723,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 1
@@ -19790,6 +19794,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0

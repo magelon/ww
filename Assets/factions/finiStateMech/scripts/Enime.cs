@@ -406,10 +406,22 @@ public class Enime : MonoBehaviour
         if (!string.IsNullOrEmpty(reactionResult))
         {
         // Reaction occurred, apply extra damage
-        dam += ApplyReactionDamage(reactionResult,dam);
-        
+        int extradam=ApplyReactionDamage(reactionResult,dam);
         // Log the reaction
-        Debug.Log($"Element reaction: {currentElement} + {element} = {reactionResult}. Extra damage applied!");
+        Debug.Log($"Element reaction: {currentElement} + {element} = {reactionResult}. Extra damage {extradam} applied!");
+        health -= extradam;
+        if(damageNumberPrefab!=null){
+            GameObject damageNumber2 = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
+            if(f == Factions.yellow){
+                damageNumber2.transform.eulerAngles = new Vector3(
+                damageNumber2.transform.eulerAngles.x,  // Keep current X rotation
+                180,                                  // Set Y rotation to 180 degrees
+                damageNumber2.transform.eulerAngles.z   // Keep current Z rotation
+                );
+            }
+            DamageNumber dnScript2 = damageNumber2.GetComponent<DamageNumber>();
+            dnScript2.SetValue(extradam,reactionResult);
+        }
 
         spriteRenderer.color= storeCol;
         }
@@ -485,18 +497,8 @@ public class Enime : MonoBehaviour
             return 0;
         }
 
-        if(damageNumberPrefab!=null){
-            GameObject damageNumber = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, canvas.transform);
-            if(f == Factions.yellow){
-                damageNumber.transform.eulerAngles = new Vector3(
-                damageNumber.transform.eulerAngles.x,  // Keep current X rotation
-                180,                                  // Set Y rotation to 180 degrees
-                damageNumber.transform.eulerAngles.z   // Keep current Z rotation
-                );
-            }
-            DamageNumber dnScript = damageNumber.GetComponent<DamageNumber>();
-            dnScript.SetValue(dam*2,reaction);
-        }
+        
+        health -= dam*2;
 
     }
 
