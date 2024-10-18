@@ -267,6 +267,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
@@ -296,6 +297,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 0

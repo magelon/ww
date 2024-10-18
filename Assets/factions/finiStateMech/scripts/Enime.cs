@@ -65,7 +65,7 @@ public class Enime : MonoBehaviour
         alive = true;
 
         GetComponent<Animator>().enabled = true;
-        //health = 3;
+        
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         
     }
@@ -256,7 +256,7 @@ public class Enime : MonoBehaviour
         {
             alive = false;
            
-            Invoke("changeLayer", 2f);
+            Invoke("changeLayer", 0.3f);
 
             this.gameObject.layer = LayerMask.NameToLayer("dead");
             
