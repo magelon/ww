@@ -492,6 +492,7 @@ public class Enime : MonoBehaviour
         case "burn":
             return dam*2; // Add extra damage for burn reaction
         case "overload":
+            knockUp((float)dam*60);
             return dam*2; // Add extra damage for burn reaction    
         default:
             return 0;
