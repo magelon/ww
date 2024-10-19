@@ -149,6 +149,11 @@ public class Enime : MonoBehaviour
             { Element.water, 2f },  // Water is strong against fire
             { Element.fire, .5f }
         };
+         elementCounterTable[Element.ice] = new Dictionary<Element, float>
+        {
+            { Element.water, 2f },  // Water is strong against fire
+            { Element.fire, .5f }
+        };
 
     }
 
@@ -256,7 +261,7 @@ public class Enime : MonoBehaviour
         {
             alive = false;
            
-            Invoke("changeLayer", 0.3f);
+            Invoke("changeLayer", 1f);
 
             this.gameObject.layer = LayerMask.NameToLayer("dead");
             

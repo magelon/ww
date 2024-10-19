@@ -161,7 +161,7 @@ MonoBehaviour:
   atRange: 0.3
   atPos: {fileID: 7141532731422180989}
   pivot: {fileID: 3425543499480567668}
-  slash: {fileID: 0}
+  slash: {fileID: 1216169061321035414, guid: c9e91c77ae967cc49ab44b232aabdcb2, type: 3}
 --- !u!114 &7394930304366969692
 MonoBehaviour:
   m_ObjectHideFlags: 0

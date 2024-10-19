@@ -161,6 +161,9 @@ public class TankAI : MonoBehaviour
 
     void healing()
     {
+        if(slash){
+            Instantiate(slash, turret.transform.position, turret.transform.rotation);
+        }
         if (gameObject.name.Substring(0, 5) == "Drago" ||
                     gameObject.name.Substring(4, 1) == "6")
         {
