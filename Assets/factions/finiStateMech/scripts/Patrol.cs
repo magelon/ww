@@ -47,8 +47,8 @@ public class Patrol : NPCBase
             Array.Reverse(wayP);
             }
         }
-        if(Vector2.Distance(wayP[currentWP].wp,new Vector2(pivot.position.x, pivot.position.y)
-        ) < accuracy)
+        if(Mathf.Abs(wayP[currentWP].wp.x-pivot.position.x)
+        < accuracy)
         {
             currentWP++;
             if (currentWP >= wayP.Length)

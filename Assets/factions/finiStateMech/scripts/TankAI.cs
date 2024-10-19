@@ -46,7 +46,7 @@ public class TankAI : MonoBehaviour
     {
         if (player)
         {
-        distance = Vector2.Distance(transform.position, player.transform.position);
+        distance = Mathf.Abs(transform.position.x- player.transform.position.x);
         }
         clostDistance = distance;
                 re = player;
@@ -58,7 +58,7 @@ public class TankAI : MonoBehaviour
             {
                 if (item == null)
                 {
-                    distance = Vector2.Distance(transform.position, player.transform.position);
+                    distance = Mathf.Abs(transform.position.x- player.transform.position.x);
                     clostDistance = distance;
                     re = player;
                 }
@@ -69,7 +69,7 @@ public class TankAI : MonoBehaviour
                         TankAI ta = item.GetComponent<TankAI>();
                         Transform tr = ta.pivot;
                         //Debug.Log(ta.pivot);
-                        distance = Vector3.Distance( pivot.position, tr.position);
+                        distance = Mathf.Abs( pivot.position.x- tr.position.x);
                         if (distance < clostDistance)
                         {
                             clostDistance = distance;
@@ -247,7 +247,7 @@ public class TankAI : MonoBehaviour
         // anim.SetFloat("distance", Vector2.Distance(transform.position, player.transform.position));
         if (re)
         {
-            anim.SetFloat("distance", Vector2.Distance(transform.position, re.transform.position));
+            anim.SetFloat("distance", Mathf.Abs(transform.position.x- re.transform.position.x));
         }
         else
         {

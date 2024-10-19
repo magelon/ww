@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 368747725413799143}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0003, y: -0.0772, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 2655685974469664329}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.453, y: -0.178, z: 0.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -236,6 +236,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 1
+  element: 
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
   startDazed: 0
   knockBackForce: 20
   dieForce: 500
+  Eelement: 
   slowDownFactor: 0.05
   slowDownLength: 2
   alive: 0
