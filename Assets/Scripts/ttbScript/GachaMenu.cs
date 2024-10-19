@@ -189,10 +189,10 @@ public class GachaMenu : MonoBehaviour {
           
                 ttext.gameObject.transform.parent.Find("lock").GetComponent<Image>().enabled = false;
 
-                ttext.gameObject.transform.parent.Find("Image").
+                ttext.gameObject.transform.parent.Find("Imagebanner").
                     GetComponent<Image>().enabled = true;
 
-                ttext.gameObject.transform.parent.Find("Image").
+                ttext.gameObject.transform.parent.Find("Imagebanner").
                     GetComponent<Image>().sprite = Resources.Load<Sprite>("BannerImgs/banner" + i);
 
                 tbtn.GetComponentInChildren<Text>().text = "";
@@ -301,6 +301,16 @@ public class GachaMenu : MonoBehaviour {
 		/// <summary>
 		/// page goes left.
 		/// </summary>
+		public void regularbanner(){
+			GoLeft();
+			
+		}
+
+		public void limitedbanner(){
+			GoRight();
+			
+		}
+
 		public void GoLeft(){
 				if (!canmove)
 						return;
