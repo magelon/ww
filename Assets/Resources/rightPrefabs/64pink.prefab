@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 286282392688983125}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000056996936, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: -0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6158,13 +6158,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   damage: 2
-  element: 
+  element: ice
   heal: 0
   bulletForce: 0
   rangeFrequency: 0
   healFrequency: 0
-  meleeFrequency: 0
-  clostDistance: 0.5
+  meleeFrequency: 0.5
+  clostDistance: 0
   atRange: 0.1
   atPos: {fileID: 9186110962972799296}
   pivot: {fileID: 7028539453035119780}
@@ -6199,7 +6199,7 @@ MonoBehaviour:
   f: 1
   damageNumberPrefab: {fileID: 556105242235977605, guid: 7cbaf3d6cdb2e4544acaa53ea6bc3cb4, type: 3}
   healNumberPrefab: {fileID: 556105242235977605, guid: f45e756cff9caa34389e6420e870657b, type: 3}
-  canvas: {fileID: 0}
+  canvas: {fileID: 7620246759976947473}
 --- !u!50 &1337532603916822878
 Rigidbody2D:
   serializedVersion: 4
