@@ -1,101 +1,6 @@
 {
   "items": [
-    {
-      "itemsName": "sabar",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "element":"light",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "cocogoat",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "element":"ice",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "keiqin",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "element":"electric",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "lina",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "element":"fire",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "elf",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
-           "element":"grass",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "tan",
-      "attributes": 
-        {
-           "hp": 30,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":3,
-           "element":"fire",
-           "art":"lon"
-        }
-      
-    },
+    
     {
       "itemsName": "yb",
       "attributes": 
@@ -108,22 +13,6 @@
            "force":30,
            "rate":3,
            "element":"light",
-           "art":"lon"
-        }
-      
-    },
-    {
-      "itemsName": "abaaba",
-      "attributes": 
-        {
-           "hp": 60,
-           "atk": 1,
-           "mess": 1,
-           "speed": 0.1,
-           "energy":0.3,
-           "force":30,
-           "rate":5,
-           "element":"water",
            "art":"lon"
         }
       
