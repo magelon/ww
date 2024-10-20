@@ -19265,6 +19265,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f07fe102db827843977fbaba6a62604, type: 3}
+--- !u!223 &1296739158076113343 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7395958015203488715, guid: 5f07fe102db827843977fbaba6a62604, type: 3}
+  m_PrefabInstance: {fileID: 1296739158076113342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403776681736721127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19808,9 +19813,9 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 1
-  damageNumberPrefab: {fileID: 0}
-  healNumberPrefab: {fileID: 0}
-  canvas: {fileID: 0}
+  damageNumberPrefab: {fileID: 556105242235977605, guid: 7cbaf3d6cdb2e4544acaa53ea6bc3cb4, type: 3}
+  healNumberPrefab: {fileID: 556105242235977605, guid: f45e756cff9caa34389e6420e870657b, type: 3}
+  canvas: {fileID: 1868772371}
 --- !u!114 &5760821605867929294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4026021780447064282, guid: 8d1afcf6c57b4584997ea8964361e813, type: 3}
@@ -19929,9 +19934,9 @@ MonoBehaviour:
   gostFlip: {fileID: 7836417174641805552, guid: 4bea4330337447847a7b3201bbbb04ad, type: 3}
   gainText: {fileID: 6092742202349708257, guid: b19e223e40aed6e4e8f9d9434180da6c, type: 3}
   f: 3
-  damageNumberPrefab: {fileID: 0}
-  healNumberPrefab: {fileID: 0}
-  canvas: {fileID: 0}
+  damageNumberPrefab: {fileID: 556105242235977605, guid: 7cbaf3d6cdb2e4544acaa53ea6bc3cb4, type: 3}
+  healNumberPrefab: {fileID: 556105242235977605, guid: f45e756cff9caa34389e6420e870657b, type: 3}
+  canvas: {fileID: 1296739158076113343}
 --- !u!95 &6773467585756443684
 Animator:
   serializedVersion: 5
