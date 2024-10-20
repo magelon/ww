@@ -6127,7 +6127,7 @@ Animator:
   m_GameObject: {fileID: 8287228726385219484}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 78c0fad52d70ba646b196d9f6ce1a6a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: b92a48474045adc4cbb2b5111796266e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6157,18 +6157,18 @@ MonoBehaviour:
   enemiLayer:
     serializedVersion: 2
     m_Bits: 1
-  damage: 2
+  damage: 1
   element: ice
-  heal: 0
+  heal: 1
   bulletForce: 0
   rangeFrequency: 0
-  healFrequency: 0
+  healFrequency: 1
   meleeFrequency: 0.5
   clostDistance: 0
   atRange: 0.1
   atPos: {fileID: 9186110962972799296}
   pivot: {fileID: 7028539453035119780}
-  slash: {fileID: 5544692804509767650, guid: 32f9fa99ded931e47922307adf4ff320, type: 3}
+  slash: {fileID: 1216169061321035414, guid: c9e91c77ae967cc49ab44b232aabdcb2, type: 3}
 --- !u!114 &3230760617890494492
 MonoBehaviour:
   m_ObjectHideFlags: 0

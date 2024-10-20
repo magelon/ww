@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class defaultCs : MonoBehaviour
 {
-    List<string> stringList = new List<string> {"sabar", "lina", "keiqin"};
+    List<string> stringList = new List<string> {"yb", "hcz", "rm"};
     public  static List<string> equiptedL;
     // Start is called before the first frame update
     void Start()

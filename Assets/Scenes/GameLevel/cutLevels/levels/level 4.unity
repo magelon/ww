@@ -7544,7 +7544,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446349865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e39eb95918e44048a5ae613e959b67c, type: 3}
   m_Name: 
@@ -7591,7 +7591,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 2292ffa06cbcc7d4d9cef68d66216ba2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 819fa2f645801c44dac00fa9dc627513, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7611,8 +7611,8 @@ Transform:
   m_GameObject: {fileID: 446349865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1456, y: 0.95, z: 1}
-  m_LocalScale: {x: 0.42884418, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.81, y: 0.06, z: 1}
+  m_LocalScale: {x: 0.8560164, y: 0.37632453, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 494992308}
@@ -8742,7 +8742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &811839530
 Grid:
   m_ObjectHideFlags: 0
