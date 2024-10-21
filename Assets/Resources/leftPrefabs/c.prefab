@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 2347888482806629324}
   - component: {fileID: 34434362028873521}
   - component: {fileID: 3680206965146983538}
+  - component: {fileID: 457369886372989704}
+  - component: {fileID: 4670413903230625968}
   m_Layer: 0
   m_Name: c
   m_TagString: creature
@@ -334,6 +336,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d5a87434d7f4f4499bc94e84dfad7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: []
+--- !u!114 &457369886372989704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126353624765928562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92f8b93fdce7a043b6349afff3fd6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsList:
+  - {fileID: 3841811581476890008, guid: ea23d0731e784b943b767411d610adc9, type: 3}
+--- !u!114 &4670413903230625968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126353624765928562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227d596d5c278ab468c7fdaf01d75559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slots: []

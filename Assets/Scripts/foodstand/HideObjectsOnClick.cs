@@ -8,17 +8,18 @@ public class HideObjectsOnClick : MonoBehaviour
 
     private Button button;
     public InventoryUI invui;
+    public InventoryUI1 invui1;
 
     void Start()
     {
         // Get the Button component on this GameObject
-        button = GetComponent<Button>();
+        //button = GetComponent<Button>();
 
         // Add a listener to call HideObjects when the button is clicked
-        if (button != null)
-        {
-            button.onClick.AddListener(HideObjects);
-        }
+        //if (button != null)
+        //{
+            //button.onClick.AddListener(HideObjects);
+        //}
     }
 
     public void HideObjects()
@@ -33,6 +34,21 @@ public class HideObjectsOnClick : MonoBehaviour
         if (objectToHide2 != null)
         {
             objectToHide2.SetActive(!objectToHide2.activeSelf);
+        }
+    }
+
+    public void HideObjectsshowOne(){
+         if (objectToHide2 != null)
+        {
+            objectToHide2.SetActive(!objectToHide2.activeSelf);
+            invui.UpdateUI();
+            invui1.UpdateUI();
+        }
+         if (objectToHide1 != null)
+        {
+            objectToHide1.SetActive(!objectToHide1.activeSelf);
+            invui.UpdateUI();
+            invui1.UpdateUI();
         }
     }
 }

@@ -22,8 +22,6 @@ public class ShopMenu : MonoBehaviour {
 
 		void Start () {
                  
-			
-
 			if(jsonFile != null){
 
             string jsonText = jsonFile.text;

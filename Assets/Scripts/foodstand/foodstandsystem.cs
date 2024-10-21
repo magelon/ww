@@ -32,6 +32,8 @@ public class foodstandsystem : MonoBehaviour
     public FoodsData foodsData;
     public Inventory inv;
     public InventoryUI invui;
+    public Inventory1 inv1;
+    public InventoryUI1 invui1;
 
     private List<string> stringList = new List<string>(); 
     public GameObject healNumberPrefab;
@@ -124,6 +126,10 @@ public class foodstandsystem : MonoBehaviour
                     inv.RemoveItem(soldFood.foodName);
                     if(invui){
                         invui.UpdateUI();
+                    }
+                    inv1.RemoveItem(soldFood.foodName);
+                    if(invui1){
+                        invui1.UpdateUI();
                     }
                     imageComponent.sprite=null;
                     indicesToRemove.Add(i);

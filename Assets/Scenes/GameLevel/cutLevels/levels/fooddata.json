@@ -88,6 +88,15 @@
            "rate":3,
            "art":"lon"
         }
+    },
+    {
+      "foodName": "normalsword",
+      "foodsdetail": 
+        {
+           "price": 1,
+           "rate":3,
+           "art":"lon"
+        }
     }
     
   ]
