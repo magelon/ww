@@ -29,7 +29,7 @@ public class drops1 : MonoBehaviour
             droponce=true;
              // Randomly select a drop from the list
             double randomNumber = random.NextDouble();
-            if(randomNumber < 0.0014){
+            if(randomNumber < 0.3){
                 int randomIndex = Random.Range(0, dropsList.Count);
                 GameObject randomDrop = dropsList[randomIndex];
                 // Reuse the randomly selected object
